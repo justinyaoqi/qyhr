@@ -1,0 +1,143 @@
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-08-20 23:37:38
+         compiled from "D:\wamp\www\\app\template\hy\public_search\firm_search.htm" */ ?>
+<?php /*%%SmartyHeaderCode:2300455d5f44260eb37-66839120%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'c4e26e824d04d0ad7ee5264e404e267880633aae' => 
+    array (
+      0 => 'D:\\wamp\\www\\\\app\\template\\hy\\public_search\\firm_search.htm',
+      1 => 1437397127,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2300455d5f44260eb37-66839120',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'city_name' => 0,
+    'industry_name' => 0,
+    'comclass_name' => 0,
+    'industry_index' => 0,
+    'v' => 0,
+    'comdata' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55d5f442799bf2_87475080',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_55d5f442799bf2_87475080')) {function content_55d5f442799bf2_87475080($_smarty_tpl) {?><?php if (!is_callable('smarty_function_url')) include 'D:\\wamp\\www\\app\\include\\libs\\plugins\\function.url.php';
+if (!is_callable('smarty_function_searchurl')) include 'D:\\wamp\\www\\app\\include\\libs\\plugins\\function.searchurl.php';
+?><!--职位类别start-->
+<div class="sPopupDiv" id="jobdiv" style="display:none; float:left;"></div>
+<!--职位类别end-->
+<!--工作地点start-->
+<div class="sPopupDiv" id="citydiv" style="display:none"></div>
+<!--工作地点end-->
+<!--行业类别start-->
+<div class="sPopupDiv" id="industrydiv" style="display:none"></div>
+<!--行业类别end--> 
+<div class="content_firm">
+    <div class="firm_left">
+        <div class="firm_left_close">            
+            <?php if ($_GET['hy']||$_GET['pr']||$_GET['mun']||$_GET['keyword']||$_GET['cityid']) {?>
+            <div class="firm_left_close_con">
+                <div class="firm_left_h1"><span>已选择</span> <a href="<?php echo smarty_function_url(array('m'=>'company'),$_smarty_tpl);?>
+">清空条件</a></div>
+                <div class="clear"></div>
+				<?php if ($_GET['cityid']) {?>
+                <span class="firm_left_close_span"><i>所在城市：<?php echo $_smarty_tpl->tpl_vars['city_name']->value[$_GET['cityid']];?>
+</i><a href="<?php echo smarty_function_searchurl(array('m'=>'company','untype'=>'cityid'),$_smarty_tpl);?>
+"><em></em></a></span>
+                <?php }?>
+                <?php if ($_GET['hy']) {?>
+                <span class="firm_left_close_span"><i>从事行业：<?php echo $_smarty_tpl->tpl_vars['industry_name']->value[$_GET['hy']];?>
+</i><a href="<?php echo smarty_function_searchurl(array('m'=>'company','untype'=>'hy,page'),$_smarty_tpl);?>
+"><em></em></a></span>
+                <?php }?>
+                <?php if ($_GET['pr']) {?>
+                <span class="firm_left_close_span"><i>企业性质：<?php echo $_smarty_tpl->tpl_vars['comclass_name']->value[$_GET['pr']];?>
+</i><a href="<?php echo smarty_function_searchurl(array('m'=>'company','untype'=>'pr,page'),$_smarty_tpl);?>
+"><em></em></a></span>
+                <?php }?>
+                <?php if ($_GET['mun']) {?>
+                <span class="firm_left_close_span"><i>企业规模：<?php echo $_smarty_tpl->tpl_vars['comclass_name']->value[$_GET['mun']];?>
+</i><a href="<?php echo smarty_function_searchurl(array('m'=>'company','untype'=>'mun,page'),$_smarty_tpl);?>
+"><em></em></a></span>
+                <?php }?>
+                <?php if ($_GET['keyword']) {?>
+                <span class="firm_left_close_span"><i>关键字：<?php echo $_GET['keyword'];?>
+</i><a href="<?php echo smarty_function_searchurl(array('m'=>'company','untype'=>'keyword,page'),$_smarty_tpl);?>
+"><em></em></a></span>
+                <?php }?>
+            </div>
+            <?php }?>
+        </div>
+        <div class="firm_left_cont">
+            <div class="firm_seach_top_list">
+                <div class="<?php if ($_GET['hy']) {?>firm_seach_top_s<?php } else { ?>firm_seach_top_l<?php }?>" id="job_hy_click" onclick="check_type('job_hy');">从事行业</div>
+                <div class="firm_seach_top_r" id="job_hy" <?php if ($_GET['hy']) {?>style="display:none;"<?php }?>>
+                <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['j'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['industry_index']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value) {
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['j']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+                <a href="<?php echo smarty_function_searchurl(array('m'=>'company','untype'=>'hy,page','hy'=>$_smarty_tpl->tpl_vars['v']->value),$_smarty_tpl);?>
+" <?php if ($_GET['hy']==$_smarty_tpl->tpl_vars['v']->value) {?> class="firm_a_atc" <?php }?>><?php echo $_smarty_tpl->tpl_vars['industry_name']->value[$_smarty_tpl->tpl_vars['v']->value];?>
+</a>
+                <?php } ?>
+            </div>
+        </div>
+        <div class="firm_seach_top_list">
+            <div class="<?php if ($_GET['pr']) {?>firm_seach_top_s<?php } else { ?>firm_seach_top_l<?php }?>" id="job_pr_click" onclick="check_type('job_pr');">企业性质</div>
+            <div class="firm_seach_top_r" id="job_pr" <?php if ($_GET['pr']) {?>style="display:none;"<?php }?>>
+            <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['j'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['comdata']->value['job_pr']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value) {
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['j']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+            <a href="<?php echo smarty_function_searchurl(array('m'=>'company','untype'=>'pr,page','pr'=>$_smarty_tpl->tpl_vars['v']->value),$_smarty_tpl);?>
+" <?php if ($_GET['pr']==$_smarty_tpl->tpl_vars['v']->value) {?> class="firm_a_atc" <?php }?>><?php echo $_smarty_tpl->tpl_vars['comclass_name']->value[$_smarty_tpl->tpl_vars['v']->value];?>
+</a>
+            <?php } ?>
+        </div>
+    </div>
+    <div class="firm_seach_top_list">
+        <div class="<?php if ($_GET['mun']) {?>firm_seach_top_s<?php } else { ?>firm_seach_top_l<?php }?>" id="job_mun_click" onclick="check_type('job_mun');">企业规模</div>
+        <div class="firm_seach_top_r" id="job_mun" <?php if ($_GET['mun']) {?>style="display:none;"<?php }?>>
+        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['j'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['comdata']->value['job_mun']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value) {
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['j']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+        <a href="<?php echo smarty_function_searchurl(array('m'=>'company','untype'=>'mun,page','mun'=>$_smarty_tpl->tpl_vars['v']->value),$_smarty_tpl);?>
+" <?php if ($_GET['mun']==$_smarty_tpl->tpl_vars['v']->value) {?> class="firm_a_atc" <?php }?>><?php echo $_smarty_tpl->tpl_vars['comclass_name']->value[$_smarty_tpl->tpl_vars['v']->value];?>
+</a>
+        <?php } ?>
+    </div>
+</div>
+  </div>
+</div>
+
+<?php echo '<script'; ?>
+>
+    function check_type(id){
+        $("#" + id).toggle();
+		var style=$("#"+id+"_click").attr("class");
+		if(style=="firm_seach_top_l"){
+			style=$("#"+id+"_click").attr("class","firm_seach_top_s");
+		}else{
+			style=$("#"+id+"_click").attr("class","firm_seach_top_l");
+		}
+    }
+<?php echo '</script'; ?>
+>
+<?php }} ?>

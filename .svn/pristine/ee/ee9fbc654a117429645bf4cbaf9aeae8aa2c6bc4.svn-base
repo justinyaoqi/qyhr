@@ -1,0 +1,114 @@
+<?php
+defined('IN_TS') or die('Access Denied.');
+
+//获取组分类
+
+$arrRecommendGroup = $new['group']->getRecommendGroup('2');
+foreach($arrRecommendGroup as $key=>$item){
+	//$arrRecommendGroups = [];
+	$arrRecommendGroups[$key]["groupname"] = $item["groupname"];
+	$arrRecommendGroups[$key]["count_user"] = $item['count_user'];
+	$arrRecommendGroups[$key]["groupdesc"] =cututf8(t(tsDecode($item['groupdesc'])), 0, 10);
+	$arrRecommendGroups[$key]["photo"] =$item['photo'];
+}
+
+$arrCate = $new['group']->findAll('group_cate', array(
+	'referid' => '0',
+));
+
+foreach ($arrCate as $key => $item) {
+
+	$arrCates[] = $item;
+	$arrCates[$key]['two'] = $new['group']->findAll('group_cate', array(
+		'referid' => $item['cateid'],
+	));
+
+}
+
+foreach ($arrCates as $key => $item) {
+
+	$arrCatess[] = $item;
+	foreach ($item['two'] as $tkey => $titem) {
+
+		$arrCatess[$key]['two'][$tkey]['three'] = $new['group']->findAll('group_cate', array(
+			'referid' => $titem['cateid'],
+		));
+
+	}
+
+}
+//echo "<pre>";
+//print_r($arrCates);
+//echo "</pre>";
+// 所有小组
+$page = isset($_GET['page']) ? intval($_GET['page']) : '1';
+$url = tsUrl('group', 'index', array('page' => ''));
+$lstart = $page * 24 - 24;
+
+$arrGroup = $new['group']->findAll('group', array('isaudit' => 0), 'isrecommend desc,addtime asc', null, $lstart . ',24');
+
+foreach ($arrGroup as $key => $item) {
+	$arrGroup[$key]['groupname'] = tsTitle($item['groupname']);
+	$arrGroup[$key]['groupdesc'] = cututf8(t(tsDecode($item['groupdesc'])), 0, 35);
+}
+
+$groupNum = $new['group']->findCount('group', array(
+	'isaudit' => 0,
+));
+
+$pageUrl = pagination($groupNum, 24, $page, $url);
+
+// 我加入的小组
+$myGroup = array();
+if ($TS_USER['user']['userid']) {
+	$myGroups = $new['group']->findAll('group_user', array(
+		'userid' => $TS_USER['user']['userid'],
+	), null, 'groupid');
+	foreach ($myGroups as $item) {
+		$myGroup[] = $item['groupid'];
+	}
+}
+
+//小组内最新动态
+$newTopicFeeds = $new['group']->getHotTopic(30);
+
+//print_r($strUser);
+foreach ($newTopicFeeds as $key => $item) {
+	//$newTopicFeed = [];
+	$newTopicFeeds[$key]['title'] = tsTitle($item['title']);
+	$newTopicFeeds[$key]['content'] = cututf8(t(tsDecode($item['content'])), 0, 100);
+	$newTopicFeeds[$key]['count_view'] = $item['count_view'];
+	$newTopicFeeds[$key]['count_comment'] = $item['count_comment'];
+}
+
+//print_r($newTopicFeeds);
+
+// 最新4个小组
+$arrNewGroup = $new['group']->getNewGroup('4');
+
+// 热门帖子
+
+//include '/user/class.user.php';
+include_once 'app/user/user.class.php';
+
+$arrTopics = $new['group']->findAll('group_topic', null, 'count_comment desc', 'groupid,userid,topicid,title,count_comment,count_view,uptime,content', 20);
+foreach ($arrTopics as $key => $item) {
+	$arrTopic[] = $item;
+	$arrTopic[$key]['group'] = $new['group']->getOneGroup($item['groupid']);
+	$arrTopic[$key]['tag'] = aac('tag')->getObjTagByObjid('group', 'groupid', $item['groupid']);
+	$arrTopic[$key]['user'] = aac('user')->getOneUser($item['userid'], 'face,userid');
+	$arrTopic[$key]['title'] = tsTitle($item['title']);
+	$arrTopic[$key]['content'] = cututf8(t(tsDecode($item['content'])), 0, 150);
+}
+
+
+$title = '小组';
+
+if ($TS_CF['mobile']) {
+	$sitemb = tsUrl('moblie', 'group');
+}
+
+$sitekey = $TS_APP['options']['appkey'];
+$sitedesc = $TS_APP['options']['appdesc'];
+
+include template("index");

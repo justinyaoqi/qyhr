@@ -1,0 +1,139 @@
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-08-25 19:57:51
+         compiled from "D:\wamp\www\app\template\wap\once.htm" */ ?>
+<?php /*%%SmartyHeaderCode:1219755dc583fb4dc62-64049476%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'e7436e97bb1fd15a83343e09a1cca93fc2975841' => 
+    array (
+      0 => 'D:\\wamp\\www\\app\\template\\wap\\once.htm',
+      1 => 1434528044,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1219755dc583fb4dc62-64049476',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'config_wapdomain' => 0,
+    'once' => 0,
+    'total' => 0,
+    'pagenav' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55dc583fbe53c2_51575895',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_55dc583fbe53c2_51575895')) {function content_55dc583fbe53c2_51575895($_smarty_tpl) {?><?php if (!is_callable('smarty_function_url')) include 'D:\\wamp\\www\\app\\include\\libs\\plugins\\function.url.php';
+?><?php $once=array();global $db,$db_config,$config;eval('$paramer=array("item"=>"\'once\'","ispage"=>"1","limit"=>"20","keyword"=>"\'auto.keyword\'","islt"=>"4","nocache"=>"")
+;');
+	
+		$ParamerArr = GetSmarty($paramer,$_GET,$_smarty_tpl);
+		$paramer = $ParamerArr[arr];
+		$Purl =  $ParamerArr[purl];
+        global $ModuleName;
+        if(!$Purl["m"]){
+            $Purl["m"]=$ModuleName;
+        }
+		$where = "`status`='1'  and `edate`>".time();
+		if($config[did]){
+			$where.=" AND `did`='".$config['did']."'";
+		}
+		if($paramer[keyword]){
+			$where.=" AND `title` LIKE '%".$paramer[keyword]."%' or `companyname` LIKE '%".$paramer[keyword]."%'";
+		}
+		if($paramer['delid']){
+			$where.=" AND `id`<>'".$paramer['delid']."'";
+		}
+		if($paramer[order]){
+			$order = " ORDER BY `".str_replace("'","",$paramer[order])."`";
+		}else{
+			$order = " ORDER BY ctime ";
+		}
+		if($paramer[sort]){
+			$sort = $paramer[sort];
+		}else{
+			$sort = " DESC";
+		}
+		if($paramer[limit]){
+			$limit=" LIMIT ".$paramer[limit];
+		}else{
+			$limit=" LIMIT 20";
+		}
+		if($paramer[where]){
+			$where = $paramer[where];
+		}
+		if($paramer[ispage]){
+			$limit = PageNav($paramer,$_GET,"once_job",$where,$Purl,'','0',$_smarty_tpl);
+		}
+		$where.=$order.$sort.$limit;
+		$once=$db->select_all("once_job",$where);
+		if(is_array($once)){
+			foreach($once as $key=>$value){
+				$time=time()-$value['ctime'];
+				if($time>86400 && $time<604800){
+					$once[$key]['ctime'] = ceil($time/86400)."天前";
+				}elseif($time>3600 && $time<86400){
+					$once[$key]['ctime'] = ceil($time/3600)."小时前";
+				}elseif($time>60 && $time<3600){
+					$once[$key]['ctime'] = ceil($time/60)."分钟前";
+				}elseif($time<60){
+					$once[$key]['ctime'] = "刚刚";
+				}else{
+					$once[$key]['ctime'] = date("Y-m-d",$value['ctime']);
+				}
+			}
+			if($paramer[keyword]!=""&&!empty($once)){
+				addkeywords('1',$paramer[keyword]);
+			}
+		} ?>
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['wapstyle']->value)."/header_cont.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<section>
+  <div class="warp_content clear">
+    <form  action="<?php echo $_smarty_tpl->tpl_vars['config_wapdomain']->value;?>
+/index.php" method="get">
+      <div class="formFiled ">
+        <input type="hidden" name="c" value="once" />
+        <input type="text" name="keyword" value="<?php echo $_GET['keyword'];?>
+" class="input_search"  placeholder="请输入关键字" />
+        <input type="submit" value="搜索" class="input_btn">
+      </div>
+    </form>
+    <?php  $_smarty_tpl->tpl_vars['once'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['once']->_loop = false;
+$once = $once; if (!is_array($once) && !is_object($once)) { settype($once, 'array');}
+foreach ($once as $_smarty_tpl->tpl_vars['once']->key => $_smarty_tpl->tpl_vars['once']->value) {
+$_smarty_tpl->tpl_vars['once']->_loop = true;
+?>
+    <div class="list_once_box"> <a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'once','a'=>'show','id'=>$_smarty_tpl->tpl_vars['once']->value['id']),$_smarty_tpl);?>
+">
+      <div class="list_once_name"><?php echo $_smarty_tpl->tpl_vars['once']->value['title'];?>
+</div>
+      <div class="list_once_name_P"><?php echo mb_substr($_smarty_tpl->tpl_vars['once']->value['require'],0,100,'gbk');?>
+</div>
+      <div class="list_once_name_P"> 联系电话：<?php echo $_smarty_tpl->tpl_vars['once']->value['phone'];?>
+</div>
+      <div class="list_once_name_P"> 联&nbsp; 系&nbsp;人：<?php echo $_smarty_tpl->tpl_vars['once']->value['linkman'];?>
+ </div>
+      </a> </div>
+    <?php } ?> 
+    <?php if ($_smarty_tpl->tpl_vars['total']->value<=0) {?>
+    <?php if ($_GET['keyword']!='') {?>
+    <div class="wap_member_no">没有搜索到微招聘</div>
+    <?php } else { ?>
+    <div class="wap_member_no">暂无微招聘</div>
+    <?php }?>
+    <?php } else { ?>
+    <div class="pages"><?php echo $_smarty_tpl->tpl_vars['pagenav']->value;?>
+</div>
+    <?php }?> </div>
+</section>
+<!--功能条 -->
+<div id="yun_cz" class="fn-dbox center">
+  <div id="resumeBtn" class="deep fn-dbox-flex fn-dbox-flex-flex1"> <a href="###" class="once_t_fb" onclick="location.href='<?php echo smarty_function_url(array('m'=>'wap','c'=>'once','a'=>'add'),$_smarty_tpl);?>
+'"> <i class="fa fa-pencil-square-o"></i> 发布微招聘</a></div>
+</div>
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['wapstyle']->value)."/footer.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php }} ?>

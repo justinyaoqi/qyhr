@@ -1,0 +1,40 @@
+{template header} {php doAction('home_index_js')} {php doAction('home_index_css')}
+<div class="container">
+    {php doAction('home_index_header')} {php doAction('wordad')}
+
+    <div class="row">
+        <div class="col-md-8" style="">
+            {php doAction('home_index_left')}
+        </div>
+
+        <div class="col-md-4" style="">
+            {php doAction('home_index_right')}
+
+            <!--广告位-->
+            {php doAction('gobad','300')}
+        </div>
+    </div>
+
+    {php doAction('home_index_footer')}
+
+</div>
+<div class="container hidden-lg hidden-md">
+  <nav class="navbar navbar-default navbar-fixed-bottom ">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+         <ul class="nav navbar-nav navbar-left col-xs-5" style="float:left;margin-left:20px;border-right:1px red solid">
+          <li><a href="{tsUrl('group','add',array('id'=>'1'))}"><span class="glyphicon glyphicon-pencil"></span>发表话题</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left col-xs-5" style="float:left;margin-left:20px;">
+          <li><a href="{tsUrl('article','add',array(''=>''))}"><span class="glyphicon glyphicon-pencil"></span>发表文章</a></li>
+        </ul>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=44417377" charset="UTF-8"></script>
+
+{template footer}

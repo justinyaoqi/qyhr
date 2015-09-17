@@ -1,0 +1,28 @@
+<?php 
+
+
+
+
+
+/**
+* 
+*/
+class evaluate_controller extends common
+{
+	
+	function __construct(argument)
+	{
+		# code...
+	}
+}
+
+
+
+
+
+
+
+
+
+
+ ?>

@@ -1,0 +1,3588 @@
+<?php /*%%SmartyHeaderCode:2169655f8e1fe5f7bb0-13814559%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'b3b6c5be2afc147e3520b3e47750c22e45735b53' => 
+    array (
+      0 => 'D:\\wamp\\www\\qyhr\\app\\template\\hy\\index\\index.htm',
+      1 => 1442026781,
+      2 => 'file',
+    ),
+    '31b941a90d3e0b833d11f5d43a94ca058345bdbe' => 
+    array (
+      0 => 'D:\\wamp\\www\\qyhr\\\\app\\template\\hy\\header.htm',
+      1 => 1440984092,
+      2 => 'file',
+    ),
+    '1c0350521fdf50b308693e883bf856635b557682' => 
+    array (
+      0 => 'D:\\wamp\\www\\qyhr\\\\app\\template\\hy\\public_search\\index_search.htm',
+      1 => 1440984098,
+      2 => 'file',
+    ),
+    '8ef9366cb9e439cb1a7d1acf0f1351640cba7008' => 
+    array (
+      0 => 'D:\\wamp\\www\\qyhr\\\\app\\template\\hy\\footer.htm',
+      1 => 1442040326,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2169655f8e1fe5f7bb0-13814559',
+  'variables' => 
+  array (
+    'title' => 0,
+    'keywords' => 0,
+    'description' => 0,
+    'style' => 0,
+    'config' => 0,
+    'job_index' => 0,
+    'key' => 0,
+    'v' => 0,
+    'job_name' => 0,
+    'job_type' => 0,
+    'jobclassurl' => 0,
+    'vv' => 0,
+    'vvl' => 0,
+    'vvv' => 0,
+    'top_key' => 0,
+    'lunbo' => 0,
+    'hotjob' => 0,
+    'hotjobs' => 0,
+    'hjob' => 0,
+    'job1' => 0,
+    'jobl' => 0,
+    'link1' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55f8e2009db798_99853158',
+  'cache_lifetime' => 3600,
+),true); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_55f8e2009db798_99853158')) {function content_55f8e2009db798_99853158($_smarty_tpl) {?><!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>phpyun人才系统_最新招聘信息_找工作</title>
+<meta name="keywords" content="phpyun人才系统，招聘，招聘网，找工作" />
+<meta name="description" content="phpyun人才系统（http://localhost/qyhr）大品牌的招聘网站，找工作的理想选择，规模大信息真实的专业招聘网站，查询人才网最新招聘信息，找工作，上phpyun人才系统!" />
+<link rel="stylesheet" href="http://localhost/qyhr/app/template/hy/style/css.css" type="text/css" />
+<link rel="stylesheet" href="http://localhost/qyhr/app/template/hy/style/hy.css" type="text/css" />
+<link rel="stylesheet" href="http://localhost/qyhr/app/template/hy/style/index.css" type="text/css">
+<!--[if IE 6]>
+<script src="http://localhost/qyhr/js/png.js"></script>
+<script>
+DD_belatedPNG.fix('.png,.pagination li a');
+</script>
+<![endif]-->
+<script src="http://localhost/qyhr/js/jquery-1.8.0.min.js" language="javascript"></script>
+<script src="http://localhost/qyhr/js/layer/layer.min.js" language="javascript"></script>
+<script src="http://localhost/qyhr/js/lazyload.min.js" language="javascript"></script>
+<script src="http://localhost/qyhr/js/public.js" language="javascript"></script>
+<script src="http://localhost/qyhr/app/template/hy/js/reg_ajax.js" type="text/javascript"></script>
+<script src="http://localhost/qyhr/app/template/hy/js/index.js" language="javascript"></script>
+<script src="http://localhost/qyhr/js/search.js" type="text/javascript"></script>
+<script src="http://localhost/qyhr/js/slides.jquery.js" type="text/javascript"></script>
+</head>
+<body class="index_body_box">
+<!--header-->
+<div class="top">
+  <div class="top_cot">
+    <div class="top_cot_content">
+      <div class="top_left fl">
+        <div class="yun_welcome fl">欢迎来到phpyun人才系统！</div>
+        <span class="fl"><a href="http://localhost/qyhr/wap" class="wap_icon">手机版</a> | <a href="http://localhost/qyhr/index.php?m=subscribe">订阅</a></span> </div>
+      <div class="top_right_re fr">
+        <div class="top_right">
+          <div class="yun_topNav fr"> 
+		  <a class="yun_navMore" href="javascript:;">网站导航</a>
+            <div class="yun_webMoredown" style="display:none">
+              <div class="yun_top_nav_box"> 
+			                  <div class="yun_top_nav_h1"><a href="http://localhost/qyhr/job/" >找工作</a></div>
+                <ul>
+                                    <li><a href="http://localhost/qyhr/company/" >找企业</a></li>
+                                    <li><a href="http://localhost/qyhr/once/" >微招聘</a></li>
+                                    <li><a href="http://localhost/qyhr/map/" >地图招聘</a></li>
+                                  </ul>
+                                <div class="yun_top_nav_h1"><a href="http://localhost/qyhr/resume/" >找人才</a></div>
+                <ul>
+                                    <li><a href="http://localhost/qyhr/hr/" >工具箱</a></li>
+                                    <li><a href="http://localhost/qyhr/tiny/" >微简历</a></li>
+                                  </ul>
+                                <div class="yun_top_nav_h1"><a href="http://localhost/qyhr/article/" >资讯</a></div>
+                <ul>
+                                    <li><a href="http://localhost/qyhr//ask" >问答</a></li>
+                                  </ul>
+                                <div class="yun_top_nav_h1"><a href="http://www.hr135.com"  target="_blank">本站特色</a></div>
+                <ul>
+                                    <li><a href="http://localhost/qyhr/redeem/" >积分兑换</a></li>
+                                  </ul>
+                 </div>
+            </div>
+          </div>
+                        <div class=" fr"><div class="yun_topLogin_cont"><div class="yun_topLogin"><a class="yun_More" href="javascript:void(0)">用户登录</a><ul class="yun_Moredown" style="display:none"><li><a href="http://localhost/qyhr/index.php?m=login">会员登录</a></li></ul></div><div class="yun_topLogin"> <a class="yun_More" href="javascript:void(0)">用户注册</a><ul class="yun_Moredown fn-hide" style="display:none"><li><a href="http://localhost/qyhr/index.php?m=register&usertype=1">个人注册</a></li><li><a href="http://localhost/qyhr/index.php?m=register&usertype=2">企业注册</a></li></ul></div></div></div>
+                    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header_zt"></div>
+<div class="header">
+  <div class="w980">
+    <div class="header_cont">
+      <div class="logo fl"><a href="http://localhost/qyhr"><img src="http://localhost/qyhr/data/logo/20150505/14383375306.PNG" class="png"></a></div>
+      <nav>
+        <ul class="header_nav">
+                    <li class="header_nav_cur"><a href="http://localhost/qyhr/index.php" >首页</a></li>
+                    <li class=""><a href="http://localhost/qyhr/job/" >找工作</a></li>
+                    <li class=""><a href="http://localhost/qyhr/resume/" >找人才</a></li>
+                    <li class=""><a href="http://localhost/qyhr/company/" >找企业</a></li>
+                    <li class=""><a href="http://localhost/qyhr/once/" >微招聘</a></li>
+                    <li class=""><a href="http://localhost/qyhr/tiny/" >微简历</a></li>
+                    <li class=""><a href="http://localhost/qyhr/article/" >职场资讯</a></li>
+                    <li class=""><a href="http://localhost/qyhr/zph/" >招聘会</a></li>
+                    <li class=""><a href="http://localhost/qyhr/map/"  target="_blank">地图</a></li>
+                    <li class=""><a href="http://localhost/qyhr/evaluate/" >测评</a></li>
+                            </ul>
+      </nav>
+
+        
+        
+        
+        
+        
+        
+    </div>
+  </div>
+</div> 
+<script>
+    $(document).ready(function(){       
+        $('.index_header_seach_find').delegate('#search_name','click',function(){$(this).next().show();});
+		$("img.lazy").lazyload();
+    });
+		$(document).ready(function(){
+	$(".index_post_ul").find("li").bind("click",function(){var id=$(this).attr("tab_name");$(".index_new_job").hide();$(".index_post_ul_cur").removeClass("index_post_ul_cur");$(this).addClass("index_post_ul_cur");$("#"+id).show();});
+	});
+</script> 
+<!--content  start-->
+
+<div class="index_cont">
+<div class="w980"> 
+  <!--leftnav-->
+  <div class="left_sidebar"> 
+
+    <div id="sidebar">
+      <div class="mainNavs"> 
+        <!--放上去current--> 
+                <div class="menu_box" aid="0" id="jobclass0">
+          <div class="menu_main">
+            <h2>计算机/互联网 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50">IT-品管、技术支持及其它 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=49">IT-管理 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48">互联网/网游 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47">计算机软件 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=46">计算机硬件 </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;" id="jobclass_0">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50">IT-品管、技术支持及其它 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50&job_post=166">其他 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50&job_post=165">技术文员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50&job_post=164">文档工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50&job_post=163">测试员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50&job_post=162">硬件测试 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50&job_post=161">软件测试 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50&job_post=160">系统测试 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50&job_post=159">品质经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50&job_post=158">标准化工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50&job_post=157">计量工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50&job_post=156">Helpdesk 技术支持 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50&job_post=155">技术支持/维护工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=50&job_post=154">技术支持/维护经理 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=49">IT-管理 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=49&job_post=153">其他 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=49&job_post=152">项目执行/协调人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=49&job_post=151">项目主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=49&job_post=150">项目经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=49&job_post=149">项目总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=49&job_post=148">信息技术专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=49&job_post=147">信息技术经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=49&job_post=146">技术总监/经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=49&job_post=145">首席技术执行官CTO/首席信息官CIO </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48">互联网/网游 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=131">网站策划 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=130">系统管理员/网络管理员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=129">网站维护工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=128">网站架构设计师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=127">UI设计师/顾问 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=126">网络工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=125">网站营运专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=124">网站营运经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=123">多媒体/游戏开发工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=122">语音/视频开发工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=121">互联网软件开发工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=132">网站编辑 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=133">网页设计/制作/美工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=144">其他 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=143">智能大厦/综合布线 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=142">网络信息安全工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=141">SEO搜索引擎优化 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=140">音效设计师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=139">视觉设计师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=138">特效设计师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=134">脚本开发工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=135">游戏策划师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=136">游戏界面设计师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=48&job_post=137">Flash设计/开发 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47">计算机软件 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47&job_post=118">系统架构设计师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47&job_post=108">高级软件工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47&job_post=109">软件工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47&job_post=14">软件UI设计师/工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47&job_post=111">仿真应用工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47&job_post=112">ERP实施顾问 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47&job_post=113">ERP技术开发 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47&job_post=120">计算机辅 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47&job_post=119">数据库工程师/管理员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47&job_post=117">系统工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47&job_post=116">系统分析员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47&job_post=115">系统集成工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=47&job_post=114">需求工程师 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=46">计算机硬件 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=46&job_post=104">高级硬件工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=46&job_post=105">硬件工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=35&job1_son=46&job_post=106">其他 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="1" id="jobclass1">
+          <div class="menu_main">
+            <h2>服务业 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56">客服及技术支持  </a>  <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=90">餐饮/娱乐 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91">酒店/旅游 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92">美容/健身/体育 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93">百货/连锁/零售服务 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=94">交通运输服务 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=95">保安/家政/其他服务 </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;" id="jobclass_1">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56">客服及技术支持  </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56&job_post=239">售前/售后技术支持经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56&job_post=240">售前/售后技术支持主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56&job_post=241">售前/售后技术支持工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56&job_post=242">咨询热线/呼叫中心服务人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56&job_post=243">VIP专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56&job_post=244">其他 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56&job_post=233">客服总监(非技术) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56&job_post=234">客服经理(非技术) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56&job_post=235">客服主管(非技术) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56&job_post=236">客服专员/助理(非技术) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56&job_post=237">客户关系经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=56&job_post=238">投诉专员 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=90">餐饮/娱乐 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=90&job_post=707">餐饮/娱乐管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=90&job_post=708">餐饮/娱乐领班/部长 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=90&job_post=709">餐饮/娱乐服务员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=90&job_post=710">传菜主管/传菜员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=90&job_post=711">礼仪/迎宾 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=90&job_post=712">司仪 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=90&job_post=713">行政主厨/厨师长 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=90&job_post=714">厨师/面点师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=90&job_post=715">调酒师/吧台员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=90&job_post=716">茶艺师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=90&job_post=717">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91">酒店/旅游 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=718">酒店/宾馆经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=719">酒店/宾馆营销 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=720">宴会管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=721">大堂经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=722">宾客服务经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=723">楼面经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=724">前厅接待 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=725">预定部主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=726">预定员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=727">客房服务员/楼面服务员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=728">机场代表 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=729">行李员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=730">管家部经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=731">清洁服务人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=732">健身房服务 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=733">旅游产品销售 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=734">导游/旅行顾问 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=735">行程管理/操作 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=736">票务/订房服务 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=737">签证专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=91&job_post=738">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92">美容/健身/体育 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=739">美容顾问/化妆 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=740">彩妆培训师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=741">专柜彩妆顾问(BA) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=742">美容助理/见席美容师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=743">瘦身顾问 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=744">发型师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=745">发型助理/学徒 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=746">美甲师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=747">按摩/足疗 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=748">健身顾问/教练 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=749">体育运动教练 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=750">救生员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=751">瑜伽/舞蹈老师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=752">宠物护理/美容 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=92&job_post=753">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93">百货/连锁/零售服务 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93&job_post=754">店长/卖场经理/楼面管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93&job_post=755">品类经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93&job_post=756">店员/营业员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93&job_post=757">安防主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93&job_post=758">防损员/内保 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93&job_post=759">收银主管/收银员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93&job_post=760">理货员/陈列员/收货员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93&job_post=761">导购员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93&job_post=762">西点师/面包糕点加工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93&job_post=763">生鲜食品加工/处理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93&job_post=764">熟食加工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93&job_post=765">兼职店员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=93&job_post=766">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=94">交通运输服务 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=94&job_post=767">飞机机长/副机长 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=94&job_post=768">空乘人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=94&job_post=769">地勤人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=94&job_post=770">列车/地铁车长 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=94&job_post=771">列车/地铁司机 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=94&job_post=772">船长/副船长 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=94&job_post=773">船员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=94&job_post=774">乘务员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=94&job_post=775">司机 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=94&job_post=776">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=95">保安/家政/其他服务 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=95&job_post=777">保安经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=95&job_post=778">保安人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=95&job_post=779">保镖 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=95&job_post=780">寻呼员/话务员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=95&job_post=781">搬运工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=95&job_post=782">清洁工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=95&job_post=783">家政服务/保姆 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=44&job1_son=95&job_post=784">其他 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="2" id="jobclass2">
+          <div class="menu_main">
+            <h2>会计/金融/银行/保险 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60">保险  </a>  <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59">银行 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=58">金融/证券/期货/投资 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57">财务/审计/税务 </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;" id="jobclass_2">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60">保险  </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60&job_post=299">保险精算师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60&job_post=300">保险产品开发/项目策划 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60&job_post=301">保险业务经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60&job_post=302">保险代理/经纪人/客户经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60&job_post=303">理财顾问/财务规划师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60&job_post=304">储备经理人 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60&job_post=305">保险核保 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60&job_post=306">保险理赔 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60&job_post=307">保险客户服务/续期管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60&job_post=308">保险培训师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60&job_post=309">保险内勤 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60&job_post=310">契约管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=60&job_post=311">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59">银行 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=279">行长/副行长 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=280">个人业务部门经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=281">个人业务客户经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=282">公司业务部门经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=283">公司业务客户经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=284">综合业务经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=285">综合业务专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=286">资产评估/分析 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=287">风险控制 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=288">信贷管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=289">信审核查 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=290">进出口/信用证结算 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=291">外汇交易 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=292">清算人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=293">高级客户经理/客户经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=294">客户主管/专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=295">营业部大堂经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=296">银行柜员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=297">银行卡、电子银行业务推广 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=59&job_post=298">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=58">金融/证券/期货/投资 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=58&job_post=268">证券/期货/外汇经纪人 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=58&job_post=269">证券分析师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=58&job_post=270">股票/期货操盘手 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=58&job_post=271">金融/经济研究员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=58&job_post=272">投资/基金项目经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=58&job_post=273">投资/理财顾问 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=58&job_post=274">投资银行业务 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=58&job_post=275">融资经理/融资主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=58&job_post=276">融资专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=58&job_post=277">拍卖师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=58&job_post=278">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57">财务/审计/税务 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=245">首席财务官 CFO </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=246">财务总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=247">财务经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=248">财务顾问 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=249">财务主管/总帐主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=250">会计经理/会计主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=251">会计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=252">出纳员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=253">财务/会计助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=254">会计文员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=255">固定资产会计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=256">财务分析经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=257">财务分析员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=258">成本经理/成本主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=259">成本管理员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=260">资金经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=261">资金专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=262">审计经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=263">审计专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=264">税务经理/税务主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=265">税务专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=266">统计员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=37&job1_son=57&job_post=267">其他 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="3" id="jobclass3">
+          <div class="menu_main">
+            <h2>咨询/法律/教育/科研 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=89">科研人员 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=88">培训 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=87">教师 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=86">律师/法务/合规 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=85">咨询/顾问 </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;" id="jobclass_3">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=89">科研人员 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=89&job_post=704">科研管理人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=89&job_post=705">科研人员 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=88">培训 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=88&job_post=697">培训督导 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=88&job_post=698">培训讲师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=88&job_post=699">培训策划 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=88&job_post=700">培训产品开发 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=88&job_post=701">培训/课程顾问 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=88&job_post=702">培训助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=88&job_post=703">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=87">教师 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=87&job_post=686">校长 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=87&job_post=687">大学教授 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=87&job_post=688">讲师/助教 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=87&job_post=689">中学教师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=87&job_post=690">小学教师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=87&job_post=691">幼教 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=87&job_post=692">院校教务管理人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=87&job_post=693">兼职教师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=87&job_post=694">家教 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=87&job_post=695">职业技术教师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=87&job_post=696">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=86">律师/法务/合规 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=86&job_post=677">律师/法律顾问 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=86&job_post=678">律师助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=86&job_post=679">法务经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=86&job_post=680">法务主管/专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=86&job_post=681">法务助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=86&job_post=682">合规经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=86&job_post=683">合规主管/专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=86&job_post=684">知识产权/专利顾问/专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=86&job_post=685">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=85">咨询/顾问 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=85&job_post=668">专业顾问 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=85&job_post=669">咨询总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=85&job_post=670">咨询经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=85&job_post=671">专业培训师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=85&job_post=672">咨询员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=85&job_post=673">调研员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=85&job_post=674">猎头/人才中介 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=85&job_post=675">情报信息分析人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=43&job1_son=85&job_post=676">其他 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="4" id="jobclass4">
+          <div class="menu_main">
+            <h2>人事/行政/高级管理 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82">人力资源 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=83">高级管理 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=84">行政/后勤 </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;" id="jobclass_4">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82">人力资源 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=633">人事总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=634">人事经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=635">人事主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=636">人事专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=637">人事助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=638">招聘经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=639">招聘专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=640">薪资福利经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=641">薪资福利专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=642">绩效考核经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=643">绩效考核专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=644">培训经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=645">培训专员/助理/培训师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=646">企业文化/员工关系/工会管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=647">人力资源信息系统专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=82&job_post=648">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=83">高级管理 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=83&job_post=649">首席执行官CEO/总裁/总经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=83&job_post=650">首席运营官COO </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=83&job_post=651">副总经理/副总裁 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=83&job_post=652">合伙人 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=83&job_post=653">总监/部门经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=83&job_post=654">策略发展总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=83&job_post=655">办事处首席代表 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=83&job_post=656">办事处/分公司/分支机构经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=83&job_post=657">总裁助理/总经理助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=83&job_post=658">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=84">行政/后勤 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=84&job_post=659">行政总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=84&job_post=660">行政经理/主管/办公室主任 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=84&job_post=661">行政专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=84&job_post=662">经理助理/秘书 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=84&job_post=663">前台接待/总机/接待生 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=84&job_post=664">后勤 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=84&job_post=665">图书管理员/资料管理员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=84&job_post=666">电脑操作员/打字员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=42&job1_son=84&job_post=667">其他 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="5" id="jobclass5">
+          <div class="menu_main">
+            <h2>建筑/房地产 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=81">物业管理  </a>  <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=80">房地产 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79">建筑装潢/市政建设 </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;" id="jobclass_5">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=81">物业管理  </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=81&job_post=625">高级物业顾问/物业顾问 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=81&job_post=626">物业管理经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=81&job_post=627">物业管理专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=81&job_post=628">物业招商/租赁/租售 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=81&job_post=629">物业设施管理人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=81&job_post=630">物业机电工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=81&job_post=631">物业维修人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=81&job_post=632">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=80">房地产 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=80&job_post=616">房地产项目/开发/策划经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=80&job_post=617">房地产项目/开发/策划主管/专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=80&job_post=618">房产项目配套工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=80&job_post=619">房地产项目招投标 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=80&job_post=620">房地产评估 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=80&job_post=621">房地产中介/交易 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=80&job_post=622">房地产销售经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=80&job_post=623">房地产销售人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=80&job_post=624">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79">建筑装潢/市政建设 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=588">高级建筑工程师/总工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=589">建筑工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=590">建筑设计师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=591">市政工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=592">结构/土木/土建工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=593">公路/桥梁/港口/隧道工程 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=594">岩土工程 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=595">楼宇自动化 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=596">建筑机电工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=597">安防工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=598">给排水/暖通工程 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=599">幕墙工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=600">规划与设计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=601">室内外装潢设计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=602">园艺/园林/景观设计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=603">测绘/测量 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=604">建筑制图 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=605">开发报建 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=606">工程造价师/预结算经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=607">预结算员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=608">建筑工程管理/项目经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=609">建筑工程验收 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=610">工程监理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=611">合同管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=612">安全员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=613">资料员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=614">施工员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=41&job1_son=79&job_post=615">其他 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="6" id="jobclass6">
+          <div class="menu_main">
+            <h2>广告/市场/媒体/艺术 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=73">广告 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74">公关/媒介 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75">市场/营销 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76">影视/媒体 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77">写作/出版/印刷 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78">艺术/设计 </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;" id="jobclass_6">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=73">广告 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=73&job_post=502">广告客户总监/副总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=73&job_post=503">广告客户经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=73&job_post=504">广告客户主管/专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=73&job_post=505">广告创意/设计经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=73&job_post=506">广告创意总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=73&job_post=507">广告创意/设计主管/专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=73&job_post=508">美术指导 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=73&job_post=509">文案/策划 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=73&job_post=510">企业/业务发展经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=73&job_post=511">企业策划人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=73&job_post=512">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74">公关/媒介 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74&job_post=513">公关经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74&job_post=514">公关主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74&job_post=515">公关专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74&job_post=516">会务/会展经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74&job_post=517">会务/会展主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74&job_post=518">会务/会展专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74&job_post=519">媒介经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74&job_post=520">媒介主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74&job_post=521">媒介专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74&job_post=522">公关/媒介助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74&job_post=523">媒介销售 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74&job_post=524">活动策划 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=74&job_post=525">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75">市场/营销 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=526">市场/营销/拓展总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=527">市场/营销/拓展经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=528">市场/营销/拓展主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=529">市场/营销/拓展专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=530">市场助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=531">市场分析/调研人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=532">产品/品牌经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=533">产品/品牌主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=534">产品/品牌专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=535">市场通路经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=536">市场通路专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=537">市场企划经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=538">市场企划专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=539">促销经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=540">促销主管/督导 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=541">促销员/导购 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=542">选址拓展/新店开发 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=75&job_post=543">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76">影视/媒体 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76&job_post=544">影视策划/制作人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76&job_post=545">导演/编导 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76&job_post=546">艺术/设计总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76&job_post=547">经纪人/星探 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76&job_post=548">演员/模特/主持人 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76&job_post=549">摄影师/摄像师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76&job_post=550">后期制作 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76&job_post=551">音效师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76&job_post=552">配音员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76&job_post=553">放映经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76&job_post=554">放映员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76&job_post=555">化妆师/造型师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=76&job_post=556">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77">写作/出版/印刷 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=557">总编/副总编 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=558">编辑 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=559">作家/撰稿人 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=560">记者 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=561">电话采编 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=562">美术编辑 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=563">排版设计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=564">校对/录入 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=565">出版/发行 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=566">电分操作员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=567">印刷排版/制版 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=568">数码直印/菲林输出 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=569">打稿机操作员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=570">调墨技师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=571">印刷机械机长 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=572">晒版/拼版/装订/烫金技工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=77&job_post=573">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78">艺术/设计 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=574">平面设计总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=575">平面设计经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=576">平面设计师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=577">绘画 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=578">动画/3D设计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=579">原画师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=580">展览/展示/店面设计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=581">多媒体设计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=582">包装设计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=583">工业/产品设计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=584">工艺品/珠宝设计鉴定 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=585">家具/家居用品设计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=586">玩具设计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=40&job1_son=78&job_post=587">其他 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="7" id="jobclass7">
+          <div class="menu_main">
+            <h2>生物/制药/医疗/护理 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70">生物/制药/医疗器械 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72">医院/医疗/护理  </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;height:550px;" id="jobclass_7">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70">生物/制药/医疗器械 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=450">生物工程/生物制药 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=451">化学分析测试员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=452">医药技术研发管理人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=453">医药技术研发人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=454">临床研究员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=455">临床协调员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=456">临床数据分析员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=457">药品注册 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=458">药品生产/质量管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=459">药品市场推广经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=460">药品市场推广主管/专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=461">医药招商 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=462">政府事务管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=463">招投标管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=464">医药销售经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=465">医药销售代表 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=466">医疗设备注册 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=467">医疗设备生产/质量管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=468">医疗器械市场推广 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=469">医疗器械销售 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=470">医疗器械维修人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=70&job_post=471">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72">医院/医疗/护理  </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=481">医院管理人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=482">内科医生 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=483">外科医生 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=484">专科医生 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=485">牙科医生 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=486">麻醉医生 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=487">美容整形师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=488">理疗师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=489">中医科医生 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=490">针灸、推拿 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=491">儿科医生 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=492">心理医生 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=493">营养师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=494">药库主任/药剂师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=495">医药学检验 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=496">公共卫生/疾病控制 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=497">护理主任/护士长 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=498">护士/护理人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=499">兽医 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=500">验光师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=39&job1_son=72&job_post=501">其他 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="8" id="jobclass8">
+          <div class="menu_main">
+            <h2>销售/客服/技术支持 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53">销售管理 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=54">销售人员 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=55">销售行政及商务 </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;" id="jobclass_8">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53">销售管理 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=215">其他 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=214">团购经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=213">区域销售经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=212">区域销售总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=211">客户经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=210">大客户经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=209">渠道/分销主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=208">渠道/分销经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=207">渠道/分销总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=206">业务拓展主管/经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=205">销售主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=204">销售经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=203">版图设计工销售总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=202">变压器与磁电工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=201">电子/电器维修工程师/技师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=200">射频工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=199">电子技术研发工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=198">电子工程师/技术员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=197">IC验证工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=53&job_post=196">集成电路IC设计/应用工程师 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=54">销售人员 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=54&job_post=223">其他 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=54&job_post=222">经销商 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=54&job_post=221">团购业务员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=54&job_post=220">电话销售 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=54&job_post=219">销售工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=54&job_post=218">客户代表 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=54&job_post=217">渠道/分销专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=54&job_post=216">销售代表 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=55">销售行政及商务 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=55&job_post=230">商务助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=55&job_post=229">商务主管/专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=55&job_post=228">商务经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=55&job_post=227">业务分析专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=55&job_post=226">业务分析经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=55&job_post=225">销售行政专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=55&job_post=224">销售行政经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=36&job1_son=55&job_post=232">其他 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="9" id="jobclass9">
+          <div class="menu_main">
+            <h2>生产/营运/采购/物流 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61">生产/营运 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62">质量/安全管理 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63">工程/机械/能源 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64">汽车 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65">技工 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66">服装/纺织/皮革 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=67">采购 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=68">贸易 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69">物流/仓储  </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;" id="jobclass_9">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61">生产/营运 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61&job_post=312">工厂经理/厂长 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61&job_post=313">总工程师/副总工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61&job_post=314">项目总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61&job_post=315">项目经理/主管项目工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61&job_post=316">营运经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61&job_post=317">营运主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61&job_post=318">生产总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61&job_post=319">生产经理/车间主任 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61&job_post=320">生产计划/物料管理(PMC) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61&job_post=321">生产主管/督导/领班/组长 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61&job_post=322">生产文员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61&job_post=323">化验员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=61&job_post=324">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62">质量/安全管理 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62&job_post=325">质量管理/测试经理(QA/QC经理) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62&job_post=326">质量管理/测试主管(QA/QC主管) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62&job_post=327">质量管理/测试工程师(QA/QC工程师) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62&job_post=328">质量检验员/测试员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62&job_post=329">可靠度工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62&job_post=330">故障分析工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62&job_post=331">认证工程师/审核员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62&job_post=332">体系工程师/审核员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62&job_post=333">环境/健康/安全经理/主管（EHS） </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62&job_post=334">环境/健康/安全工程师（EHS） </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62&job_post=335">供应商管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62&job_post=336">采购材料、设备质量管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=62&job_post=337">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63">工程/机械/能源 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=338">电工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=339">维修经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=340">维修工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=341">装配工程师/技师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=342">铸造/锻造工程师/技师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=343">注塑工程师/技师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=344">焊接工程师/技师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=345">夹具工程师/技师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=346">CNC工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=347">冲压工程师/技师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=348">锅炉工程师/技师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=349">电力工程师/技术员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=350">光源与照明工程 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=351">汽车/摩托车工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=352">船舶工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=353">轨道交通工程师/技术员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=354">飞机维修机械师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=355">飞行器设计与制造 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=356">水利/水电工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=357">石油天然气技术人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=358">矿产勘探/地质勘测工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=63&job_post=359">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64">汽车 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=360">技术研发经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=361">技术研发工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=362">产品工艺/制程工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=363">产品规划工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=364">实验室负责人/工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=365">工程/设备经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=366">工程/设备主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=367">工程/设备工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=368">工程/机械绘图员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=369">工业工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=370">材料工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=371">机械工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=372">结构工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=373">模具工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=374">机汽车机构工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=375">汽车设计工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=376">汽车电子工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=377">汽车质量管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=378">汽车安全性能工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=379">汽车装配工艺工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=380">汽车修理人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=381">4S店经理/维修站经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=382">汽车销售/经纪人 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=383">二手车评估师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=64&job_post=384">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65">技工 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=385">技工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=386">钳工/机修工/钣金工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=387">电焊工/铆焊工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=388">车工/磨工/铣工/冲压工/锣工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=389">切割技工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=390">模具工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=391">电工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=392">叉车工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=393">空调工/电梯工/锅炉工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=394">水工/木工/漆工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=395">普工/操作工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=396">裁缝印纺熨烫 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=397">汽车修理工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=65&job_post=398">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66">服装/纺织/皮革 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66&job_post=399">服装/纺织设计总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66&job_post=400">服装/纺织设计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66&job_post=401">面料辅料开发 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66&job_post=402">面料辅料采购 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66&job_post=403">服装/纺织/皮革跟单 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66&job_post=404">质量管理/验货员(QA/QC) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66&job_post=405">板房/楦头/底格出格师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66&job_post=406">打样/制版 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66&job_post=407">电脑放码员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66&job_post=408">纸样师/车板工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66&job_post=409">裁床 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=66&job_post=410">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=67">采购 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=67&job_post=411">采购总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=67&job_post=412">采购经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=67&job_post=413">采购主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=67&job_post=414">采购员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=67&job_post=415">采购助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=67&job_post=416">买手 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=67&job_post=417">供应商开发 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=67&job_post=418">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=68">贸易 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=68&job_post=419">贸易/进出口经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=68&job_post=420">贸易/进出口专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=68&job_post=421">国内贸易人员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=68&job_post=422">业务跟单经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=68&job_post=423">高级业务跟单 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=68&job_post=424">业务跟单 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=68&job_post=425">助理业务跟单 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=68&job_post=426">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69">物流/仓储  </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=427">物流总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=428">物流经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=429">物流主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=430">物流专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=431">供应链总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=432">供应链经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=433">供应链主管/专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=434">物料经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=435">物料主管/专员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=436">仓库经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=437">仓库管理员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=438">运输经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=439">项目经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=440">货运代理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=441">集装箱业务 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=442">海关事务管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=443">报关员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=444">单证员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=445">船务/空运陆运操作 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=446">快递员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=447">调度员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=448">理货员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=38&job1_son=69&job_post=449">其他 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="10" id="jobclass10">
+          <div class="menu_main">
+            <h2>化工/能源 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71">化工/环保 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847">电气/能源/动力/矿产 </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;height:550px;" id="jobclass_10">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71">化工/环保 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=472">化工技术应用/化工工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=473">化工实验室研究员/技术员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=474">涂料研发工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=475">配色技术员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=476">塑料工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=477">化妆品研发 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=478">食品/饮料研发 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=479">造纸研发 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=480">其他 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=865">环保工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=866">污水处理工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=867">环境影响评价工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=868">环保检测 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=869">水质检测员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=71&job_post=870">固废工程师 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847">电气/能源/动力/矿产 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=850">电路工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=848">核力/火力工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=849">空调/热能工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=851">电力工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=852">电气维修技术员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=853">制冷/暖通工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=854">强电维修技工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=856">变压/变频/磁电 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=857">矿产勘探/地质勘测工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=858">煤矿/煤炭/煤化 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=859">电气工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=860">光源与照明工程 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=861">水利/水电工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=862">风电工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=863">光伏系统工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=836&job1_son=847&job_post=864">燃气轮机工程师 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="11" id="jobclass11">
+          <div class="menu_main">
+            <h2>机械/设备/技工 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906">机械/设备 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907">技工 </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;height:550px;" id="jobclass_11">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906">机械/设备 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=908">模具工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=909">机械工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=910">机电工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=911">铸造/锻造 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=912">冲压工程师/技师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=913">注塑工程师/技师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=914">CNC工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=915">轨道交通工程师/技术员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=916">锅炉工程师/技师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=917">船舶工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=918">飞行器设计与制造 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=919">夹具 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=920">工程/机械绘图员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=921">结构工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=922">设备工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=923">焊接 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=924">机械/设备维修 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=925">机床/车床 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=926">技术研发经理/主管  </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=927">技术研发工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=928">产品工艺/制程工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=929">产品规划工程师  </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=930">实验室负责人/工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=931">工程/设备经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=932">工业工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=933">材料工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=934">维修经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=935">维修工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=906&job_post=936">装配工程师/技师 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907">技工 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=952">操作工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=937">普工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=938">钣金工/机修工/冲压工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=939">电焊工/铆焊工/钳工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=940">车工/磨工/铣工锣工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=941">切割技工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=942">模具工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=943">铲车/叉车工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=944">空调工/电梯工/锅炉工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=945">电工/水工/木工/油漆工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=946">片皮工/铲皮工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=947">裁缝印纺熨烫 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=948">万能工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=949">油边工/台面工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=950">技工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=837&job1_son=907&job_post=951">汽车修理工 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="12" id="jobclass12">
+          <div class="menu_main">
+            <h2>通信/电子 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52">电子/电器/半导体/仪器仪表 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51">通信技术开发及应用 </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;height:550px;" id="jobclass_12">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52">电子/电器/半导体/仪器仪表 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=195">版图设计工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=194">测试工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=193">仪器/仪表/计量分析师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=192">家用电器/数码产品研发 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=191">工艺工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=190">FAE 现场应用工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=189">电池/电源开发 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=188">嵌入式硬件开发(主板机…) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=187">嵌入式软件开发(Linux/单片机/DLC/DSP…) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=186">电子软件开发(ARM/MCU...) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=185">自动控制工程师/技术员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=184">半导体技术 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=183">激光/光电子技术 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=182">电声/音响工程师/技术员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=181">电路工程师/技术员(模拟/数字) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=180">电气工程师/技术员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=179">IC验证工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=826">集成电路IC设计/应用工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=827">电子技术研发工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=828">射频工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=829">电子/电器维修工程师/技师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=830">变压器与磁电工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=52&job_post=831">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51">通信技术开发及应用 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51&job_post=178">其他 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51&job_post=177">手机应用开发工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51&job_post=176">手机软件开发工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51&job_post=175">增值产品开发工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51&job_post=174">通信电源工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51&job_post=173">电信网络工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51&job_post=172">移动通信工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51&job_post=171">数据通信工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51&job_post=170">电信交换工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51&job_post=169">无线通信工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51&job_post=168">有线传输工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=839&job1_son=51&job_post=167">通信技术工程师 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="13" id="jobclass13">
+          <div class="menu_main">
+            <h2>公务员/翻译/其他 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=96">公务员 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97">翻译 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=98">在校学生 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=99">储备干部/培训生/实习生 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=100">兼职 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=101">其他 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=102">环保 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=103">农/林/牧/渔  </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;" id="jobclass_13">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=96">公务员 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=96&job_post=785">公务员 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97">翻译 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97&job_post=786">英语翻译 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97&job_post=787">日语翻译 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97&job_post=788">德语翻译 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97&job_post=789">法语翻译 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97&job_post=790">俄语翻译 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97&job_post=791">意大利语翻译 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97&job_post=792">西班牙语翻译 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97&job_post=793">葡萄牙语翻译 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97&job_post=794">阿拉伯语翻译 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97&job_post=795">韩语/朝鲜语翻译 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97&job_post=796">泰语翻译 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97&job_post=797">中国方言翻译 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=97&job_post=798">其他语种翻译 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=98">在校学生 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=98&job_post=821">研究生 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=98&job_post=822">大学/大专应届毕业生 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=98&job_post=823">中专/职校生 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=98&job_post=824">其他 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=99">储备干部/培训生/实习生 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=99&job_post=800">储备干部 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=99&job_post=801">培训生 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=99&job_post=802">实习生 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=100">兼职 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=100&job_post=803">兼职 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=101">其他 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=101&job_post=804">驯兽师/助理驯兽师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=101&job_post=805">志愿者 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=101&job_post=806">其他  </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=102">环保 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=102&job_post=807">环保工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=102&job_post=808">环境影响评价工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=102&job_post=809">环保检测 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=102&job_post=810">水质检测员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=102&job_post=811">污水处理工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=102&job_post=812">固废工程师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=102&job_post=813">其它 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=103">农/林/牧/渔  </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=103&job_post=814">养殖部主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=103&job_post=815">场长(农/林/牧/渔业) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=103&job_post=816">农艺师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=103&job_post=817">畜牧师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=103&job_post=818">饲养员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=103&job_post=819">动物营养/饲料研发 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=45&job1_son=103&job_post=820">其他 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+                <div class="menu_box" aid="14" id="jobclass14">
+          <div class="menu_main">
+            <h2>贸易/百货 <span ></span></h2>
+
+             <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=844">服装/纺织/皮革 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845">百货/连锁/零售 </a>  <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=871">贸易 </a>  </div>
+          <div class="menu_sub dn" style="top: 0px;" id="jobclass_14">             <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=844">服装/纺织/皮革 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=844&job_post=889">电脑放码员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=844&job_post=890">纸样师/车板工4 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=844&job_post=881">服装/纺织设计总监 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=844&job_post=882">服装/纺织设计 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=844&job_post=883">服装/纺织/皮革工艺师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=844&job_post=884">面料辅料开发/采购 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=844&job_post=885">服装/纺织/皮革跟单 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=844&job_post=886">质量管理/验货员(QA/QC) </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=844&job_post=887">板房/楦头/底格出格师 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=844&job_post=888">打样/制版 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=844&job_post=891">裁床 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845">百货/连锁/零售 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=892">店长/卖场经理/楼面管理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=893">品类经理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=894">店员/营业员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=895">防损员/内保 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=896">收银主管/收银员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=897">理货员/陈列员/收货员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=898">导购员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=899">西点师/面包糕点加工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=900">生鲜食品加工/处理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=901">熟食加工 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=902">兼职店员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=903">店长助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=904">防损经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=845&job_post=905">安防主管 </a> 
+               </dd>
+            </dl>
+                        <dl class="reset">
+              <dt>
+             
+              		<a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=871">贸易 </a>
+              
+              </dt>
+              <dd> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=871&job_post=872">外贸/进出口经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=871&job_post=873">外贸/进出口专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=871&job_post=874">外贸/进出口专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=871&job_post=875">国内贸易经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=871&job_post=876">国内贸易专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=871&job_post=877">业务跟单经理/主管 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=871&job_post=878">业务跟单专员/助理 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=871&job_post=879">单证员 </a> 
+               
+            
+              <a href="http://localhost/qyhr/job/?c=search&job1=835&job1_son=871&job_post=880">报关/报检员 </a> 
+               </dd>
+            </dl>
+             </div>
+        </div>
+         </div>
+      <div class="subscribe"> <a href="http://localhost/qyhr/index.php?m=subscribe" target="_blank" rel="nofollow"> <span>订阅职位</span></a> </div>
+    </div>
+  </div>
+  <!--    index right-->
+  <div class="index_right_sidebar">
+    <div class="index_search fr mt20">
+      <div class="search_box">
+        <div class="select_wrap fl"> <span class="search_type_selected f18">职位</span> <span class="search_type_keyword"></span>
+          <div class="select_wrap_list" style="display:none"><span class="search_type_list f18" aid="job">职位</span><span class="search_type_list f18" aid="company" cid="search">公司</span></div>
+        </div>
+        <form method="get" action="index.php" onsubmit="return search_keyword(this);">
+          <input type="hidden" name="m" id="m" value="job" />
+          <input type="text" name="keyword" value="请输入职位名称，如：产品经理" onclick="if(this.value==window.KeywordTip.split('|')[0]||this.value==window.KeywordTip.split('|')[1]){this.value=''}" onblur="if(this.value==''){this.value=$('#m').val()=='job'?window.KeywordTip.split('|')[0]:window.KeywordTip.split('|')[1];}" placeholder="请输入职位名称，如：产品经理" class="index_search-input fl" >
+          <input type="submit" value=" 搜索" class="index_search-bth fr">
+        </form>
+      </div>
+      <div class="index_search_tag c6  mt15">热门： </div>
+    </div>
+    <div class="clear"></div>
+    <div class="index_right_cont">
+      <div class="slideCon">
+        <div class="Projector">
+          <div class="Projector_img">
+            <div id="slides" class="s_lb">
+              <div class="slides_container">                 <div class="slide"><a href='http://localhost/index.php?c=clickHits&id=1' rel='nofollow'><img src='http://localhost/data/upload/pimg/20150623/14428064404.JPG' height='248' width='510' ></a></div>
+                 </div>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="index_Switching"><span class="index_Switching_icon fl"></span>名企招聘</div>
+        <div class="index_Switching_cont">
+          <div class="index_Switching_cont_box">             
+             </div>
+        </div>
+        <div class="clear"></div>
+        <ul class="index_post_ul">
+          <li class="index_post_ul_cur" tab_name="latest">推荐职位 </li>
+          <li tab_name="introself"> 最新职位</li>
+        </ul>
+        <ul class="index_new_job mt10" id="latest">
+                  </ul>
+        <ul class="index_new_job mt10" style="display:none;" id="introself">
+                  </ul>
+        <div class="clear"></div>
+        <div class="index_Switching"><span class="index_Switching_icon fl"></span>友情链接</div>
+        <div class="index_link fl">  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+$(document).ready(function(){
+	$(".index_new_job li").hover(function(){
+		var aid=$(this).attr("aid");
+		$("#joblist"+aid).addClass("index_new_job_hover");	
+	},function(){
+		var aid=$(this).attr("aid");
+		$("#joblist"+aid).removeClass("index_new_job_hover");	
+	})   
+	
+	$(".menu_box").hover(function(){
+		var aid=$(this).attr("aid");
+		var ftop=Number($(this).offset().top); 
+		var sheight=Number($("#jobclass_"+aid).height());  
+		if(aid=='0'){ 
+			$("#jobclass_"+aid).css("top","0px"); 
+		}else if(sheight>ftop){ 
+			$("#jobclass_"+aid).css("top","0px"); 
+		}else if(ftop>sheight&&Number(sheight)<250){  
+			var isIE6=!window.XMLHttpRequest;
+			if (isIE6){
+				var top=Number(ftop)-Number(99);
+			}else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/9./i)=="9."){
+				var top=Number(ftop)-Number(94);
+			}else{ 
+				var top=Number(ftop)-Number(94);
+			}  
+			$("#jobclass_"+aid).css("top",top+"px"); 
+ 		}else if(Number(sheight)>250){ 
+			var top=Number(ftop)-Number(220);
+			$("#jobclass_"+aid).css("top",top+"px"); 
+		} 
+		$("#jobclass"+aid).addClass("current");	
+		$("#jobclass_"+aid).attr("class","menu_sub db");
+	},function(){
+		var aid=$(this).attr("aid");
+		$("#jobclass"+aid).removeClass("current");	
+		$("#jobclass_"+aid).attr("class","menu_sub dn");	
+	})  
+	$(".select_wrap").hover(function(){
+		$(".select_wrap_list").show();
+	},function(){
+		$(".select_wrap_list").hide();
+	})  
+	window.KeywordTip='请输入职位名称，如：飞行签派员|请输入公司名称，如：国际航空';
+	$(".search_type_list").click(function(){
+		var aid=$(this).attr("aid");
+		var cid=$(this).attr("cid")
+		var name=$(this).html();
+		$("#m").val(aid);		
+		if(cid){
+			$('#m').append('<input type="hidden" value="'+cid+'">');			
+		}
+		$(".search_type_selected").html(name);
+		$(".select_wrap_list").hide();
+		$('input[name=keyword]').val(window.KeywordTip.split('|')[$(this).index()%2]);
+		$('input[name=keyword]').attr('placeholder',window.KeywordTip.split('|')[$(this).index()%2]);
+	});
+	$("#slides").slides({
+		preload: true,
+		preloadImage: 'http://localhost/qyhr/app/template/hy/images/loading.gif',
+		play: 5000,
+		pause: 2500,
+		hoverPause: true
+	});
+
+})
+function search_keyword(myform){
+	var keyword=myform.keyword.value;
+	var placeholder=myform.keyword.placeholder;
+	if(placeholder==keyword&&keyword){
+		myform.keyword.value='';
+	}
+}
+</script> 
+<!--------------------------------弹出框-------------------------------------->
+<!--职位类别start-->
+<div class="sPopupDiv" id="jobdiv" style="display:none; float:left;"></div>
+<!--职位类别end--> 
+
+<!--工作地点start-->
+<div class="sPopupDiv" id="citydiv" style="display:none"></div>
+<!--工作地点end--> 
+
+<!--行业类别start-->
+<div class="sPopupDiv" id="industrydiv" style="display:none"></div>
+<!--行业类别end--> 
+
+
+<!--foot  start-->
+
+<div class="clear"></div>
+<div class="footer">
+  <div class="foot">
+    <div class="foot_conent">
+      <div class="footer_left">         <dl class="footer_list">
+          <dt>关于我们</dt>
+          <dd>
+            <ul>
+                            <li><a 
+                            href="http://localhost/qyhr/about/index.html"
+                              title="关于我们">关于我们</a></li>
+                            <li><a 
+                            href="http://localhost/qyhr/about/service.html"
+                              title="注册协议">注册协议</a></li>
+                            <li><a 
+                            href="http://localhost/qyhr/about/phpyun.html"
+                              title="法律声明">法律声明</a></li>
+                          </ul>
+          </dd>
+        </dl>
+                <dl class="footer_list">
+          <dt>支付信息</dt>
+          <dd>
+            <ul>
+                            <li><a 
+                            href="http://localhost/qyhr/about/yh.html"
+                              title="银行帐户">银行帐户</a></li>
+                            <li><a 
+                            href="http://localhost/qyhr/about/pinpai.html"
+                              title="品牌推广">品牌推广</a></li>
+                            <li><a 
+                            href="http://localhost/qyhr/about/charge.html"
+                              title="收费标准">收费标准</a></li>
+                            <li><a 
+                            href="http://localhost/qyhr/about/indexzy.html"
+                              title="经营资源">经营资源</a></li>
+                          </ul>
+          </dd>
+        </dl>
+                <dl class="footer_list">
+          <dt>网站特色</dt>
+          <dd>
+            <ul>
+                            <li><a 
+                            href="index.php?m=redeem"
+                              title="积分兑换">积分兑换</a></li>
+                            <li><a 
+                            href="index.php?m=subscribe"
+                              title="订阅服务">订阅服务</a></li>
+                          </ul>
+          </dd>
+        </dl>
+                <dl class="footer_list">
+          <dt>咨询反馈</dt>
+          <dd>
+            <ul>
+                            <li><a 
+                            href="http://localhost/qyhr/about/kf.html"
+                              title="客服中心">客服中心</a></li>
+                            <li><a 
+                            href="http://localhost/qyhr/about/gg.html"
+                              title="广告投放">广告投放</a></li>
+                            <li><a 
+                            href="http://localhost/qyhr/about/newuser.html"
+                              title="新手指引">新手指引</a></li>
+                          </ul>
+          </dd>
+        </dl>
+                <dl class="footer_list">
+          <dt>特色服务</dt>
+          <dd>
+            <ul>
+                            <li><a 
+                            href="http://localhost/qyhr/about/jinjia.html"
+                              title="竟价职位">竟价职位</a></li>
+                            <li><a 
+                            href="http://localhost/qyhr/about/map.html"
+                              title="地图搜索">地图搜索</a></li>
+                            <li><a 
+                            href="http://localhost/qyhr/about/new.html"
+                              title="职场指南">职场指南</a></li>
+                          </ul>
+          </dd>
+        </dl>
+         </div>
+       <div class="footer_right" style="text-align:left">
+        <div class="footer_touch">服务热线</div>
+        <div class="footer_tel">400-880-5523</div>
+        
+        <ul class="footer_last">
+                  
+          <li style="width:70px; float:left; margin-top:5px; text-align:left"> <a class="move_03" style="color: #ff0000"  target="_blank" href="http://localhost/qyhr/index.php?c=weixin" target="_blank">微信</a> </li>
+                  </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="footer_bot">
+      <div class="footer_bot_p">Copyright C 20092014 All Rights Reserved 版权所有 鑫潮人力资源服务苏ICP备12049413号-3 </div>
+      <div class="footer_bot_p">	地址:江苏省沭阳县软件园B栋10楼  电话(Tel):400-880-5523  EMAIL:admin@admin.com</div>
+      <div class="footer_img"> 
+      <a href="/"><img alt="" src="http://localhost/qyhr/app/template/hy/images/ftImg01.png" width="120" height="52"> </a> 
+      <a href="/"><img alt="" src="http://localhost/qyhr/app/template/hy/images/ftImg02.png" width="120" height="52"> </a> 
+      <a href="/"><img alt="" src="http://localhost/qyhr/app/template/hy/images/ftImg03.png" width="120" height="52"> </a> 
+	  
+      </div>
+    </div>
+  </div>
+</div>
+<!--foot  end--> 
+<div id="bg" style=""></div>
+<div id="uclogin" style="display:none"></div>
+<script>var integral_pricename='积分';var weburl="http://localhost/qyhr"; </script>
+</body>
+</html> 
+<?php }} ?>

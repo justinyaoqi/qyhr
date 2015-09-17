@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{yun:}$title{/yun}</title>
+<meta name="keywords" content="{yun:}$keywords{/yun}" />
+<meta name="description" content="{yun:}$description{/yun}" />
+<link rel="stylesheet" href="{yun:}$style{/yun}/style/css.css" type="text/css" />
+<link rel="stylesheet" href="{yun:}$style{/yun}/style/hy.css" type="text/css" />
+<link rel="stylesheet" href="{yun:}$style{/yun}/style/index.css" type="text/css">
+<!--[if IE 6]>
+<script src="{yun:}$config.sy_weburl{/yun}/js/png.js"></script>
+<script>
+DD_belatedPNG.fix('.png,.pagination li a');
+</script>
+<![endif]-->
+<script src="{yun:}$config.sy_weburl{/yun}/js/jquery-1.8.0.min.js" language="javascript"></script>
+<script src="{yun:}$config.sy_weburl{/yun}/js/layer/layer.min.js" language="javascript"></script>
+<script src="{yun:}$config.sy_weburl{/yun}/js/lazyload.min.js" language="javascript"></script>
+<script src="{yun:}$config.sy_weburl{/yun}/js/public.js" language="javascript"></script>
+<script src="{yun:}$style{/yun}/js/reg_ajax.js" type="text/javascript"></script>
+<script src="{yun:}$style{/yun}/js/index.js" language="javascript"></script>
+<script src="{yun:}$config.sy_weburl{/yun}/js/search.js" type="text/javascript"></script>
+<script src="{yun:}$config.sy_weburl{/yun}/js/slides.jquery.js" type="text/javascript"></script>
+</head>
+<body class="index_body_box">
+{yun:}include file="$tplstyle/header.htm"{/yun} 
+<script>
+    $(document).ready(function(){       
+        $('.index_header_seach_find').delegate('#search_name','click',function(){$(this).next().show();});
+		$("img.lazy").lazyload();
+    });
+		$(document).ready(function(){
+	$(".index_post_ul").find("li").bind("click",function(){var id=$(this).attr("tab_name");$(".index_new_job").hide();$(".index_post_ul_cur").removeClass("index_post_ul_cur");$(this).addClass("index_post_ul_cur");$("#"+id).show();});
+	});
+</script> 
+<!--content  start-->
+
+<div class="index_cont">
+<div class="w980"> 
+  <!--leftnav-->
+  <div class="left_sidebar"> 
+
+    <div id="sidebar">
+      <div class="mainNavs"> 
+        <!--放上去current--> 
+        {yun:}foreach item=v key=key from=$job_index{/yun}
+        <div class="menu_box" aid="{yun:}$key{/yun}" id="jobclass{yun:}$key{/yun}">
+          <div class="menu_main">
+            <h2>{yun:}$job_name[$v]{/yun} <span ></span></h2>
+
+            {yun:}foreach item=vv from=$job_type[$v]{/yun} <a href="{yun:}$jobclassurl{/yun}job1={yun:}$v{/yun}&job1_son={yun:}$vv{/yun}">{yun:}$job_name[$vv]{/yun} </a> {yun:}/foreach{/yun} </div>
+          <div class="menu_sub dn" style="top: 0px;{yun:}if count($job_type[$v])<3{/yun}height:550px;{yun:}/if{/yun}" id="jobclass_{yun:}$key{/yun}"> {yun:}foreach item=vvl from=$job_type[$v]{/yun}
+            <dl class="reset">
+              <dt>
+             
+              		<a href="{yun:}$jobclassurl{/yun}job1={yun:}$v{/yun}&job1_son={yun:}$vvl{/yun}">{yun:}$job_name[$vvl]{/yun} </a>
+              
+              </dt>
+              <dd> 
+              {yun:}foreach item=vvv from=$job_type[$vvl]{/yun} 
+            
+              <a href="{yun:}$jobclassurl{/yun}job1={yun:}$v{/yun}&job1_son={yun:}$vvl{/yun}&job_post={yun:}$vvv{/yun}">{yun:}$job_name[$vvv]{/yun} </a> 
+              {yun:}/foreach{/yun} </dd>
+            </dl>
+            {yun:}/foreach{/yun} </div>
+        </div>
+        {yun:}/foreach{/yun} </div>
+      <div class="subscribe"> <a href="{yun:}$config.sy_weburl{/yun}/index.php?m=subscribe" target="_blank" rel="nofollow"> <span>订阅职位</span></a> </div>
+    </div>
+  </div>
+  <!--    index right-->
+  <div class="index_right_sidebar">
+    <div class="index_search fr mt20">
+      <div class="search_box">
+        <div class="select_wrap fl"> <span class="search_type_selected f18">职位</span> <span class="search_type_keyword"></span>
+          <div class="select_wrap_list" style="display:none"><span class="search_type_list f18" aid="job">职位</span><span class="search_type_list f18" aid="company" cid="search">公司</span></div>
+        </div>
+        <form method="get" action="index.php" onsubmit="return search_keyword(this);">
+          <input type="hidden" name="m" id="m" value="job" />
+          <input type="text" name="keyword" value="请输入职位名称，如：产品经理" onclick="if(this.value==window.KeywordTip.split('|')[0]||this.value==window.KeywordTip.split('|')[1]){this.value=''}" onblur="if(this.value==''){this.value=$('#m').val()=='job'?window.KeywordTip.split('|')[0]:window.KeywordTip.split('|')[1];}" placeholder="请输入职位名称，如：产品经理" class="index_search-input fl" >
+          <input type="submit" value=" 搜索" class="index_search-bth fr">
+        </form>
+      </div>
+      <div class="index_search_tag c6  mt15">热门：{yun:}key limit=6 recom=1 item=top_key{/yun} <a href="{yun:}$top_key.url{/yun}">{yun:}$top_key.key_name{/yun}</a>{yun:}/key{/yun} </div>
+    </div>
+    <div class="clear"></div>
+    <div class="index_right_cont">
+      <div class="slideCon">
+        <div class="Projector">
+          <div class="Projector_img">
+            <div id="slides" class="s_lb">
+              <div class="slides_container"> {yun:}adlist classid=3 item="lunbo" key=key{/yun}
+                <div class="slide">{yun:}$lunbo.html{/yun}</div>
+                {yun:}/adlist{/yun} </div>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="index_Switching"><span class="index_Switching_icon fl"></span>名企招聘</div>
+        <div class="index_Switching_cont">
+          <div class="index_Switching_cont_box"> {yun:}hotjob item=hotjob limit=4 name=hotjob key=key{/yun}
+            <div class="index_Switching_ban fl"><a href="{yun:}url m=company c=show id=$hotjob.uid{/yun}"><img  src="{yun:}$config.sy_weburl{/yun}/{yun:}$hotjob.hot_pic{/yun}" width="170" height="90"></a></div>
+            {yun:}/hotjob{/yun}
+            
+            {yun:}hotjob item=hotjobs limit=11 name=hotjobs key=key{/yun}
+            {yun:}if $key>4{/yun}
+            <div class="index_Switching_ban index_Switching_ban_w111 fl"><a href="{yun:}url m=company c=show id=$hotjobs.uid{/yun}"><img  src="{yun:}$config.sy_weburl{/yun}/{yun:}$hotjobs.hot_pic{/yun}" width="109" height="109"></a></div>
+            {yun:}/if{/yun}
+            {yun:}/hotjob{/yun} </div>
+        </div>
+        <div class="clear"></div>
+        <ul class="index_post_ul">
+          <li class="index_post_ul_cur" tab_name="latest">推荐职位 </li>
+          <li tab_name="introself"> 最新职位</li>
+        </ul>
+        <ul class="index_new_job mt10" id="latest">
+          {yun:}joblist rec=1 limit=14 comlen=15 namelen=13 item=hjob key=key{/yun}
+          <li class="">
+            <div class="index_new_job_tit fl"><a href="{yun:}$hjob.job_url{/yun}" class="index_new_job_name fl f16">{yun:}$hjob.name_n{/yun}</a> <span class="index_new_job_city fl">[{yun:}$hjob.job_city_one{/yun}]</span><em class="index_new_job_date fr">{yun:}$hjob.time{/yun}</em></div>
+            <div class="index_new_job_tit fl mt15"> <span class="index_new_job_bt">薪资：</span> <span class="index_new_job_xz cf6">{yun:}$hjob.job_salary{/yun}</span> <span class="index_new_job_bt index_new_job_bt_l30">经验：</span> <span class="index_new_job_xz ">{yun:}$hjob.job_exp{/yun} </span> <span class="index_new_job_bt index_new_job_bt_l30">最低学历：</span> <span class="index_new_job_xz ">{yun:}$hjob.job_edu{/yun} </span> <a href="{yun:}$hjob.com_url{/yun}" class="cblue  index_new_job_bt_l30">{yun:}$hjob.com_n{/yun}</a> </div>
+          </li>
+          {yun:}/joblist{/yun}
+        </ul>
+        <ul class="index_new_job mt10" style="display:none;" id="introself">
+          {yun:}joblist  limit=14 comlen=15 namelen=13 item=jobl key=key{/yun}
+          <li class="">
+            <div class="index_new_job_tit fl"><a href="{yun:}$job1.job_url{/yun}" class="index_new_job_name fl f16">{yun:}$jobl.name_n{/yun}</a> <span class="index_new_job_city fl">[{yun:}$hjob.job_city_one{/yun}]</span><em class="index_new_job_date fr">{yun:}$jobl.time{/yun}</em></div>
+            <div class="index_new_job_tit fl mt15"> <span class="index_new_job_bt">薪资：</span> <span class="index_new_job_xz cf6">{yun:}$jobl.job_salary{/yun}</span> <span class="index_new_job_bt index_new_job_bt_l30">经验：</span> <span class="index_new_job_xz ">{yun:}$jobl.job_exp{/yun} </span> <span class="index_new_job_bt index_new_job_bt_l30">最低学历：</span> <span class="index_new_job_xz ">{yun:}$jobl.job_edu{/yun} </span> <a href="{yun:}$job1.com_url{/yun}" class="cblue  index_new_job_bt_l30">{yun:}$jobl.com_n{/yun}</a> </div>
+          </li>
+          {yun:}/joblist{/yun}
+        </ul>
+        <div class="clear"></div>
+        <div class="index_Switching"><span class="index_Switching_icon fl"></span>友情链接</div>
+        <div class="index_link fl"> {yun:}link type=1 tem_type=2 item=link1 key=key{/yun}
+          {yun:}if $key>0{/yun}<span>|</span>{yun:}/if{/yun}<a href="{yun:}$link1.link_url{/yun}" target="_blank" class="index_link_a">{yun:}$link1.link_name{/yun}</a> {yun:}/link{/yun} </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+$(document).ready(function(){
+	$(".index_new_job li").hover(function(){
+		var aid=$(this).attr("aid");
+		$("#joblist"+aid).addClass("index_new_job_hover");	
+	},function(){
+		var aid=$(this).attr("aid");
+		$("#joblist"+aid).removeClass("index_new_job_hover");	
+	})   
+	
+	$(".menu_box").hover(function(){
+		var aid=$(this).attr("aid");
+		var ftop=Number($(this).offset().top); 
+		var sheight=Number($("#jobclass_"+aid).height());  
+		if(aid=='0'){ 
+			$("#jobclass_"+aid).css("top","0px"); 
+		}else if(sheight>ftop){ 
+			$("#jobclass_"+aid).css("top","0px"); 
+		}else if(ftop>sheight&&Number(sheight)<250){  
+			var isIE6=!window.XMLHttpRequest;
+			if (isIE6){
+				var top=Number(ftop)-Number(99);
+			}else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/9./i)=="9."){
+				var top=Number(ftop)-Number(94);
+			}else{ 
+				var top=Number(ftop)-Number(94);
+			}  
+			$("#jobclass_"+aid).css("top",top+"px"); 
+ 		}else if(Number(sheight)>250){ 
+			var top=Number(ftop)-Number(220);
+			$("#jobclass_"+aid).css("top",top+"px"); 
+		} 
+		$("#jobclass"+aid).addClass("current");	
+		$("#jobclass_"+aid).attr("class","menu_sub db");
+	},function(){
+		var aid=$(this).attr("aid");
+		$("#jobclass"+aid).removeClass("current");	
+		$("#jobclass_"+aid).attr("class","menu_sub dn");	
+	})  
+	$(".select_wrap").hover(function(){
+		$(".select_wrap_list").show();
+	},function(){
+		$(".select_wrap_list").hide();
+	})  
+	window.KeywordTip='请输入职位名称，如：飞行签派员|请输入公司名称，如：国际航空';
+	$(".search_type_list").click(function(){
+		var aid=$(this).attr("aid");
+		var cid=$(this).attr("cid")
+		var name=$(this).html();
+		$("#m").val(aid);		
+		if(cid){
+			$('#m').append('<input type="hidden" value="'+cid+'">');			
+		}
+		$(".search_type_selected").html(name);
+		$(".select_wrap_list").hide();
+		$('input[name=keyword]').val(window.KeywordTip.split('|')[$(this).index()%2]);
+		$('input[name=keyword]').attr('placeholder',window.KeywordTip.split('|')[$(this).index()%2]);
+	});
+	$("#slides").slides({
+		preload: true,
+		preloadImage: '{yun:}$style{/yun}/images/loading.gif',
+		play: 5000,
+		pause: 2500,
+		hoverPause: true
+	});
+
+})
+function search_keyword(myform){
+	var keyword=myform.keyword.value;
+	var placeholder=myform.keyword.placeholder;
+	if(placeholder==keyword&&keyword){
+		myform.keyword.value='';
+	}
+}
+</script> 
+{yun:}include file="$tplstyle/public_search/index_search.htm"{/yun}
+{yun:}include file="$tplstyle/footer.htm"{/yun} 

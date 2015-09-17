@@ -1,0 +1,28 @@
+<?php defined('IN_TS') or die('Access Denied.'); ?><?php include template('header'); ?>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3">
+			
+		</div>
+		<div class="col-lg-6">
+			<div class="bbox">
+				<div class="btitle">
+					<?php echo $title;?>->分类下的小组
+				<div class="bc commlist">
+					<ul>
+					<?php foreach((array)$arrCateGroup as $key=>$item) {?>
+					    <li><a href="{}tsUrl('group','show',array('id'=><?php echo $item['groupid'];?>))}"><?php echo $item['groupname'];?></a> By <a href="<?php echo tsurl('user','space',array('id'=>$item['user']['userid']))?>"><?php echo $item['user']['username'];?></a></li>
+	
+					<?php }?>
+
+					</ul>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3">
+			
+		</div>
+	</div>
+</div>
+<?php include template('footer'); ?>

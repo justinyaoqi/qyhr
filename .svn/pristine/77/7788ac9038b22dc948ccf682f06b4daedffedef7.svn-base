@@ -1,0 +1,66 @@
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-08-25 19:57:21
+         compiled from "D:\wamp\www\\app\template\wap\footer.htm" */ ?>
+<?php /*%%SmartyHeaderCode:2014455dc5821290950-95822352%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '8663edada4afa5b6669f803ceba3fead1f44be0c' => 
+    array (
+      0 => 'D:\\wamp\\www\\\\app\\template\\wap\\footer.htm',
+      1 => 1434641053,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2014455dc5821290950-95822352',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'cookie' => 0,
+    'config' => 0,
+    'layer' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55dc58212eae04_36340404',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_55dc58212eae04_36340404')) {function content_55dc58212eae04_36340404($_smarty_tpl) {?><?php if (!is_callable('smarty_function_url')) include 'D:\\wamp\\www\\app\\include\\libs\\plugins\\function.url.php';
+?><footer>
+<div class="footer">
+<div class="footer_t">
+<?php if (!$_smarty_tpl->tpl_vars['cookie']->value['username']) {?> 
+<a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'register'),$_smarty_tpl);?>
+">注册</a><em class="line">|</em><a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'login'),$_smarty_tpl);?>
+">登录</a> 
+<?php } else { ?>
+<span class="footer_member_span_a">你好！</span><span class="footer_member_span"><?php echo $_smarty_tpl->tpl_vars['cookie']->value['username'];?>
+</span><a href="<?php echo smarty_function_url(array('m'=>'wap'),$_smarty_tpl);?>
+/member" class="footer_member">进入用户中心>></a><a href="javascript:;" onclick="islogout('<?php echo smarty_function_url(array('m'=>'wap','c'=>'loginout'),$_smarty_tpl);?>
+','确认退出吗？');" class="footer_member_out">退出</a> 
+<?php }?>
+<a href="#"><div class="footer_top"><i class="fa fa-angle-up"></i></div></a></div>
+<div class="footer_bot"><?php echo $_smarty_tpl->tpl_vars['config']->value['sy_webcopyright'];
+echo $_smarty_tpl->tpl_vars['config']->value['sy_webrecord'];?>
+ <br></div>
+</div>
+</footer> 
+<?php if ($_smarty_tpl->tpl_vars['layer']->value) {?>
+<input id="layermsg" value="<?php echo $_smarty_tpl->tpl_vars['layer']->value['msg'];?>
+" type="hidden">
+<input id="layerurl" value="<?php echo $_smarty_tpl->tpl_vars['layer']->value['url'];?>
+" type="hidden">
+<?php echo '<script'; ?>
+>window.onload=islayer(); <?php echo '</script'; ?>
+>
+<?php }?>
+<?php echo '<script'; ?>
+>wapurl="<?php echo smarty_function_url(array('m'=>'wap'),$_smarty_tpl);?>
+";<?php echo '</script'; ?>
+>  
+<?php echo '<script'; ?>
+>var weburl="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+"<?php echo '</script'; ?>
+>
+</body>
+</html><?php }} ?>

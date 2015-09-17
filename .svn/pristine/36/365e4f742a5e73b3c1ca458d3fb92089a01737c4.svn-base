@@ -1,0 +1,11 @@
+<?php
+defined('IN_TS') or die('Access Denied.');
+return array (
+  'appname' => '赞庆阳吧',
+  'appdesc' => '比比赞吧，比比赞小组，比比赞圈子，生活圈子',
+  'appkey' => '比比赞吧，比比赞小组，比比赞圈子，生活圈子，庆阳圈子',
+  'iscreate' => '0',
+  'isaudit' => '1',
+  'joinnum' => '20',
+  'isallowpost' => '0',
+);

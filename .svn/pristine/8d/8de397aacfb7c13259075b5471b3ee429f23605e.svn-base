@@ -1,0 +1,32 @@
+<?php 
+
+
+
+
+/**
+* 
+*/
+class ask_controller extends common
+{
+	
+		function index_action()
+		{
+			$this->rightinfo();
+			$this->get_moblie();
+
+			//这里是微信
+			$jssdk = new JSSDK();
+            $WxData = $jssdk->getSignPackage();
+            $this->yunset("wxAppid",$WxData['appId']);
+            $this->yunset('wxNonceStr',$WxData['nonceStr']);
+            $this->yunset('wxTimestamp',$WxData['timestamp']);
+            $this->yunset('wxSignature',$WxData['signature']);
+
+
+		}
+}
+
+
+
+
+ ?>

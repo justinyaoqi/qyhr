@@ -1,0 +1,15 @@
+<?php 
+defined('IN_TS') or die('Access Denied.');
+//插件信息
+return array(
+	'name' => '微信登陆',//插件名称
+	'version' => '1.0',//插件版本号
+	'desc' => '微信登陆插件',//插件介绍
+	'url' => '517730120@qq.com',//开发者Emial
+	'author' => '姚琦',//开发者
+	'author_url' => 'http://www.thinksaas.cn',
+	'isedit'	=> '1',//是否可编辑：0不可以1可以
+);
+
+
+ ?>

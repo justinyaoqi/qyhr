@@ -1,0 +1,35 @@
+<?php 
+defined('IN_TS') or die('Access Denied.');
+$arrOptions = $new['wechat']->findAll('wx_config');
+require 'wechat.php';
+$options = array(
+ 			'token'=>$arrOptions[0]['token'], //填写你设定的key
+ 			'encodingaeskey'=>$arrOptions[0]['encodingaeskey'], //填写加密用的EncodingAESKey
+ 			'appid'=>$arrOptions[0]['appid'], //填写高级调用功能的app id
+ 			'appsecret'=>$arrOptions[0]['appsecret'] //填写高级调用功能的密钥
+ 		);
+
+
+$weObj = new Wechats($options);
+var_dump($weObj);
+    $weObj->valid();
+    
+    $type = $weObj->getRev()->getRevType();
+    switch($type) {
+    		 //定义文本内容
+    		case Wechat::MSGTYPE_TEXT:
+    			
+   			$weObj->text("hello, I'm wechat")->reply();
+    			exit;
+    			break;
+    		case Wechat::MSGTYPE_EVENT:
+    			echo "string";
+    			break;
+    		case Wechat::MSGTYPE_IMAGE:
+    			echo "string";
+   			break;
+    		default:
+    			$weObj->text("help info")->reply();
+    }
+ 
+ ?>

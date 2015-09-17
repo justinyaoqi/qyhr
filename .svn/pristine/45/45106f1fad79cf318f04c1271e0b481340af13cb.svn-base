@@ -1,0 +1,5 @@
+TIME:2015-02-02 :16:14:03
+SQL:SELECT * FROM ts_area_province  
+ERROR:Table 'zanqy.ts_area_province' doesn't exist
+REQUEST_URI:/index.php?app=my&ac=setting&ts=city
+--------------------------------------

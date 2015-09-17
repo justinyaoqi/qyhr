@@ -1,0 +1,15 @@
+<?php
+defined('IN_TS') or die('Access Denied.');
+function hottopic() {
+
+	$arrHotTopics = aac('group')->getHotTopic(15);
+	foreach ($arrHotTopics as $key => $item) {
+		$arrHotTopic[]= $item;
+		$arrHotTopic[$key]['title']=cututf8 ( t(tsDecode ( $item ['title'] )), 0, 22 );
+		$arrHotTopic[$key]['count_view']=$item['count_view'];
+	}
+
+include template('hottopic','hottopic');
+}
+
+addAction('home_index_right', 'hottopic');

@@ -1,0 +1,34 @@
+<div class="bbox hidden-xs">
+    <div class="btitle">最新话题</div>
+    <ul class ="list-group" style="">
+        {loop $arrTopic $key $item}
+        <li class="list-group-item " style="padding:10px 10px;">
+            <div class="media" style="">
+                <div class="media-left">
+                    <a href="{tsUrl('user','space',array('id'=>$item[user][userid]))}"><img class="img-circle" src="{$item[user][face]}" width="32" height="32" alt="{$item['user']['username']}" title="{$item['user']['username']}" />
+                    </a>
+                </div>
+                <div class="media-body">
+                    <div class="media-heading">
+                        <strong><a style="font-size:13px;color:#222" title="{$item[title]}" href="{tsUrl('group','topic',array('id'=>$item[topicid]))}">{$item[title]}</a></strong>
+                    </div>
+                    <div>
+                        <p style="font-size:12px;line-height:20px;color:#333;">{$item['content']}</p>
+                    </div>
+                    <div class="topic_info">
+                        <span>
+                            <a style="color:#666" href="{tsUrl('group','show',array('id'=>$item[groupid]))}">{$item[group][groupname]}</a>
+                        </span>
+                        <span >
+                            {php echo getTime($item[uptime],time())}
+                            
+                            {if $item[count_comment]>0}<a class="rank" style="color:#FFFFFF;" href="{tsUrl('group','topic',array('id'=>$item[topicid]))}">{$item[count_comment]}</a>{/if}
+                        </span>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </li>
+        {/loop}
+    </ul>
+</div>

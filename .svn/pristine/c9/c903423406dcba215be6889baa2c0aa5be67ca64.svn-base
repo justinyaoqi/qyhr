@@ -1,0 +1,1022 @@
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-08-20 23:33:14
+         compiled from "D:\wamp\www\\app\template\hy\article\list.htm" */ ?>
+<?php /*%%SmartyHeaderCode:1595455d5f33a721062-54862805%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '2c1c535e3b402da3721dc27f4b24b3cb135ec12a' => 
+    array (
+      0 => 'D:\\wamp\\www\\\\app\\template\\hy\\article\\list.htm',
+      1 => 1435582426,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1595455d5f33a721062-54862805',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'title' => 0,
+    'keywords' => 0,
+    'description' => 0,
+    'style' => 0,
+    'config' => 0,
+    'classname' => 0,
+    'news' => 0,
+    'pagenav' => 0,
+    'news_jian' => 0,
+    'news_hits' => 0,
+    'indexnews1' => 0,
+    'indexnews2' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55d5f33a896360_15203997',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_55d5f33a896360_15203997')) {function content_55d5f33a896360_15203997($_smarty_tpl) {?><?php global $db,$db_config,$config;include PLUS_PATH.'/group.cache.php';$news=array();$rs=null;$nids=null;eval('$paramer=array("nid"=>"\'auto.nid\'","ispage"=>"1","urlstatic"=>"1","limit"=>"10","t_len"=>"30","item"=>"\'news\'","nocache"=>"")
+;');
+		$ParamerArr = GetSmarty($paramer,$_GET,$_smarty_tpl);
+		$paramer = $ParamerArr['arr'];
+		$Purl =  $ParamerArr['purl'];
+        if($paramer[cache]){
+			$Purl="{{page}}.html";
+		}
+        global $ModuleName;
+        if(!$Purl["m"]){
+            $Purl["m"]=$ModuleName;
+        }$where=1;
+		if($config['did']){
+			$where.=" and `did`='".$config['did']."'";
+		} 
+		include PLUS_PATH."/group.cache.php";
+		if(is_array($paramer)){
+			if($paramer['nid']!=""){
+				$where .=" AND `nid` in ($paramer[nid])";
+				$nids = @explode(',',$paramer['nid']);$paramer['nid']=$paramer['nid'];
+			}else if($paramer['rec']!=""){
+				$nids=array();if(is_array($group_rec)){
+					foreach($group_rec as $key=>$value){
+						if($key<=2){
+							$nids[]=$value;
+						}
+					}
+					$paramer[nid]=@implode(',',$nids);
+				}
+			}
+			if($paramer['nid']){
+				$nid_s = @explode(',',$paramer[nid]);				
+				foreach($nid_s as $v){
+					if($group_type[$v]){
+						$paramer[nid] = $paramer[nid].",".@implode(',',$group_type[$v]);
+					}
+				}
+			}			
+			if($paramer['type']){
+				$type = str_replace("\"","",$paramer[type]);
+				$type_arr =	@explode(",",$type);
+				if(is_array($type_arr) && !empty($type_arr))
+				{
+					foreach($type_arr as $key=>$value)
+					{
+						$where .=" AND FIND_IN_SET('".$value."',`describe`)";
+						if(count($nids)>0)
+						{
+							$picwhere .=" AND FIND_IN_SET('".$value."',`describe`)";
+						}
+					}
+				}
+			}
+			if($paramer['pic']!=""){
+				$where .=" AND `newsphoto`<>''";
+			}
+			if($paramer['order']!=""){
+				$order = str_replace("'","",$paramer['order']);
+				$where .=" ORDER BY $order";
+			}else{
+				$where .=" ORDER BY `datetime`";
+			}
+			if($paramer['sort']){
+				$where.=" ".$paramer[sort];
+			}else{
+				$where.=" DESC";
+			}
+			if(intval($paramer['limit'])>0){
+				$limit = intval($paramer['limit']);
+				$limit = " limit ".$limit;
+			}
+			if($paramer['ispage']){
+				$limit = PageNav($paramer,$_GET,"news_base",$where,$Purl,"","5",$_smarty_tpl);
+			}
+		}
+		if(!intval($paramer['ispage']) && count($nids)>0){
+			$where = " and nid IN ($paramer[nid])";
+			if($paramer['pic']){
+				if(!$paramer['piclimit']){
+					$piclimit = 1;
+				}else{
+					$piclimit = $paramer['piclimit'];
+				}
+				$db->query("set @f=0,@n=0");
+				$query = $db->query("select * from (select id,title,color,datetime,description,newsphoto,@n:=if(@f=nid,@n:=@n+1,1) as aid,@f:=nid as nid from $db_config[def]news_base  WHERE `nid` IN ($paramer[nid]) AND `newsphoto` <>''  order by nid asc,datetime desc) a where aid <=".$piclimit);
+				while($rs = $db->fetch_array($query)){
+					if(intval($paramer[t_len])>0){
+						$len = intval($paramer[t_len]);
+						if($rs[color]){
+							$rs[title] = "<font color='".$rs[color]."'>".mb_substr($rs[title],0,$len,"GBK")."</font>";
+						}else{
+							$rs[title] = mb_substr($rs[title],0,$len,"GBK");
+						}
+					}
+					if(intval($paramer[d_len])>0)
+					{
+						$len = intval($paramer[d_len]);
+						$rs[description] = mb_substr($rs[description],0,$len,"GBK");
+					}
+					$rs['name'] = $group_name[$rs['nid']];
+					if($config[sy_news_rewrite]=="2"){
+						$rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+					}else{
+						$rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+					}
+					$rs[time]=date("Y-m-d",$rs[datetime]);
+					$rs['datetime']=date("m-d",$rs[datetime]);
+					$news[$rs['nid']]['pic'][] = $rs;
+				}
+			}
+			
+            $db->query("set @f=0,@n=0");
+            $query = $db->query("select * from (select id,title,datetime,color,description,newsphoto,@n:=if(@f=nid,@n:=@n+1,1) as aid,@f:=nid as nid from $db_config[def]news_base  WHERE `nid` IN ($paramer[nid]) order by nid asc,datetime desc) a where aid <=$paramer[limit]");
+
+            while($rs = $db->fetch_array($query)){
+                if(intval($paramer[t_len])>0){
+                    $len = intval($paramer[t_len]);
+                    if($rs[color]){
+                        $rs[title] = "<font color='".$rs[color]."'>".mb_substr($rs[title],0,$len,"GBK")."</font>";
+                    }else{
+                        $rs[title] = mb_substr($rs[title],0,$len,"GBK");
+                    }
+                }
+                if(intval($paramer[d_len])>0){
+                    $len = intval($paramer[d_len]);
+                    $rs[description] = mb_substr($rs[description],0,$len,"GBK");
+                }
+                $rs['name'] = $group_name[$rs['nid']];
+                if($config[sy_news_rewrite]=="2"){
+                    $rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+                }else{
+                    $rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+                }
+                $rs[time]=date("Y-m-d",$rs[datetime]);
+                $rs[datetime]=date("m-d",$rs[datetime]);
+                $news[$rs['nid']]['arclist'][] = $rs;
+            }
+		}else{
+			$query = $db->query("SELECT * FROM `$db_config[def]news_base` WHERE ".$where.$limit);
+			while($rs = $db->fetch_array($query)){
+                if(intval($paramer[t_len])>0)
+                {
+                    $len = intval($paramer[t_len]);
+                    $rs[title] = mb_substr($rs[title],0,$len,"GBK");
+                }
+                if(intval($paramer[d_len])>0)
+                {
+                    $len = intval($paramer[d_len]);
+                    $rs[description] = mb_substr($rs[description],0,$len,"GBK");
+                }
+                $rs['name'] = $group_name[$rs['nid']];
+                if($config[sy_news_rewrite]=="2"){
+                    $rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+                }else{
+                    $rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+                }
+                $rs[time]=date("Y-m-d",$rs[datetime]);
+                $rs[datetime]=date("m-d",$rs[datetime]);
+                $news[] = $rs;
+            }
+		} ?>
+<?php global $db,$db_config,$config;include PLUS_PATH.'/group.cache.php';$news_jian=array();$rs=null;$nids=null;eval('$paramer=array("limit"=>"1","type"=>"\'tj\'","pic"=>"1","t_len"=>"7","urlstatic"=>"1","key"=>"\'key\'","item"=>"\'news_jian\'","nocache"=>"")
+;');
+		$ParamerArr = GetSmarty($paramer,$_GET,$_smarty_tpl);
+		$paramer = $ParamerArr['arr'];
+		$Purl =  $ParamerArr['purl'];
+        if($paramer[cache]){
+			$Purl="{{page}}.html";
+		}
+        global $ModuleName;
+        if(!$Purl["m"]){
+            $Purl["m"]=$ModuleName;
+        }$where=1;
+		if($config['did']){
+			$where.=" and `did`='".$config['did']."'";
+		} 
+		include PLUS_PATH."/group.cache.php";
+		if(is_array($paramer)){
+			if($paramer['nid']!=""){
+				$where .=" AND `nid` in ($paramer[nid])";
+				$nids = @explode(',',$paramer['nid']);$paramer['nid']=$paramer['nid'];
+			}else if($paramer['rec']!=""){
+				$nids=array();if(is_array($group_rec)){
+					foreach($group_rec as $key=>$value){
+						if($key<=2){
+							$nids[]=$value;
+						}
+					}
+					$paramer[nid]=@implode(',',$nids);
+				}
+			}
+			if($paramer['nid']){
+				$nid_s = @explode(',',$paramer[nid]);				
+				foreach($nid_s as $v){
+					if($group_type[$v]){
+						$paramer[nid] = $paramer[nid].",".@implode(',',$group_type[$v]);
+					}
+				}
+			}			
+			if($paramer['type']){
+				$type = str_replace("\"","",$paramer[type]);
+				$type_arr =	@explode(",",$type);
+				if(is_array($type_arr) && !empty($type_arr))
+				{
+					foreach($type_arr as $key=>$value)
+					{
+						$where .=" AND FIND_IN_SET('".$value."',`describe`)";
+						if(count($nids)>0)
+						{
+							$picwhere .=" AND FIND_IN_SET('".$value."',`describe`)";
+						}
+					}
+				}
+			}
+			if($paramer['pic']!=""){
+				$where .=" AND `newsphoto`<>''";
+			}
+			if($paramer['order']!=""){
+				$order = str_replace("'","",$paramer['order']);
+				$where .=" ORDER BY $order";
+			}else{
+				$where .=" ORDER BY `datetime`";
+			}
+			if($paramer['sort']){
+				$where.=" ".$paramer[sort];
+			}else{
+				$where.=" DESC";
+			}
+			if(intval($paramer['limit'])>0){
+				$limit = intval($paramer['limit']);
+				$limit = " limit ".$limit;
+			}
+			if($paramer['ispage']){
+				$limit = PageNav($paramer,$_GET,"news_base",$where,$Purl,"","5",$_smarty_tpl);
+			}
+		}
+		if(!intval($paramer['ispage']) && count($nids)>0){
+			$where = " and nid IN ($paramer[nid])";
+			if($paramer['pic']){
+				if(!$paramer['piclimit']){
+					$piclimit = 1;
+				}else{
+					$piclimit = $paramer['piclimit'];
+				}
+				$db->query("set @f=0,@n=0");
+				$query = $db->query("select * from (select id,title,color,datetime,description,newsphoto,@n:=if(@f=nid,@n:=@n+1,1) as aid,@f:=nid as nid from $db_config[def]news_base  WHERE `nid` IN ($paramer[nid]) AND `newsphoto` <>''  order by nid asc,datetime desc) a where aid <=".$piclimit);
+				while($rs = $db->fetch_array($query)){
+					if(intval($paramer[t_len])>0){
+						$len = intval($paramer[t_len]);
+						if($rs[color]){
+							$rs[title] = "<font color='".$rs[color]."'>".mb_substr($rs[title],0,$len,"GBK")."</font>";
+						}else{
+							$rs[title] = mb_substr($rs[title],0,$len,"GBK");
+						}
+					}
+					if(intval($paramer[d_len])>0)
+					{
+						$len = intval($paramer[d_len]);
+						$rs[description] = mb_substr($rs[description],0,$len,"GBK");
+					}
+					$rs['name'] = $group_name[$rs['nid']];
+					if($config[sy_news_rewrite]=="2"){
+						$rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+					}else{
+						$rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+					}
+					$rs[time]=date("Y-m-d",$rs[datetime]);
+					$rs['datetime']=date("m-d",$rs[datetime]);
+					$news_jian[$rs['nid']]['pic'][] = $rs;
+				}
+			}
+			
+            $db->query("set @f=0,@n=0");
+            $query = $db->query("select * from (select id,title,datetime,color,description,newsphoto,@n:=if(@f=nid,@n:=@n+1,1) as aid,@f:=nid as nid from $db_config[def]news_base  WHERE `nid` IN ($paramer[nid]) order by nid asc,datetime desc) a where aid <=$paramer[limit]");
+
+            while($rs = $db->fetch_array($query)){
+                if(intval($paramer[t_len])>0){
+                    $len = intval($paramer[t_len]);
+                    if($rs[color]){
+                        $rs[title] = "<font color='".$rs[color]."'>".mb_substr($rs[title],0,$len,"GBK")."</font>";
+                    }else{
+                        $rs[title] = mb_substr($rs[title],0,$len,"GBK");
+                    }
+                }
+                if(intval($paramer[d_len])>0){
+                    $len = intval($paramer[d_len]);
+                    $rs[description] = mb_substr($rs[description],0,$len,"GBK");
+                }
+                $rs['name'] = $group_name[$rs['nid']];
+                if($config[sy_news_rewrite]=="2"){
+                    $rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+                }else{
+                    $rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+                }
+                $rs[time]=date("Y-m-d",$rs[datetime]);
+                $rs[datetime]=date("m-d",$rs[datetime]);
+                $news_jian[$rs['nid']]['arclist'][] = $rs;
+            }
+		}else{
+			$query = $db->query("SELECT * FROM `$db_config[def]news_base` WHERE ".$where.$limit);
+			while($rs = $db->fetch_array($query)){
+                if(intval($paramer[t_len])>0)
+                {
+                    $len = intval($paramer[t_len]);
+                    $rs[title] = mb_substr($rs[title],0,$len,"GBK");
+                }
+                if(intval($paramer[d_len])>0)
+                {
+                    $len = intval($paramer[d_len]);
+                    $rs[description] = mb_substr($rs[description],0,$len,"GBK");
+                }
+                $rs['name'] = $group_name[$rs['nid']];
+                if($config[sy_news_rewrite]=="2"){
+                    $rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+                }else{
+                    $rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+                }
+                $rs[time]=date("Y-m-d",$rs[datetime]);
+                $rs[datetime]=date("m-d",$rs[datetime]);
+                $news_jian[] = $rs;
+            }
+		} ?>
+<?php global $db,$db_config,$config;include PLUS_PATH.'/group.cache.php';$news_hits=array();$rs=null;$nids=null;eval('$paramer=array("limit"=>"6","order"=>"\'hits\'","t_len"=>"17","urlstatic"=>"1","item"=>"\'news_hits\'","nocache"=>"")
+;');
+		$ParamerArr = GetSmarty($paramer,$_GET,$_smarty_tpl);
+		$paramer = $ParamerArr['arr'];
+		$Purl =  $ParamerArr['purl'];
+        if($paramer[cache]){
+			$Purl="{{page}}.html";
+		}
+        global $ModuleName;
+        if(!$Purl["m"]){
+            $Purl["m"]=$ModuleName;
+        }$where=1;
+		if($config['did']){
+			$where.=" and `did`='".$config['did']."'";
+		} 
+		include PLUS_PATH."/group.cache.php";
+		if(is_array($paramer)){
+			if($paramer['nid']!=""){
+				$where .=" AND `nid` in ($paramer[nid])";
+				$nids = @explode(',',$paramer['nid']);$paramer['nid']=$paramer['nid'];
+			}else if($paramer['rec']!=""){
+				$nids=array();if(is_array($group_rec)){
+					foreach($group_rec as $key=>$value){
+						if($key<=2){
+							$nids[]=$value;
+						}
+					}
+					$paramer[nid]=@implode(',',$nids);
+				}
+			}
+			if($paramer['nid']){
+				$nid_s = @explode(',',$paramer[nid]);				
+				foreach($nid_s as $v){
+					if($group_type[$v]){
+						$paramer[nid] = $paramer[nid].",".@implode(',',$group_type[$v]);
+					}
+				}
+			}			
+			if($paramer['type']){
+				$type = str_replace("\"","",$paramer[type]);
+				$type_arr =	@explode(",",$type);
+				if(is_array($type_arr) && !empty($type_arr))
+				{
+					foreach($type_arr as $key=>$value)
+					{
+						$where .=" AND FIND_IN_SET('".$value."',`describe`)";
+						if(count($nids)>0)
+						{
+							$picwhere .=" AND FIND_IN_SET('".$value."',`describe`)";
+						}
+					}
+				}
+			}
+			if($paramer['pic']!=""){
+				$where .=" AND `newsphoto`<>''";
+			}
+			if($paramer['order']!=""){
+				$order = str_replace("'","",$paramer['order']);
+				$where .=" ORDER BY $order";
+			}else{
+				$where .=" ORDER BY `datetime`";
+			}
+			if($paramer['sort']){
+				$where.=" ".$paramer[sort];
+			}else{
+				$where.=" DESC";
+			}
+			if(intval($paramer['limit'])>0){
+				$limit = intval($paramer['limit']);
+				$limit = " limit ".$limit;
+			}
+			if($paramer['ispage']){
+				$limit = PageNav($paramer,$_GET,"news_base",$where,$Purl,"","5",$_smarty_tpl);
+			}
+		}
+		if(!intval($paramer['ispage']) && count($nids)>0){
+			$where = " and nid IN ($paramer[nid])";
+			if($paramer['pic']){
+				if(!$paramer['piclimit']){
+					$piclimit = 1;
+				}else{
+					$piclimit = $paramer['piclimit'];
+				}
+				$db->query("set @f=0,@n=0");
+				$query = $db->query("select * from (select id,title,color,datetime,description,newsphoto,@n:=if(@f=nid,@n:=@n+1,1) as aid,@f:=nid as nid from $db_config[def]news_base  WHERE `nid` IN ($paramer[nid]) AND `newsphoto` <>''  order by nid asc,datetime desc) a where aid <=".$piclimit);
+				while($rs = $db->fetch_array($query)){
+					if(intval($paramer[t_len])>0){
+						$len = intval($paramer[t_len]);
+						if($rs[color]){
+							$rs[title] = "<font color='".$rs[color]."'>".mb_substr($rs[title],0,$len,"GBK")."</font>";
+						}else{
+							$rs[title] = mb_substr($rs[title],0,$len,"GBK");
+						}
+					}
+					if(intval($paramer[d_len])>0)
+					{
+						$len = intval($paramer[d_len]);
+						$rs[description] = mb_substr($rs[description],0,$len,"GBK");
+					}
+					$rs['name'] = $group_name[$rs['nid']];
+					if($config[sy_news_rewrite]=="2"){
+						$rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+					}else{
+						$rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+					}
+					$rs[time]=date("Y-m-d",$rs[datetime]);
+					$rs['datetime']=date("m-d",$rs[datetime]);
+					$news_hits[$rs['nid']]['pic'][] = $rs;
+				}
+			}
+			
+            $db->query("set @f=0,@n=0");
+            $query = $db->query("select * from (select id,title,datetime,color,description,newsphoto,@n:=if(@f=nid,@n:=@n+1,1) as aid,@f:=nid as nid from $db_config[def]news_base  WHERE `nid` IN ($paramer[nid]) order by nid asc,datetime desc) a where aid <=$paramer[limit]");
+
+            while($rs = $db->fetch_array($query)){
+                if(intval($paramer[t_len])>0){
+                    $len = intval($paramer[t_len]);
+                    if($rs[color]){
+                        $rs[title] = "<font color='".$rs[color]."'>".mb_substr($rs[title],0,$len,"GBK")."</font>";
+                    }else{
+                        $rs[title] = mb_substr($rs[title],0,$len,"GBK");
+                    }
+                }
+                if(intval($paramer[d_len])>0){
+                    $len = intval($paramer[d_len]);
+                    $rs[description] = mb_substr($rs[description],0,$len,"GBK");
+                }
+                $rs['name'] = $group_name[$rs['nid']];
+                if($config[sy_news_rewrite]=="2"){
+                    $rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+                }else{
+                    $rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+                }
+                $rs[time]=date("Y-m-d",$rs[datetime]);
+                $rs[datetime]=date("m-d",$rs[datetime]);
+                $news_hits[$rs['nid']]['arclist'][] = $rs;
+            }
+		}else{
+			$query = $db->query("SELECT * FROM `$db_config[def]news_base` WHERE ".$where.$limit);
+			while($rs = $db->fetch_array($query)){
+                if(intval($paramer[t_len])>0)
+                {
+                    $len = intval($paramer[t_len]);
+                    $rs[title] = mb_substr($rs[title],0,$len,"GBK");
+                }
+                if(intval($paramer[d_len])>0)
+                {
+                    $len = intval($paramer[d_len]);
+                    $rs[description] = mb_substr($rs[description],0,$len,"GBK");
+                }
+                $rs['name'] = $group_name[$rs['nid']];
+                if($config[sy_news_rewrite]=="2"){
+                    $rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+                }else{
+                    $rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+                }
+                $rs[time]=date("Y-m-d",$rs[datetime]);
+                $rs[datetime]=date("m-d",$rs[datetime]);
+                $news_hits[] = $rs;
+            }
+		} ?>
+<?php global $db,$db_config,$config;include PLUS_PATH.'/group.cache.php';$indexnews1=array();$rs=null;$nids=null;eval('$paramer=array("rec"=>"1","limit"=>"1","pic"=>"1","t_len"=>"7","d_len"=>"24","urlstatic"=>"1","order"=>"\'hits\'","item"=>"\'indexnews1\'","key"=>"\'key\'","name"=>"\'indexnews1\'","nocache"=>"")
+;');
+		$ParamerArr = GetSmarty($paramer,$_GET,$_smarty_tpl);
+		$paramer = $ParamerArr['arr'];
+		$Purl =  $ParamerArr['purl'];
+        if($paramer[cache]){
+			$Purl="{{page}}.html";
+		}
+        global $ModuleName;
+        if(!$Purl["m"]){
+            $Purl["m"]=$ModuleName;
+        }$where=1;
+		if($config['did']){
+			$where.=" and `did`='".$config['did']."'";
+		} 
+		include PLUS_PATH."/group.cache.php";
+		if(is_array($paramer)){
+			if($paramer['nid']!=""){
+				$where .=" AND `nid` in ($paramer[nid])";
+				$nids = @explode(',',$paramer['nid']);$paramer['nid']=$paramer['nid'];
+			}else if($paramer['rec']!=""){
+				$nids=array();if(is_array($group_rec)){
+					foreach($group_rec as $key=>$value){
+						if($key<=2){
+							$nids[]=$value;
+						}
+					}
+					$paramer[nid]=@implode(',',$nids);
+				}
+			}
+			if($paramer['nid']){
+				$nid_s = @explode(',',$paramer[nid]);				
+				foreach($nid_s as $v){
+					if($group_type[$v]){
+						$paramer[nid] = $paramer[nid].",".@implode(',',$group_type[$v]);
+					}
+				}
+			}			
+			if($paramer['type']){
+				$type = str_replace("\"","",$paramer[type]);
+				$type_arr =	@explode(",",$type);
+				if(is_array($type_arr) && !empty($type_arr))
+				{
+					foreach($type_arr as $key=>$value)
+					{
+						$where .=" AND FIND_IN_SET('".$value."',`describe`)";
+						if(count($nids)>0)
+						{
+							$picwhere .=" AND FIND_IN_SET('".$value."',`describe`)";
+						}
+					}
+				}
+			}
+			if($paramer['pic']!=""){
+				$where .=" AND `newsphoto`<>''";
+			}
+			if($paramer['order']!=""){
+				$order = str_replace("'","",$paramer['order']);
+				$where .=" ORDER BY $order";
+			}else{
+				$where .=" ORDER BY `datetime`";
+			}
+			if($paramer['sort']){
+				$where.=" ".$paramer[sort];
+			}else{
+				$where.=" DESC";
+			}
+			if(intval($paramer['limit'])>0){
+				$limit = intval($paramer['limit']);
+				$limit = " limit ".$limit;
+			}
+			if($paramer['ispage']){
+				$limit = PageNav($paramer,$_GET,"news_base",$where,$Purl,"","5",$_smarty_tpl);
+			}
+		}
+		if(!intval($paramer['ispage']) && count($nids)>0){
+			$where = " and nid IN ($paramer[nid])";
+			if($paramer['pic']){
+				if(!$paramer['piclimit']){
+					$piclimit = 1;
+				}else{
+					$piclimit = $paramer['piclimit'];
+				}
+				$db->query("set @f=0,@n=0");
+				$query = $db->query("select * from (select id,title,color,datetime,description,newsphoto,@n:=if(@f=nid,@n:=@n+1,1) as aid,@f:=nid as nid from $db_config[def]news_base  WHERE `nid` IN ($paramer[nid]) AND `newsphoto` <>''  order by nid asc,datetime desc) a where aid <=".$piclimit);
+				while($rs = $db->fetch_array($query)){
+					if(intval($paramer[t_len])>0){
+						$len = intval($paramer[t_len]);
+						if($rs[color]){
+							$rs[title] = "<font color='".$rs[color]."'>".mb_substr($rs[title],0,$len,"GBK")."</font>";
+						}else{
+							$rs[title] = mb_substr($rs[title],0,$len,"GBK");
+						}
+					}
+					if(intval($paramer[d_len])>0)
+					{
+						$len = intval($paramer[d_len]);
+						$rs[description] = mb_substr($rs[description],0,$len,"GBK");
+					}
+					$rs['name'] = $group_name[$rs['nid']];
+					if($config[sy_news_rewrite]=="2"){
+						$rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+					}else{
+						$rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+					}
+					$rs[time]=date("Y-m-d",$rs[datetime]);
+					$rs['datetime']=date("m-d",$rs[datetime]);
+					$indexnews1[$rs['nid']]['pic'][] = $rs;
+				}
+			}
+			
+            $db->query("set @f=0,@n=0");
+            $query = $db->query("select * from (select id,title,datetime,color,description,newsphoto,@n:=if(@f=nid,@n:=@n+1,1) as aid,@f:=nid as nid from $db_config[def]news_base  WHERE `nid` IN ($paramer[nid]) order by nid asc,datetime desc) a where aid <=$paramer[limit]");
+
+            while($rs = $db->fetch_array($query)){
+                if(intval($paramer[t_len])>0){
+                    $len = intval($paramer[t_len]);
+                    if($rs[color]){
+                        $rs[title] = "<font color='".$rs[color]."'>".mb_substr($rs[title],0,$len,"GBK")."</font>";
+                    }else{
+                        $rs[title] = mb_substr($rs[title],0,$len,"GBK");
+                    }
+                }
+                if(intval($paramer[d_len])>0){
+                    $len = intval($paramer[d_len]);
+                    $rs[description] = mb_substr($rs[description],0,$len,"GBK");
+                }
+                $rs['name'] = $group_name[$rs['nid']];
+                if($config[sy_news_rewrite]=="2"){
+                    $rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+                }else{
+                    $rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+                }
+                $rs[time]=date("Y-m-d",$rs[datetime]);
+                $rs[datetime]=date("m-d",$rs[datetime]);
+                $indexnews1[$rs['nid']]['arclist'][] = $rs;
+            }
+		}else{
+			$query = $db->query("SELECT * FROM `$db_config[def]news_base` WHERE ".$where.$limit);
+			while($rs = $db->fetch_array($query)){
+                if(intval($paramer[t_len])>0)
+                {
+                    $len = intval($paramer[t_len]);
+                    $rs[title] = mb_substr($rs[title],0,$len,"GBK");
+                }
+                if(intval($paramer[d_len])>0)
+                {
+                    $len = intval($paramer[d_len]);
+                    $rs[description] = mb_substr($rs[description],0,$len,"GBK");
+                }
+                $rs['name'] = $group_name[$rs['nid']];
+                if($config[sy_news_rewrite]=="2"){
+                    $rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+                }else{
+                    $rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+                }
+                $rs[time]=date("Y-m-d",$rs[datetime]);
+                $rs[datetime]=date("m-d",$rs[datetime]);
+                $indexnews1[] = $rs;
+            }
+		} ?>
+<?php global $db,$db_config,$config;include PLUS_PATH.'/group.cache.php';$indexnews2=array();$rs=null;$nids=null;eval('$paramer=array("limit"=>"6","t_len"=>"16","d_len"=>"24","urlstatic"=>"1","order"=>"\'hits\'","item"=>"\'indexnews2\'","nocache"=>"")
+;');
+		$ParamerArr = GetSmarty($paramer,$_GET,$_smarty_tpl);
+		$paramer = $ParamerArr['arr'];
+		$Purl =  $ParamerArr['purl'];
+        if($paramer[cache]){
+			$Purl="{{page}}.html";
+		}
+        global $ModuleName;
+        if(!$Purl["m"]){
+            $Purl["m"]=$ModuleName;
+        }$where=1;
+		if($config['did']){
+			$where.=" and `did`='".$config['did']."'";
+		} 
+		include PLUS_PATH."/group.cache.php";
+		if(is_array($paramer)){
+			if($paramer['nid']!=""){
+				$where .=" AND `nid` in ($paramer[nid])";
+				$nids = @explode(',',$paramer['nid']);$paramer['nid']=$paramer['nid'];
+			}else if($paramer['rec']!=""){
+				$nids=array();if(is_array($group_rec)){
+					foreach($group_rec as $key=>$value){
+						if($key<=2){
+							$nids[]=$value;
+						}
+					}
+					$paramer[nid]=@implode(',',$nids);
+				}
+			}
+			if($paramer['nid']){
+				$nid_s = @explode(',',$paramer[nid]);				
+				foreach($nid_s as $v){
+					if($group_type[$v]){
+						$paramer[nid] = $paramer[nid].",".@implode(',',$group_type[$v]);
+					}
+				}
+			}			
+			if($paramer['type']){
+				$type = str_replace("\"","",$paramer[type]);
+				$type_arr =	@explode(",",$type);
+				if(is_array($type_arr) && !empty($type_arr))
+				{
+					foreach($type_arr as $key=>$value)
+					{
+						$where .=" AND FIND_IN_SET('".$value."',`describe`)";
+						if(count($nids)>0)
+						{
+							$picwhere .=" AND FIND_IN_SET('".$value."',`describe`)";
+						}
+					}
+				}
+			}
+			if($paramer['pic']!=""){
+				$where .=" AND `newsphoto`<>''";
+			}
+			if($paramer['order']!=""){
+				$order = str_replace("'","",$paramer['order']);
+				$where .=" ORDER BY $order";
+			}else{
+				$where .=" ORDER BY `datetime`";
+			}
+			if($paramer['sort']){
+				$where.=" ".$paramer[sort];
+			}else{
+				$where.=" DESC";
+			}
+			if(intval($paramer['limit'])>0){
+				$limit = intval($paramer['limit']);
+				$limit = " limit ".$limit;
+			}
+			if($paramer['ispage']){
+				$limit = PageNav($paramer,$_GET,"news_base",$where,$Purl,"","5",$_smarty_tpl);
+			}
+		}
+		if(!intval($paramer['ispage']) && count($nids)>0){
+			$where = " and nid IN ($paramer[nid])";
+			if($paramer['pic']){
+				if(!$paramer['piclimit']){
+					$piclimit = 1;
+				}else{
+					$piclimit = $paramer['piclimit'];
+				}
+				$db->query("set @f=0,@n=0");
+				$query = $db->query("select * from (select id,title,color,datetime,description,newsphoto,@n:=if(@f=nid,@n:=@n+1,1) as aid,@f:=nid as nid from $db_config[def]news_base  WHERE `nid` IN ($paramer[nid]) AND `newsphoto` <>''  order by nid asc,datetime desc) a where aid <=".$piclimit);
+				while($rs = $db->fetch_array($query)){
+					if(intval($paramer[t_len])>0){
+						$len = intval($paramer[t_len]);
+						if($rs[color]){
+							$rs[title] = "<font color='".$rs[color]."'>".mb_substr($rs[title],0,$len,"GBK")."</font>";
+						}else{
+							$rs[title] = mb_substr($rs[title],0,$len,"GBK");
+						}
+					}
+					if(intval($paramer[d_len])>0)
+					{
+						$len = intval($paramer[d_len]);
+						$rs[description] = mb_substr($rs[description],0,$len,"GBK");
+					}
+					$rs['name'] = $group_name[$rs['nid']];
+					if($config[sy_news_rewrite]=="2"){
+						$rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+					}else{
+						$rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+					}
+					$rs[time]=date("Y-m-d",$rs[datetime]);
+					$rs['datetime']=date("m-d",$rs[datetime]);
+					$indexnews2[$rs['nid']]['pic'][] = $rs;
+				}
+			}
+			
+            $db->query("set @f=0,@n=0");
+            $query = $db->query("select * from (select id,title,datetime,color,description,newsphoto,@n:=if(@f=nid,@n:=@n+1,1) as aid,@f:=nid as nid from $db_config[def]news_base  WHERE `nid` IN ($paramer[nid]) order by nid asc,datetime desc) a where aid <=$paramer[limit]");
+
+            while($rs = $db->fetch_array($query)){
+                if(intval($paramer[t_len])>0){
+                    $len = intval($paramer[t_len]);
+                    if($rs[color]){
+                        $rs[title] = "<font color='".$rs[color]."'>".mb_substr($rs[title],0,$len,"GBK")."</font>";
+                    }else{
+                        $rs[title] = mb_substr($rs[title],0,$len,"GBK");
+                    }
+                }
+                if(intval($paramer[d_len])>0){
+                    $len = intval($paramer[d_len]);
+                    $rs[description] = mb_substr($rs[description],0,$len,"GBK");
+                }
+                $rs['name'] = $group_name[$rs['nid']];
+                if($config[sy_news_rewrite]=="2"){
+                    $rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+                }else{
+                    $rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+                }
+                $rs[time]=date("Y-m-d",$rs[datetime]);
+                $rs[datetime]=date("m-d",$rs[datetime]);
+                $indexnews2[$rs['nid']]['arclist'][] = $rs;
+            }
+		}else{
+			$query = $db->query("SELECT * FROM `$db_config[def]news_base` WHERE ".$where.$limit);
+			while($rs = $db->fetch_array($query)){
+                if(intval($paramer[t_len])>0)
+                {
+                    $len = intval($paramer[t_len]);
+                    $rs[title] = mb_substr($rs[title],0,$len,"GBK");
+                }
+                if(intval($paramer[d_len])>0)
+                {
+                    $len = intval($paramer[d_len]);
+                    $rs[description] = mb_substr($rs[description],0,$len,"GBK");
+                }
+                $rs['name'] = $group_name[$rs['nid']];
+                if($config[sy_news_rewrite]=="2"){
+                    $rs["url"]=$config['sy_weburl']."/news/".date("Ymd",$rs["datetime"])."/".$rs[id].".html";
+                }else{
+                    $rs["url"] = Url("article",array("c"=>"show","id"=>$rs[id]),"1");
+                }
+                $rs[time]=date("Y-m-d",$rs[datetime]);
+                $rs[datetime]=date("m-d",$rs[datetime]);
+                $indexnews2[] = $rs;
+            }
+		} ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>
+<META name="keywords" content="<?php echo $_smarty_tpl->tpl_vars['keywords']->value;?>
+">
+<META name="description" content="<?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+">
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['style']->value;?>
+/style/css.css" type="text/css">
+<!--[if IE 6]>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/js/png.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+>
+DD_belatedPNG.fix('.png');
+<?php echo '</script'; ?>
+>
+<![endif]-->
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/js/jquery-1.8.0.min.js" language="javascript"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/js/layer/layer.min.js" language="javascript"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/js/lazyload.min.js" language="javascript"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/js/public.js" language="javascript"><?php echo '</script'; ?>
+>
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['style']->value;?>
+/style/news.css" type="text/css">
+</head>
+<body>
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplstyle']->value)."/header.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<div class="yun_content">
+<div class="current_Location  png"> 您当前的位置：<a href="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+">首页</a> > 职场资讯 > <span class="newss_cblue"><?php echo $_smarty_tpl->tpl_vars['classname']->value;?>
+</span></div>
+<!--content开始-->
+<div class="zx_cont_inner">
+  <div class="wrap">
+    <div class="zx_inner_left fl">
+      <div class="zx_left_part">
+        <div class="zx_part_lists"> 
+            <?php  $_smarty_tpl->tpl_vars['news'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['news']->_loop = false;
+$news = $news; if (!is_array($news) && !is_object($news)) { settype($news, 'array');}
+foreach ($news as $_smarty_tpl->tpl_vars['news']->key => $_smarty_tpl->tpl_vars['news']->value) {
+$_smarty_tpl->tpl_vars['news']->_loop = true;
+?>
+          <dl>
+           <!-- <dt><a href="<?php echo $_smarty_tpl->tpl_vars['news']->value['url'];?>
+"><img src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/<?php echo $_smarty_tpl->tpl_vars['news']->value['newsphoto'];?>
+" width="115" height="82"/></a></dt>-->
+            <dd>
+              <div class="zx_part_bt"> <a href="<?php echo $_smarty_tpl->tpl_vars['news']->value['url'];?>
+" class="fl"><?php echo $_smarty_tpl->tpl_vars['news']->value['title'];?>
+</a><em class="fr"><?php echo $_smarty_tpl->tpl_vars['news']->value['time'];?>
+</em>
+                <div class="clear"></div>
+              </div>
+              <div class="zx_part_nr"><?php echo mb_substr($_smarty_tpl->tpl_vars['news']->value['description'],0,100,'gbk');?>
+</div>
+            </dd>
+          </dl>
+          <?php } ?>
+          <div class="clear"></div>
+          <div class="pages"><?php echo $_smarty_tpl->tpl_vars['pagenav']->value;?>
+</div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="zx_inner_right fr">
+      <div class="zx_rig_rom">
+        <div class="zx_article">
+          <div class="zx_art_tit"><i class="Company_h1_line"></i>推荐文章</div>
+          <div class="zx_art_hot">
+           <?php  $_smarty_tpl->tpl_vars['news_jian'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['news_jian']->_loop = false;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+$news_jian = $news_jian; if (!is_array($news_jian) && !is_object($news_jian)) { settype($news_jian, 'array');}
+foreach ($news_jian as $_smarty_tpl->tpl_vars['news_jian']->key => $_smarty_tpl->tpl_vars['news_jian']->value) {
+$_smarty_tpl->tpl_vars['news_jian']->_loop = true;
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['news_jian']->key;
+?>
+            <dl>
+              <dt><a href="<?php echo $_smarty_tpl->tpl_vars['news_jian']->value['url'];?>
+"><img src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/<?php echo $_smarty_tpl->tpl_vars['news_jian']->value['newsphoto'];?>
+" width="84" height="63"/></a></dt>
+              <dd>
+                <div class="art_fanfu"><a href="<?php echo $_smarty_tpl->tpl_vars['news_jian']->value['url'];?>
+"><?php echo $_smarty_tpl->tpl_vars['news_jian']->value['title'];?>
+</a></div>
+                <div class="art_xq"><?php echo mb_substr($_smarty_tpl->tpl_vars['news_jian']->value['description'],0,22,'gbk');?>
+</div>
+              </dd>
+            </dl>
+            <?php } ?>
+            <div class="clear"></div>
+          </div>
+          <div class="zx_art_list">
+            <ul>
+              <?php  $_smarty_tpl->tpl_vars['news_hits'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['news_hits']->_loop = false;
+$news_hits = $news_hits; if (!is_array($news_hits) && !is_object($news_hits)) { settype($news_hits, 'array');}
+foreach ($news_hits as $_smarty_tpl->tpl_vars['news_hits']->key => $_smarty_tpl->tpl_vars['news_hits']->value) {
+$_smarty_tpl->tpl_vars['news_hits']->_loop = true;
+?>
+              <li><a href="<?php echo $_smarty_tpl->tpl_vars['news_hits']->value['url'];?>
+"><?php echo $_smarty_tpl->tpl_vars['news_hits']->value['title'];?>
+</a></li>
+              <?php } ?>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="zx_article">
+          <div class="zx_art_tit"><i class="Company_h1_line"></i>最新文章</div>
+          <?php  $_smarty_tpl->tpl_vars['indexnews1'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['indexnews1']->_loop = false;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+$indexnews1 = $indexnews1; if (!is_array($indexnews1) && !is_object($indexnews1)) { settype($indexnews1, 'array');}
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['indexnews1']['index']=-1;
+foreach ($indexnews1 as $_smarty_tpl->tpl_vars['indexnews1']->key => $_smarty_tpl->tpl_vars['indexnews1']->value) {
+$_smarty_tpl->tpl_vars['indexnews1']->_loop = true;
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['indexnews1']->key;
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['indexnews1']['index']++;
+?>
+              <?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['indexnews1']['index']==0) {?>
+            <div class="zx_art_hot">
+              <dl>
+                <dt><a href="<?php echo $_smarty_tpl->tpl_vars['indexnews1']->value['pic'][0]['url'];?>
+"><img src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/<?php echo $_smarty_tpl->tpl_vars['indexnews1']->value['pic'][0]['newsphoto'];?>
+" width="84" height="63" /></a></dt>
+                <dd>
+                  <div class="art_fanfu"><a href="<?php echo $_smarty_tpl->tpl_vars['indexnews1']->value['pic'][0]['url'];?>
+"><?php echo $_smarty_tpl->tpl_vars['indexnews1']->value['pic'][0]['title'];?>
+</a></div>
+                  <div class="art_xq"><?php echo $_smarty_tpl->tpl_vars['indexnews1']->value['pic'][0]['description'];?>
+..</div>
+                </dd>
+              </dl>
+              <div class="clear"></div>
+            </div>
+              <?php }?>
+              <?php } ?>
+            <div class="zx_art_list">
+              <ul>
+                  <?php  $_smarty_tpl->tpl_vars['indexnews2'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['indexnews2']->_loop = false;
+$indexnews2 = $indexnews2; if (!is_array($indexnews2) && !is_object($indexnews2)) { settype($indexnews2, 'array');}
+foreach ($indexnews2 as $_smarty_tpl->tpl_vars['indexnews2']->key => $_smarty_tpl->tpl_vars['indexnews2']->value) {
+$_smarty_tpl->tpl_vars['indexnews2']->_loop = true;
+?>
+                <li><a href="<?php echo $_smarty_tpl->tpl_vars['indexnews2']->value['url'];?>
+" target="_blank"><?php echo $_smarty_tpl->tpl_vars['indexnews2']->value['title'];?>
+</a></li>
+                  <?php } ?>
+              </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+</div>
+<!--content结束--> 
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplstyle']->value)."/footer.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php }} ?>

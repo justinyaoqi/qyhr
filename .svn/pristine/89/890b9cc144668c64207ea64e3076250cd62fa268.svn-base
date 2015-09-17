@@ -1,0 +1,95 @@
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-08-25 19:57:21
+         compiled from "D:\wamp\www\\app\template\wap\header.htm" */ ?>
+<?php /*%%SmartyHeaderCode:1688355dc5821205cd4-21739487%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'f2d073616d4a1e062fa78589b6fcfee14bf51719' => 
+    array (
+      0 => 'D:\\wamp\\www\\\\app\\template\\wap\\header.htm',
+      1 => 1434641053,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1688355dc5821205cd4-21739487',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'title' => 0,
+    'keywords' => 0,
+    'description' => 0,
+    'config' => 0,
+    'wap_style' => 0,
+    'cookie' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55dc5821281e24_55536661',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_55dc5821281e24_55536661')) {function content_55dc5821281e24_55536661($_smarty_tpl) {?><?php if (!is_callable('smarty_function_url')) include 'D:\\wamp\\www\\app\\include\\libs\\plugins\\function.url.php';
+?><!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+ -  手机人才网</title>
+<meta http-equiv="keywords" content="<?php echo $_smarty_tpl->tpl_vars['keywords']->value;?>
+,wap" />
+<meta http-equiv="description" content="<?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+" />
+<meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="format-detection" content="telephone=no,email=no"/>
+<meta name="MobileOptimized" content="240" />
+<meta http-equiv="Expires" content="0" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=yes" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+<meta http-equiv="X-UA-compatible"content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="format-detection" content="telephone=no,email=no"/>
+<meta name="viewport" content="width=device-width" initial-scale="1">
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/app/template/wap/css/font-awesome.min.css" type="text/css">
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/js/jquery-1.8.0.min.js" language="javascript"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['wap_style']->value;?>
+/js/layer/layer.m.js" language="javascript"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['wap_style']->value;?>
+/js/public.js" language="javascript"><?php echo '</script'; ?>
+>
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/app/template/wap/css/css.css" type="text/css"> 
+</head> 
+<body>
+<header>
+<div class="header_bg">
+<div class="logo"><img src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_wap_logo'];?>
+" width="180" height="46"></div>
+<?php if (!$_smarty_tpl->tpl_vars['cookie']->value['username']) {?> 
+<em class="regorlogin"> 
+<a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'login'),$_smarty_tpl);?>
+">登录</a> 
+| <a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'register'),$_smarty_tpl);?>
+">注册 </a> 
+ </em>
+ <?php } else { ?>
+ <em class="regorlogin" style="width:40px;">
+<a href="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/wap/member/index.php"><i class="fa fa-user" style="font-size:23px;"></i></a>
+</em>
+<?php }?>
+</div>
+</header><?php }} ?>

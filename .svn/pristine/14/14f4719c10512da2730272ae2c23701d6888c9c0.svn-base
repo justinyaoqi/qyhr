@@ -1,0 +1,90 @@
+TIME:2015-03-01 :22:18:01
+SQL:select * from ts_event_type
+ERROR:La table 'zanqy.ts_event_type' n'existe pas
+REQUEST_URI:/documents/index.php?app=event&ac=admin&mg=cache
+--------------------------------------
+TIME:2015-03-01 :22:18:01
+SQL:select count(eventid) from ts_event
+ERROR:La table 'zanqy.ts_event' n'existe pas
+REQUEST_URI:/documents/index.php?app=event&ac=admin&mg=cache
+--------------------------------------
+TIME:2015-03-01 :22:20:24
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:21:03
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:21:13
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:21:50
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:21:50
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:21:51
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:21:51
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:21:51
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:21:51
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:22:03
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:22:04
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:22:04
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:23:36
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:23:37
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:23:38
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------
+TIME:2015-03-01 :22:23:41
+SQL:select groupid from ts_event_group_index group by groupid
+ERROR:La table 'zanqy.ts_event_group_index' n'existe pas
+REQUEST_URI:/documents/index.php/event
+--------------------------------------

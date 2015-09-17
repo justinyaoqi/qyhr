@@ -1,0 +1,112 @@
+<?php defined('IN_TS') or die('Access Denied.'); ?><?php include template('header'); ?>
+
+<div class="container">
+
+
+<ol class="breadcrumb">
+  <li><a href="<?php echo SITE_URL;?>">首页</a></li>
+  <li><a href="<?php echo tsurl('user')?>">用户</a></li>
+  <li class="active"><?php echo $strUser['username'];?>的空间</li>
+</ol>
+
+<div class="row">
+
+<div class="col-md-8">
+
+<div class="bbox">
+
+<div class="bc">
+
+<?php include template('menu'); ?>
+
+
+<div class="feed">
+<ul>
+<?php foreach((array)$arrFeed as $key=>$item) {?>
+<li class="mbtl">
+<?php if($item['user'][userid] !=$arrFeed[$key-1][user][userid]) { ?>
+<a href="<?php echo tsurl('user','space',array('id'=>$item['user'][userid]))?>"><img title="<?php echo $item['user'][username];?>" alt="<?php echo $item['user'][username];?>" src="<?php echo $item['user'][face];?>" width="48" height="48" /></a>
+<?php } ?>
+</li>
+<li class="mbtr">
+<a href="<?php echo tsurl('user','space',array('id'=>$item['user'][userid]))?>"><?php echo $item['user'][username];?></a> 
+<?php echo $item['content'];?>
+</li>
+<div class="clear"></div>
+<?php }?>
+</ul>
+</div>
+</div>
+
+</div>
+
+
+<div class="bbox">
+<div class="btitle">留言板</div>
+<div class="bc">
+
+<?php if(intval($TS_USER['user']['userid']) >0 && intval($TS_USER['user']['userid']) != $strUser['userid']) { ?>
+<div class="guest">
+<img src="<?php echo SITE_URL;?>public/images/user_normal.jpg" />
+<form method="post" action="<?php echo SITE_URL;?>index.php?app=user&ac=guestbook&ts=do">
+<textarea style="width:100%;height: 50px;margin-bottom: 5px;" name="content"></textarea>
+<div class="clear"></div>
+<input type="hidden" name="touserid" value="<?php echo $strUser['userid'];?>" />
+<input type="hidden" name="token" value="<?php echo $_SESSION['token'];?>" />
+<button class="btn btn-success" type="submit">添加留言</button>
+</form>
+</div>
+<?php } ?>
+
+<div id="reguest" style="display:none;">
+<form method="post" action="<?php echo SITE_URL;?>index.php?app=user&ac=guestbook&ts=redo">
+<textarea style="width:100%;height: 50px;margin-bottom: 5px;" name="content"></textarea>
+<p>
+<input id="touserid" type="hidden" name="touserid" value="0" />
+<input id="reid" type="hidden" name="reid" value="0" />
+<input type="hidden" name="token" value="<?php echo $_SESSION['token'];?>" />
+<input class="btn btn-success" type="submit" value="回复" />
+</p>
+</form>
+</div>
+
+<div class="clear"></div>
+
+<div class="glist">
+<ul>
+
+<?php foreach((array)$arrGuest as $key=>$item) {?>
+<li>
+<a href="<?php echo tsurl('user','space',array('id'=>$item['userid']))?>" rel="face" uid="<?php echo $item['user']['userid'];?>">
+<img src="<?php echo $item['user']['face'];?>" alt="<?php echo $item['user']['username'];?>" width="48" height="48" /></a>
+
+<div class="content">
+
+<p><a href="<?php echo tsurl('user','space',array('id'=>$item['userid']))?>"  rel="face" uid="<?php echo $item['user']['userid'];?>"><?php echo $item['user']['username'];?></a> <?php echo $item['addtime'];?></p>
+
+<?php echo $item['content'];?>
+
+<p style="text-align:right">
+<?php if(intval($TS_USER['user']['userid'] == $strUser['userid'])) { ?>
+<a href="#reguest" onclick="reguest('<?php echo $item['userid'];?>','<?php echo $item['id'];?>')">回复</a> <a href="<?php echo tsurl('user','guestbook',array('ts'=>'delete','gbid'=>$item['id']))?>" onclick="return confirm('确定删除?')">删除</a>
+<?php } ?>
+</p>
+
+</div>
+</li>
+<?php }?>
+</ul>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<div class="col-md-4">
+<?php include template('userinfo'); ?>
+</div>
+
+</div>
+</div>
+<?php include template('footer'); ?>

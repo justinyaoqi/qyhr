@@ -1,0 +1,30 @@
+<?php
+/**
+*
+*/
+class evaluate_controller extends common
+{
+	
+	function index_action()
+	{
+		$this->rightinfo();
+		$this->get_moblie();
+		$M=$this->MODEL('evaluate');
+		$FriendM=$this->MODEL('friend');
+		 
+		$evaluateTop = $M->GetExamList(array("top"=>'1'),array("field"=>"`id`,`keyid`,`name`,`description`,`visits`,`pic`,`comnum`","limit"=>4)); 
+		$rows=$M->GetExamList(array('hot'=>1,"`keyid`>'0'"),array("orderby"=>"`sort` desc",'limit'=>10));
+		 
+		
+		$evaluateRecommend = $M->GetExamList(array('keyid!=0','recommend=1'),array('field'=>'id,keyid,name,visits','limit'=>'0,8')); 
+		
+		$examinee = $M->GetGrade(array("`uid`<>''"),array('orderby'=>'ctime desc',"groupby"=>"uid",'limit'=>'12'));  
+		$this->seo('evaluate');
+		$this->yunset("rows",$rows); 
+		$this->yunset("evaluateTop",$evaluateTop); 
+		$this->yunset('evaluateRecommend',$evaluateRecommend);
+		$this->yunset('examinee',$examinee);
+		$this->evaluate_tpl('wap/evaluate_index'); 
+	}
+}
+?>

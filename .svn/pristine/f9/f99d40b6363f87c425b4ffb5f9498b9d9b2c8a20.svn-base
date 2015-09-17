@@ -1,0 +1,32 @@
+<?php 
+defined('IN_TS') or die('Access Denied.');
+switch($ts){
+	case "":
+		$arrData = fileRead('data/plugins_pubs_wechatlogin.php');
+		
+		if($arrData==''){
+			$arrData = $tsMySqlCache->get('plugins_pubs_wechatlogin');
+		}
+		
+		include 'html/edit.html';
+		break;
+		
+	case "do":
+		$key = trim($_POST['appid']);
+		$secret = trim($_POST['appkey']);
+		$siteurl = $_POST['siteurl'];
+		
+		$arrData = array(
+			'key' => $key,
+			'secret'	=>$secret,
+			'siteurl'	=> $siteurl,
+		);
+		
+		fileWrite('plugins_pubs_douban.php','data',$arrData);
+		$tsMySqlCache->set('plugins_pubs_douban',$arrData);
+		
+		header('Location: '.SITE_URL.'index.php?app=pubs&ac=plugin&plugin=douban&in=edit&ts=set');
+		break;
+}
+
+ ?>

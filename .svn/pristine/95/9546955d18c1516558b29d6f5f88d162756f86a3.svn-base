@@ -1,0 +1,14 @@
+<div class="bbox">
+	<div class="btitle">热门话题</div>
+	<div class="bc commlist">
+	<div class="hottopic">
+		<ul>
+		{loop $arrHotTopic $key $item}
+		    <li><span class="badge" >{$item['count_view']}</span><span style="width:30px;">&nbsp;&nbsp;</span><a href="{tsUrl('group', 'topic', array('id' => $item['topicid']))}">{$item['title']}</a></li> 
+		{/loop}
+
+		</ul>
+	</div>
+
+</div>
+	</div>

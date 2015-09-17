@@ -1,0 +1,15 @@
+<?php 
+  $db_config = array(
+      'dbtype'=>'mysql',
+      'dbhost'=>'localhost',
+      'dbuser'=>'root',
+      'dbpass'=>'abcqq.com',
+      'dbname'=>'qyhr',
+      'def'=>'hr_',
+      'charset'=>'GBK',
+      'timezone'=>'PRC',
+      'coding'=>'9ca21dfb3394c74a221a69ca1996ca6b', //生成cookie加密
+      'version'=>'4.0',//版本号
+    );
+    
+?>

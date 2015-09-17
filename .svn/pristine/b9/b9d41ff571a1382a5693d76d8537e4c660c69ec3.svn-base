@@ -1,0 +1,14 @@
+<?php defined('IN_TS') or die('Access Denied.'); ?><div class="bbox">
+	<div class="btitle">热门话题</div>
+	<div class="bc commlist">
+	<div class="hottopic">
+		<ul>
+		<?php foreach((array)$arrHotTopic as $key=>$item) {?>
+		    <li><span class="badge" ><?php echo $item['count_view'];?></span><span style="width:30px;">&nbsp;&nbsp;</span><a href="<?php echo tsurl('group', 'topic', array('id' => $item['topicid']))?>"><?php echo $item['title'];?></a></li> 
+		<?php }?>
+
+		</ul>
+	</div>
+
+</div>
+	</div>

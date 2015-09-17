@@ -1,0 +1,191 @@
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-08-25 19:57:42
+         compiled from "D:\wamp\www\\app\template\wap\header_cont.htm" */ ?>
+<?php /*%%SmartyHeaderCode:263955dc58367a89e9-52259664%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '7110461f02e881eaf1faa01c120cab4d3c0b605b' => 
+    array (
+      0 => 'D:\\wamp\\www\\\\app\\template\\wap\\header_cont.htm',
+      1 => 1434641053,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '263955dc58367a89e9-52259664',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'title' => 0,
+    'keywords' => 0,
+    'description' => 0,
+    'config' => 0,
+    'cookie' => 0,
+    'rightinfo' => 0,
+    'config_wapdomain' => 0,
+    'headertitle' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55dc58368ae4b7_85927555',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_55dc58368ae4b7_85927555')) {function content_55dc58368ae4b7_85927555($_smarty_tpl) {?><?php if (!is_callable('smarty_function_url')) include 'D:\\wamp\\www\\app\\include\\libs\\plugins\\function.url.php';
+?><!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+ -  手机人才网</title>
+<meta http-equiv="keywords" content="<?php echo $_smarty_tpl->tpl_vars['keywords']->value;?>
+,wap" />
+<meta http-equiv="description" content="<?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-compatible"content="IE=edge">
+<meta name="viewport" content="width=device-width" initial-scale="1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="format-detection" content="telephone=no,email=no"/>
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width">
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/app/template/wap/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/app/template/wap/css/css.css" type="text/css">
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/app/template/wap/css/job.css" type="text/css">
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/app/template/wap/js/prefixfree.min.js">
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/js/jquery-1.8.0.min.js" language="javascript"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/app/template/wap/js/layer/layer.m.js" language="javascript"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/app/template/wap/js/public.js" language="javascript"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript">
+function show(obj){
+var obj=document.getElementById(obj);  //获得id为b的容器
+  //如果下面的内容显示的话就隐藏
+  if(obj.style.display=="block"){
+     obj.style.display="none";
+  }else 
+  obj.style.display="block";
+}
+<?php echo '</script'; ?>
+>
+</head>
+<body>
+<div id="wrapper">
+<div class="mobile">
+
+<!-- Checkbox to toggle the menu -->
+<input type="checkbox" id="tm" />
+<!-- The menu -->
+<div class="sidenav"> 
+<?php if (!$_smarty_tpl->tpl_vars['cookie']->value['username']) {?> 
+   <!--     登录前-->
+   <div class="nav_loin" style="display:block"><a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'login'),$_smarty_tpl);?>
+" class="nav_loin_a">登录</a><a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'register'),$_smarty_tpl);?>
+"class="nav_loin_a nav_loin_zc">注册</a></div>
+   <?php } else { ?> 
+   <!--     登录后-->
+   <div class="nav_loin" style="display:block"> <?php if ($_smarty_tpl->tpl_vars['cookie']->value['usertype']=="1") {?>
+    <div class="nav_login_after">
+       <div class="nav_header_img">
+        <div class="nav_header_bg"> <img src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/<?php echo $_smarty_tpl->tpl_vars['rightinfo']->value['photo'];?>
+"  onerror="showImgDelay(this,'<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_member_icon'];?>
+',2);"></div>
+      </div>
+       <a href="<?php echo $_smarty_tpl->tpl_vars['config_wapdomain']->value;?>
+/member/" class="nav_loin_a">用户中心</a><a href="javascript:;" onclick="islogout('<?php echo smarty_function_url(array('m'=>'wap','c'=>'loginout'),$_smarty_tpl);?>
+','确认退出吗？');" class="nav_loin_a nav_loin_zc">退出</a> </div>
+    <div class="nav_header_info_box">
+       <dl class="nav_header_info">
+        <a href="<?php echo smarty_function_url(array('m'=>'wap'),$_smarty_tpl);?>
+/member/index.php?c=invite">
+         <dt><?php echo $_smarty_tpl->tpl_vars['rightinfo']->value['msgnum'];?>
+</dt>
+         <dd>面试邀请</dd>
+         </a>
+      </dl>
+       <dl class="nav_header_info">
+        <a href="<?php echo smarty_function_url(array('m'=>'wap'),$_smarty_tpl);?>
+/member/index.php?c=resume">
+         <dt><?php echo $_smarty_tpl->tpl_vars['rightinfo']->value['expectnum'];?>
+</dt>
+         <dd>简历管理</dd>
+         </a>
+      </dl>
+     </div>
+    <?php } elseif ($_smarty_tpl->tpl_vars['cookie']->value['usertype']=="2") {?>
+    <div class="nav_login_after">
+       <div class="nav_header_img">
+        <div class="nav_header_bg"><img src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/<?php echo $_smarty_tpl->tpl_vars['rightinfo']->value['logo'];?>
+" onerror="showImgDelay(this,'<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_unit_icon'];?>
+',2);" ></div>
+      </div>
+       <a href="<?php echo smarty_function_url(array('m'=>'wap'),$_smarty_tpl);?>
+/member" class="nav_loin_a">用户中心</a><a href="javascript:;" onclick="islogout('<?php echo smarty_function_url(array('m'=>'wap','c'=>'loginout'),$_smarty_tpl);?>
+','确认退出吗？');" class="nav_loin_a nav_loin_zc">退出</a> </div>
+    <div class="nav_header_info_box">
+       <dl class="nav_header_info">
+        <a href="<?php echo smarty_function_url(array('m'=>'wap'),$_smarty_tpl);?>
+/member/index.php?c=hr">
+         <dt><?php echo $_smarty_tpl->tpl_vars['rightinfo']->value['sqnum'];?>
+</dt>
+         <dd>应聘简历</dd>
+         </a>
+      </dl>
+       <dl class="nav_header_info">
+        <a href="<?php echo smarty_function_url(array('m'=>'wap'),$_smarty_tpl);?>
+/member/index.php?c=job">
+         <dt><?php echo $_smarty_tpl->tpl_vars['rightinfo']->value['jobnum'];?>
+</dt>
+         <dd>职位管理</dd>
+         </a>
+      </dl>
+     </div>
+    <?php }?> </div>
+   <?php }?>
+   <div style="clear:both"></div>
+   <ul>
+    <li><a href="<?php echo smarty_function_url(array('m'=>'wap'),$_smarty_tpl);?>
+" class="side_nav_a"><i class="nav_fa fa fa-home"></i><b>首页</b></a></li>
+    <li><a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'job'),$_smarty_tpl);?>
+" class="side_nav_a"><i class="nav_fa fa fa-briefcase"></i><b>找职位</b></a></li>
+    <li><a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'resume'),$_smarty_tpl);?>
+" class="side_nav_a"><i class="nav_fa fa fa-graduation-cap"></i><b>找人才</b></a></li>
+    <li><a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'company'),$_smarty_tpl);?>
+" class="side_nav_a"><i class="nav_fa fa fa-building-o"></i><b>找企业</b></a></li>
+    <li><a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'once'),$_smarty_tpl);?>
+" class="side_nav_a"><i class="nav_fa fa fa-tasks"></i><b>微招聘</b></a></li>
+    <li><a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'tiny'),$_smarty_tpl);?>
+" class="side_nav_a"><i class="nav_fa fa fa-users"></i><b>微简历</b></a></li>
+    <li><a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'article'),$_smarty_tpl);?>
+" class="side_nav_a"><i class="nav_fa fa fa-newspaper-o"></i><b>找资讯</b></a></li>
+    <li><a href="<?php echo smarty_function_url(array('m'=>'wap','c'=>'map'),$_smarty_tpl);?>
+" class="side_nav_a"><i class="nav_fa fa fa-map-marker"></i><b>附近职位</b></a></li>
+  </ul>
+ </div>
+<!-- Content area -->
+<div class="body_wap">
+<header>
+   <div class="header">
+    <div class="header_bg"> <a class="hd-lbtn" href="javascript:history.back();"><i class="header_top_l fa fa-chevron-left"></i></a>
+       <div class="header_h1"><?php echo $_smarty_tpl->tpl_vars['headertitle']->value;?>
+</div>
+       <label for="tm" class="label"><i class="header_top_r fa fa-th "></i></label>
+     </div>
+  </div>
+ </header><?php }} ?>

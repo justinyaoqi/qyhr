@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>职业指导 - 职场资讯- 庆阳人力资源网_致力于为庆阳市提供最优质的人才服务基地和人才聚合基地。</title>
+<META name="keywords" content="职业指导 ">
+<META name="description" content="庆阳人力资源网_致力于为庆阳市提供最优质的人才服务基地和人才聚合基地。为您带来最新的职业指导的职场资讯。">
+<link rel="stylesheet" href="http://localhost/app/template/hy/style/css.css" type="text/css">
+<!--[if IE 6]>
+<script src="http://localhost/js/png.js"></script>
+<script>
+DD_belatedPNG.fix('.png');
+</script>
+<![endif]-->
+<script src="http://localhost/js/jquery-1.8.0.min.js" language="javascript"></script>
+<script src="http://localhost/js/layer/layer.min.js" language="javascript"></script>
+<script src="http://localhost/js/lazyload.min.js" language="javascript"></script>
+<script src="http://localhost/js/public.js" language="javascript"></script>
+<link rel="stylesheet" href="http://localhost/app/template/hy/style/news.css" type="text/css">
+</head>
+<body>
+<!--header-->
+<div class="top">
+  <div class="top_cot">
+    <div class="top_cot_content">
+      <div class="top_left fl">
+        <div class="yun_welcome fl">欢迎来到庆阳人力资源网_致力于为庆阳市提供最优质的人才服务基地和人才聚合基地。！</div>
+        <span class="fl"><a href="http://localhost/wap" class="wap_icon">手机版</a> | <a href="http://localhost/index.php?m=subscribe">订阅</a></span> </div>
+      <div class="top_right_re fr">
+        <div class="top_right">
+          <div class="yun_topNav fr"> 
+		  <a class="yun_navMore" href="javascript:;">网站导航</a>
+            <div class="yun_webMoredown" style="display:none">
+              <div class="yun_top_nav_box"> 
+			                  <div class="yun_top_nav_h1"><a href="http://localhost/job/" >找工作</a></div>
+                <ul>
+                                    <li><a href="http://localhost/company/" >找企业</a></li>
+                                    <li><a href="http://localhost/once/" >微招聘</a></li>
+                                    <li><a href="http://localhost/map/" >地图招聘</a></li>
+                                  </ul>
+                                <div class="yun_top_nav_h1"><a href="http://localhost/resume/" >找人才</a></div>
+                <ul>
+                                    <li><a href="http://localhost/hr/" >工具箱</a></li>
+                                    <li><a href="http://localhost/tiny/" >微简历</a></li>
+                                  </ul>
+                                <div class="yun_top_nav_h1"><a href="http://localhost/article/" >资讯</a></div>
+                <ul>
+                                    <li><a href="http://localhost//ask" >问答</a></li>
+                                  </ul>
+                                <div class="yun_top_nav_h1"><a href="http://www.hr135.com"  target="_blank">本站特色</a></div>
+                <ul>
+                                    <li><a href="http://localhost/redeem/" >积分兑换</a></li>
+                                  </ul>
+                 </div>
+            </div>
+          </div>
+                        <script language='JavaScript' src='http://localhost/index.php?m=ajax&c=RedLoginHead'></script>
+                    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header_zt"></div>
+<div class="header">
+  <div class="w980">
+    <div class="header_cont">
+      <div class="logo fl"><a href="http://localhost"><img src="http://localhost/data/logo/20150820/14450725617.PNG" class="png"></a></div>
+      <nav>
+        <ul class="header_nav">
+                    <li class=""><a href="http://localhost/index.php" >首页</a></li>
+                    <li class=""><a href="http://localhost/job/" >找工作</a></li>
+                    <li class=""><a href="http://localhost/resume/" >找人才</a></li>
+                    <li class=""><a href="http://localhost/company/" >找企业</a></li>
+                    <li class=""><a href="http://localhost/once/" >微招聘</a></li>
+                    <li class=""><a href="http://localhost/tiny/" >微简历</a></li>
+                    <li class=""><a href="http://localhost/article/" >职场资讯</a></li>
+                    <li class=""><a href="http://localhost/zph/" >招聘会</a></li>
+                    <li class=""><a href="http://localhost/map/"  target="_blank">地图</a></li>
+                    <li class=""><a href="http://localhost/evaluate/" >测评</a></li>
+                            </ul>
+      </nav>
+
+        
+        
+        
+        
+        
+        
+    </div>
+  </div>
+</div>
+<div class="yun_content">
+<div class="current_Location  png"> 您当前的位置：<a href="http://localhost">首页</a> > 职场资讯 > <span class="newss_cblue"></span></div>
+<!--content开始-->
+<div class="zx_cont_inner">
+  <div class="wrap">
+    <div class="zx_inner_left fl">
+      <div class="zx_left_part">
+        <div class="zx_part_lists"> 
+                      <div class="clear"></div>
+          <div class="pages"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="zx_inner_right fr">
+      <div class="zx_rig_rom">
+        <div class="zx_article">
+          <div class="zx_art_tit"><i class="Company_h1_line"></i>推荐文章</div>
+          <div class="zx_art_hot">
+                       <div class="clear"></div>
+          </div>
+          <div class="zx_art_list">
+            <ul>
+                          </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="zx_article">
+          <div class="zx_art_tit"><i class="Company_h1_line"></i>最新文章</div>
+                      <div class="zx_art_list">
+              <ul>
+                                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+</div>
+<!--content结束--> 
+<!--foot  start-->
+
+<div class="clear"></div>
+<div class="footer">
+  <div class="foot">
+    <div class="foot_conent">
+      <div class="footer_left">         <dl class="footer_list">
+          <dt>关于我们</dt>
+          <dd>
+            <ul>
+                            <li><a 
+                            href="http://localhost/about/index.html"
+                              title="关于我们">关于我们</a></li>
+                            <li><a 
+                            href="http://localhost/about/service.html"
+                              title="注册协议">注册协议</a></li>
+                            <li><a 
+                            href="http://localhost/about/phpyun.html"
+                              title="法律声明">法律声明</a></li>
+                          </ul>
+          <dd>
+        </dl>
+                <dl class="footer_list">
+          <dt>支付信息</dt>
+          <dd>
+            <ul>
+                            <li><a 
+                            href="http://localhost/about/yh.html"
+                              title="银行帐户">银行帐户</a></li>
+                            <li><a 
+                            href="http://localhost/about/pinpai.html"
+                              title="品牌推广">品牌推广</a></li>
+                            <li><a 
+                            href="http://localhost/about/charge.html"
+                              title="收费标准">收费标准</a></li>
+                            <li><a 
+                            href="http://localhost/about/indexzy.html"
+                              title="经营资源">经营资源</a></li>
+                          </ul>
+          <dd>
+        </dl>
+                <dl class="footer_list">
+          <dt>网站特色</dt>
+          <dd>
+            <ul>
+                            <li><a 
+                            href="index.php?m=redeem"
+                              title="积分兑换">积分兑换</a></li>
+                            <li><a 
+                            href="index.php?m=subscribe"
+                              title="订阅服务">订阅服务</a></li>
+                          </ul>
+          <dd>
+        </dl>
+                <dl class="footer_list">
+          <dt>咨询反馈</dt>
+          <dd>
+            <ul>
+                            <li><a 
+                            href="http://localhost/about/kf.html"
+                              title="客服中心">客服中心</a></li>
+                            <li><a 
+                            href="http://localhost/about/gg.html"
+                              title="广告投放">广告投放</a></li>
+                            <li><a 
+                            href="http://localhost/about/newuser.html"
+                              title="新手指引">新手指引</a></li>
+                          </ul>
+          <dd>
+        </dl>
+                <dl class="footer_list">
+          <dt>特色服务</dt>
+          <dd>
+            <ul>
+                            <li><a 
+                            href="http://localhost/about/jinjia.html"
+                              title="竟价职位">竟价职位</a></li>
+                            <li><a 
+                            href="http://localhost/about/map.html"
+                              title="地图搜索">地图搜索</a></li>
+                            <li><a 
+                            href="http://localhost/about/new.html"
+                              title="职场指南">职场指南</a></li>
+                          </ul>
+          <dd>
+        </dl>
+         </div>
+       <div class="footer_right" style="text-align:left">
+        <div class="footer_touch">服务热线</div>
+        <div class="footer_tel">18193490788</div>
+        
+        <ul class="footer_last">
+                  
+          <li style="width:70px; float:left; margin-top:5px; text-align:left"> <a class="move_03" style="color: #ff0000"  target="_blank" href="http://localhost/index.php?c=weixin" target="_blank">微信</a> </li>
+                  </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="footer_bot">
+      <div class="footer_bot_p">Copyright C 20092014 All Rights Reserved 版权所有 庆阳红旗软件工程有限公司陇ICP备12049413号-3 </div>
+      <div class="footer_bot_p">	地址:庆阳市西峰区育才路执教大厦下  电话(Tel):18193490788  EMAIL:admin@admin.com</div>
+      <div class="footer_img"> 
+      <a href="/"><img alt="" src="http://localhost/app/template/hy/images/ftImg01.png" width="120" height="52"> </a> 
+      <a href="/"><img alt="" src="http://localhost/app/template/hy/images/ftImg02.png" width="120" height="52"> </a> 
+      <a href="/"><img alt="" src="http://localhost/app/template/hy/images/ftImg03.png" width="120" height="52"> </a> 
+	  
+      </div>
+    </div>
+  </div>
+</div>
+<!--foot  end--> 
+<div id="bg" style=""></div>
+<div id="uclogin" style="display:none"></div>
+<script>var integral_pricename='积分';var weburl="http://localhost"; </script>
+</body>
+</html>

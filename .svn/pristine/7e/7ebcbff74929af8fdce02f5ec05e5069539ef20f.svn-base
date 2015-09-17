@@ -1,0 +1,34 @@
+<?php defined('IN_TS') or die('Access Denied.'); ?><?php include template('header'); ?>
+
+<div class="container">
+
+
+
+<div class="bbox">
+<div class="bc">
+
+<?php include template('edit_xbar'); ?>
+
+<form method="POST" action="<?php echo SITE_URL;?>index.php?app=group&ac=do&ts=photo" enctype="multipart/form-data" >
+<table width="100%" class="commtable">
+<tr><th>小组图标：</th><td>
+     <img alt="<?php echo $strGroup['groupname'];?>" title="<?php echo $strGroup['groupname'];?>" valign="middle" src="<?php if($strGroup['photo']) { ?><?php echo tsXimg($strGroup['photo'],'group','48','48',$strGroup['path'])?>?v=<?php echo rand();?><?php } else { ?><?php echo SITE_URL;?>public/images/group.jpg<?php } ?>" class="pil"></td></tr>
+<tr>
+<th>选择图片：</th>
+     <td>
+      <input type="file" name="picfile">
+<input type="hidden" name="groupid" value="<?php echo $strGroup['groupid'];?>" />
+<input type="submit" value="上传照片" />
+	  
+    </td>
+</tr>
+</table>
+</form>
+
+</div>
+</div>
+
+
+
+</div>
+<?php include template('footer'); ?>

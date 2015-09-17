@@ -1,0 +1,45 @@
+<?php 
+
+
+/**
+* 
+*/
+class mobile extends common
+{
+	public $token='';
+	function checkLogin()
+	{
+		
+	}
+
+	//获取token
+	public function getToken($value='')
+	{
+		
+	}
+	//设置token
+	public function setToken($value='')
+	{
+		
+	}
+
+
+	//以json格式显示数据
+	//$content 推送内容$msg 错误消息  $num错误号
+	public function apiShow($content,$msg='',$num)
+	{
+		$data["msg"]=$msg;
+		echo json_encode($data);
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+ ?>

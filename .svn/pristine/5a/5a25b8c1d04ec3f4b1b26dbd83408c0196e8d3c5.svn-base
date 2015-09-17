@@ -1,0 +1,15 @@
+TIME:2015-03-23 :23:59:01
+SQL:SET NAMES 'utf8'
+ERROR:
+REQUEST_URI:/
+--------------------------------------
+TIME:2015-03-23 :23:59:02
+SQL:SET NAMES 'utf8'
+ERROR:
+REQUEST_URI:/
+--------------------------------------
+TIME:2015-03-23 :23:59:04
+SQL:SET NAMES 'utf8'
+ERROR:
+REQUEST_URI:/index.php/group
+--------------------------------------

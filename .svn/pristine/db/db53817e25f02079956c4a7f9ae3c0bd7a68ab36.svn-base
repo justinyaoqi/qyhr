@@ -1,0 +1,24 @@
+<?php 
+
+
+/**
+* 
+*/
+class mobile extends common
+{
+	
+	function FunctionName($value='')
+	{
+		# code...
+	}
+}
+
+
+
+
+
+
+
+
+
+ ?>

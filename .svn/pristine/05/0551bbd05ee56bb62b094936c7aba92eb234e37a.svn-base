@@ -1,0 +1,17 @@
+<?php 
+
+/**
+* 
+*/
+class index_controller extends common
+{
+	
+	function job_action($value='')
+	{
+		$where  = array('rec' =>'1');
+		$position=$this->obj->DB_select_all("job_class",$where);
+		var_dump($position);
+		exit();
+	}
+}
+ ?>

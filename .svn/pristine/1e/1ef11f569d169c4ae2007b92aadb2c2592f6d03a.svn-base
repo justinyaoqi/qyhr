@@ -1,0 +1,10 @@
+TIME:2015-02-03 :00:04:27
+SQL:SELECT topicid,title,count_view,count_comment FROM ts_group_topic WHERE `addtime`>'1416413067' and `count_view`>'0' and `addtime`<'1422893067' ORDER BY addtime desc LIMIT content
+ERROR:Undeclared variable: content
+REQUEST_URI:/index.php?app=group
+--------------------------------------
+TIME:2015-02-03 :00:04:29
+SQL:SELECT topicid,title,count_view,count_comment FROM ts_group_topic WHERE `addtime`>'1416413069' and `count_view`>'0' and `addtime`<'1422893069' ORDER BY addtime desc LIMIT content
+ERROR:Undeclared variable: content
+REQUEST_URI:/index.php?app=group
+--------------------------------------

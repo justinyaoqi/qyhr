@@ -1,0 +1,12 @@
+<?php
+defined('IN_TS') or die('Access Denied.');
+return array (
+  'appname' => '邮件',
+  'appdesc' => 'ThinkSAAS邮件',
+  'isenable' => '0',
+  'mailhost' => 'smtp.exmail.qq.com',
+  'ssl' => '1',
+  'mailport' => '465',
+  'mailuser' => 'postmaster@thinksaas.cn',
+  'mailpwd' => '1231qa2342ws',
+);

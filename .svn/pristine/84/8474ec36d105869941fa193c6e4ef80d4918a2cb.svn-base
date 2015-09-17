@@ -1,0 +1,559 @@
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-08-20 23:37:39
+         compiled from "D:\wamp\www\app\template\hy\once\index.htm" */ ?>
+<?php /*%%SmartyHeaderCode:916955d5f4431ab0d3-96160691%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'cfcf8cb2ba11bb9b753d8e1bf9d2799cbf52f920' => 
+    array (
+      0 => 'D:\\wamp\\www\\app\\template\\hy\\once\\index.htm',
+      1 => 1440079204,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '916955d5f4431ab0d3-96160691',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'title' => 0,
+    'keywords' => 0,
+    'description' => 0,
+    'style' => 0,
+    'config' => 0,
+    'onshow' => 0,
+    'ip' => 0,
+    'num' => 0,
+    'keylist' => 0,
+    'once' => 0,
+    'total' => 0,
+    'pagenav' => 0,
+    'top_key' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_55d5f4433103d1_34527431',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_55d5f4433103d1_34527431')) {function content_55d5f4433103d1_34527431($_smarty_tpl) {?><?php if (!is_callable('smarty_function_url')) include 'D:\\wamp\\www\\app\\include\\libs\\plugins\\function.url.php';
+?><?php $once=array();global $db,$db_config,$config;eval('$paramer=array("item"=>"\'once\'","ispage"=>"1","limit"=>"20","keyword"=>"\'auto.keyword\'","nocache"=>"")
+;');
+	
+		$ParamerArr = GetSmarty($paramer,$_GET,$_smarty_tpl);
+		$paramer = $ParamerArr[arr];
+		$Purl =  $ParamerArr[purl];
+        global $ModuleName;
+        if(!$Purl["m"]){
+            $Purl["m"]=$ModuleName;
+        }
+		$where = "`status`='1'  and `edate`>".time();
+		if($config[did]){
+			$where.=" AND `did`='".$config['did']."'";
+		}
+		if($paramer[keyword]){
+			$where.=" AND `title` LIKE '%".$paramer[keyword]."%' or `companyname` LIKE '%".$paramer[keyword]."%'";
+		}
+		if($paramer['delid']){
+			$where.=" AND `id`<>'".$paramer['delid']."'";
+		}
+		if($paramer[order]){
+			$order = " ORDER BY `".str_replace("'","",$paramer[order])."`";
+		}else{
+			$order = " ORDER BY ctime ";
+		}
+		if($paramer[sort]){
+			$sort = $paramer[sort];
+		}else{
+			$sort = " DESC";
+		}
+		if($paramer[limit]){
+			$limit=" LIMIT ".$paramer[limit];
+		}else{
+			$limit=" LIMIT 20";
+		}
+		if($paramer[where]){
+			$where = $paramer[where];
+		}
+		if($paramer[ispage]){
+			$limit = PageNav($paramer,$_GET,"once_job",$where,$Purl,'','0',$_smarty_tpl);
+		}
+		$where.=$order.$sort.$limit;
+		$once=$db->select_all("once_job",$where);
+		if(is_array($once)){
+			foreach($once as $key=>$value){
+				$time=time()-$value['ctime'];
+				if($time>86400 && $time<604800){
+					$once[$key]['ctime'] = ceil($time/86400)."天前";
+				}elseif($time>3600 && $time<86400){
+					$once[$key]['ctime'] = ceil($time/3600)."小时前";
+				}elseif($time>60 && $time<3600){
+					$once[$key]['ctime'] = ceil($time/60)."分钟前";
+				}elseif($time<60){
+					$once[$key]['ctime'] = "刚刚";
+				}else{
+					$once[$key]['ctime'] = date("Y-m-d",$value['ctime']);
+				}
+			}
+			if($paramer[keyword]!=""&&!empty($once)){
+				addkeywords('1',$paramer[keyword]);
+			}
+		} ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>
+<META name="keywords" content="<?php echo $_smarty_tpl->tpl_vars['keywords']->value;?>
+">
+<META name="description" content="<?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+">
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['style']->value;?>
+/style/css.css" type="text/css">
+<!--[if IE 6]>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/js/png.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+>
+DD_belatedPNG.fix('.png');
+<?php echo '</script'; ?>
+>
+<![endif]-->
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/js/jquery-1.8.0.min.js" language="javascript"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/js/layer/layer.min.js" language="javascript"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/js/lazyload.min.js" language="javascript"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/js/public.js" language="javascript"><?php echo '</script'; ?>
+>
+<link href="<?php echo $_smarty_tpl->tpl_vars['style']->value;?>
+/style/Micro_resume.css" rel="stylesheet" type="text/css" />
+<style>
+* {
+	margin:0;
+	padding:0;
+}
+body, div {
+	margin:0;
+	padding:0;
+}
+.content_firm {
+	float:left;
+	width:100%;
+	margin: 0 auto;
+	position: relative;
+}
+</style>
+</head>
+<body>
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplstyle']->value)."/header.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<div class="yun_content">
+  <div class="current_Location  com_current_Location png">
+    <div class="fl">您当前的位置：<a href="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+">首页</a> > <a href="<?php echo smarty_function_url(array('m'=>'once'),$_smarty_tpl);?>
+">微招聘</a></div>
+  </div>
+  <div class="fast_issuance" style="display:none;_position:absolute;" id="fabufast">
+    <div class="fast_once_cont fl">
+      <div class="fast-onxt_box">
+      <iframe id="supportiframe"  name="supportiframe" onload="returnmessage('supportiframe');" style="display:none"></iframe>
+      <form action="<?php echo smarty_function_url(array('m'=>'once'),$_smarty_tpl);?>
+" target="supportiframe" method="post" onSubmit="return check_once_job()">
+        <div class="once_fb_list"><span class="once_fb_list_span"><font color="red">* </font>我想招聘：</span>
+          <input  class="once_input_simple once_input_simple_w290" type="text" id="title" maxlength="15" name="title">
+          <span class="once_fb_list_span"><font color="red">* </font>人数：</span>
+          <input  class="once_input_simple once_input_simple_w140" type="text" id="mans" onkeyup="this.value=this.value.replace(/[^0-9-]/g,'')"maxlength="4" name="mans">
+        </div>
+        <div class="once_fb_list"><span class="once_fb_list_span"><font color="red">* </font>(店面)名称：</span>
+          <input class="once_input_simple once_input_simple_w480" type="text" id="companyname" maxlength="15" name="companyname">
+        </div>
+        <div class="once_fb_list"><span class="once_fb_list_span"><font color="red">* </font>联系人：</span>
+          <input class="once_input_simple once_input_simple_w140" type="text" id="linkman" maxlength="15" name="linkman">
+          <span class="once_fb_list_span"><font color="red">* </font>联系地址：</span>
+          <input class="once_input_simple once_input_simple_w290" type="text" id="address" maxlength="50" name="address">
+        </div>
+        <div class="once_fb_list" style="margin-top:5px;"><span class="once_fb_list_span"><font color="red">* </font>具体要求：</span>
+          <textarea rows='6' class="once_simplew_textarea" id="require" placeholder="请填写招聘的具体要求，如：性别，学历，年龄，工作经验，工资待遇等相关信息" onfocus="if(this.value=='请填写招聘的具体要求，如：性别，学历，年龄，工作经验，工资待遇等相关信息') this.value=''" onblur="this.value=this.value==''?'请填写招聘的具体要求，如：性别，学历，年龄，工作经验，工资待遇等相关信息':this.value" name="require"><?php echo $_smarty_tpl->tpl_vars['onshow']->value['require'];?>
+</textarea>
+        </div>
+        <div class="once_fb_list_bottom">
+          <div class="once_fb_list_bottom_tips">以下（3）项需选填一项</div>
+          <div class="once_fb_list_bottom_left"> 联系电话
+            <input class="once_input_simple_xt" type="text" id="phone" onkeyup="this.value=this.value.replace(/[^0-9-]/g,'')" maxlength="13" name="phone">
+          </div>
+          <div class="once_fb_list_bottom_left"> 联系邮箱
+            <input class="once_input_simple_xt" type="text" id="email" maxlength="50" name="email">
+          </div>
+          <div class="once_fb_list_bottom_left"> 联系QQ
+            <input class="once_input_simple_xt" type="text" id="qq" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" maxlength="50" name="qq">
+          </div>
+        </div>
+        <div class="once_fb_list"> <span class="once_fb_list_span"><font color="red">* </font>有效期：</span>
+
+          <input class="once_input_simple once_input_simple_w80" type="text" id="edate" style="width:80px" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')"  maxlength="3" name="edate">
+          <em class="once_fb_list_em">天</em> <span class="once_fb_list_span once_fb_list_span_ml20"><font color="red">* </font>密码：</span>
+          <input class="once_input_simple once_input_simple_w80" type="password"  id="password" name="password" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+          <?php if (strpos($_smarty_tpl->tpl_vars['config']->value['code_web'],"一句话招聘")!==false) {?><span class="once_fb_list_span once_fb_list_span_ml20"><font color="red">* </font>验证码：</span> 
+          <input id="authcode" class="once_input_simple once_input_simple_w80" type="text" maxlength="4" name="authcode">
+          <a href="javascript:check_code();"><img id="vcode_img" src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/app/include/authcode.inc.php" style="margin-left:10px;"></a> <?php } else { ?>
+          <input id="authcode" type="hidden" value="12345" maxlength="4" name="authcode">
+          <?php }?> </div>
+        <div class="once_fb_list_tips"><span class="once_fb_list_span once_fb_list_span_w80">温馨提示：</span> <em class="once_fb_list_span_em">请妥善保存密码，密码可用于刷新/修改/删除信息！
+          您当前的IP是：<?php echo $_smarty_tpl->tpl_vars['ip']->value;?>
+，</br>
+          请不要发布虚假、违法信息！</em></div>
+        <div class="once_fb_list">
+          <input type="hidden" id="id" name="id"/>
+          <input id="botton" class="once_fast_submit" type="submit" value="发布" name="submit">
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['style']->value;?>
+/js/fast.js" language="javascript"><?php echo '</script'; ?>
+>
+  <div class="clear"></div>
+  <!--start-->
+  <div class="recruit_micro">
+    <div class="wrap">
+      <div class="once_tips_cont"> <img src="<?php echo $_smarty_tpl->tpl_vars['style']->value;?>
+/images/once_bg.jpg" width="1000" height="204">
+        <div class="once_tips_bg">
+          <div class="once_tips_h1">他们这样招工</div>
+          <div class="once_tips_p">不用注册，快速发布招聘广告信息，
+            你再也不用到处跑,这里也能贴招聘广告</div>
+          <div class="once_tips_fab"> <a href='javascript:;' <?php if ($_smarty_tpl->tpl_vars['num']->value) {?>onclick="showfabu()"<?php } else { ?>onclick="layer.msg('每天最多可发布<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_once'];?>
+份微招聘！',2,8)"<?php }?> class="recruit_user_public">发布微招聘</a> </div>
+        </div>
+      </div>
+      <div class="res_search">
+        <div class="res_search_con ">
+          <form method="get" name="myform" onsubmit="return check_once_keyword();" action="<?php if (!$_smarty_tpl->tpl_vars['config']->value['sy_oncedir']) {?>index.php<?php } else {
+echo smarty_function_url(array('m'=>'once'),$_smarty_tpl);
+}?>">
+            <div class="res_key">
+				<?php if (!$_smarty_tpl->tpl_vars['config']->value['sy_oncedir']) {?><input type="hidden" value="once" name="m" /><?php }?> 
+              <input  class="res_key_txt" id="Fastkeyword" type="text" value="请输入要搜索的关键字" onclick="if(this.value=='请输入要搜索的关键字'){this.value=''}" onblur="if(this.value==''){this.value='请输入要搜索的关键字'}" name="keyword">
+              <input class="res_key_btn" type="submit" value="搜索">
+            </div>
+          </form>
+          <div class="res_hot"> 热门搜索：
+            <?php  $_smarty_tpl->tpl_vars['keylist'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['keylist']->_loop = false;
+global $config;eval('$paramer=array("limit"=>"12","type"=>"1","item"=>"\'keylist\'","nocache"=>"")
+;');$list=array();
+	
+		if($paramer[recom]){
+			$tuijian = 1;
+		}
+		if($paramer[type]){
+			$type = $paramer[type];
+		}
+		if($paramer[limit]){
+			$limit=$paramer[limit];
+		}else{
+			$limit=20;
+		}
+		include PLUS_PATH."/keyword.cache.php";
+		if($paramer[iswap]){
+			$wap = "/wap";
+		}else{
+			$index =1;
+		}
+		if(is_array($keyword)){
+			if($paramer[iswap]){
+				$i=0;
+				foreach($keyword as $k=>$v){
+					if($tuijian && $v[tuijian]!=1){
+						continue;
+					}
+					if($type && $v[type]!=$type){
+						continue;
+					}
+
+					$i++;
+					if($v[type]=="1"){ 
+						$v[url] = Url("wap",array("c"=>"once","keyword"=>$v['key_name']));
+						$v[type_name]='一句话招聘';
+					}elseif($v['type']=="13"){
+						$v['url'] = Url("wap",array("c"=>"tiny","keyword"=>$v['key_name']));
+						$v['type_name']='微简历';					
+					}elseif($v[type]=="3"){
+						$v[url] = Url("wap",array("c"=>"job","keyword"=>$v['key_name']));
+						$v[type_name]='职位';
+					}elseif($v['type']=="4"){
+						$v['url'] = Url("wap",array("c"=>"company","keyword"=>$v['key_name']));
+						$v['type_name']='公司';
+					}elseif($v['type']=="5"){
+						$v['url'] = Url("wap",array("c"=>"resume","keyword"=>$v['key_name']));
+						$v['type_name']='人才';
+					}
+					$v['key_title']=$v['key_name'];
+					if($v['color']){
+						$v['key_name']="<font color=\"".$v['color']."\">".$v['key_name']."</font>";
+					}
+					$list[] = $v;
+					if($i==$limit){
+						break;
+					}
+				}
+			}else{
+				$i=0;
+				foreach($keyword as $k=>$v){
+					if($tuijian && $v['tuijian']!=1){
+						continue;
+					}
+					if($type && $v['type']!=$type){
+						continue;
+					}
+					$i++;
+					if($v['type']=="1"){
+						$v['url'] = Url("once",array("keyword"=>$v['key_name']));
+						$v['type_name']='一句话招聘';
+					}elseif($v['type']=="13"){
+						$v['url'] = Url("tiny",array("keyword"=>$v['key_name']));
+						$v['type_name']='微简历';	
+					}elseif($v['type']=="3"){
+						$v['url'] = Url("job",array("c"=>"search","keyword"=>$v['key_name']));
+						$v['type_name']='职位';
+					}elseif($v['type']=="4"){
+						$v['url'] = Url("company",array("keyword"=>$v['key_name']));
+						$v['type_name']='公司';
+					}elseif($v['type']=="5"){
+						$v['url'] = Url("resume",array("c"=>"search","keyword"=>$v['key_name']));
+						$v['type_name']='人才';
+					}else if($v['type']=="12"){
+						$v['url'] = Url("ask",array("c"=>"search","keyword"=>$v['key_name']));
+						$v['type_name']='问答';
+					}
+					$v['key_title']=$v['key_name'];
+					if($v['color']){
+						$v['key_name']="<font color=\"".$v['color']."\">".$v['key_name']."</font>";
+					}
+					 
+					$list[] = $v;
+					if($i==$limit){
+						break;
+					}
+				}
+			}
+		}$list = $list; if (!is_array($list) && !is_object($list)) { settype($list, 'array');}
+foreach ($list as $_smarty_tpl->tpl_vars['keylist']->key => $_smarty_tpl->tpl_vars['keylist']->value) {
+$_smarty_tpl->tpl_vars['keylist']->_loop = true;
+?> <a href="<?php echo $_smarty_tpl->tpl_vars['keylist']->value['url'];?>
+"> <?php echo $_smarty_tpl->tpl_vars['keylist']->value['key_name'];?>
+</a> <?php } ?> </div>
+        </div>
+      </div>
+      <div class="recruit_micro_list">
+        <div class="recruit_micro_list01" style="padding-top:0px;">
+          <ul>
+            <?php  $_smarty_tpl->tpl_vars['once'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['once']->_loop = false;
+$once = $once; if (!is_array($once) && !is_object($once)) { settype($once, 'array');}
+foreach ($once as $_smarty_tpl->tpl_vars['once']->key => $_smarty_tpl->tpl_vars['once']->value) {
+$_smarty_tpl->tpl_vars['once']->_loop = true;
+?>
+            <li>
+              <div class="recruit_list_title"><a href="<?php echo smarty_function_url(array('m'=>'once','c'=>'show','id'=>'`$once.id`'),$_smarty_tpl);?>
+"><?php echo mb_substr($_smarty_tpl->tpl_vars['once']->value['title'],0,11,'gbk');?>
+</a></div>
+              <div class="recruit_list_detail"><?php echo mb_substr($_smarty_tpl->tpl_vars['once']->value['require'],0,100,'gbk');?>
+</div>
+              <div class="recruit_list_link"> <?php if ($_smarty_tpl->tpl_vars['once']->value['phone']) {?>
+                <div class="recruit_list_name fl">联系电话：</div>
+                <?php echo $_smarty_tpl->tpl_vars['once']->value['phone'];?>
+<br>
+                <?php }?>
+                <div class="recruit_list_name fl">联 系 人 ：</div>
+                <?php echo $_smarty_tpl->tpl_vars['once']->value['linkman'];?>
+<br>
+              </div>
+            </li>
+            <?php } ?>
+          </ul>
+          <div class="clear"></div>
+          <?php if ($_smarty_tpl->tpl_vars['total']->value!=0) {?>
+          <div class="pages"> <?php echo $_smarty_tpl->tpl_vars['pagenav']->value;?>
+</div>
+          <?php }?>
+          <?php if ($_smarty_tpl->tpl_vars['total']->value==0) {?>
+          <div class="seachno" style="background:#FFF; width:614px;">
+            <div class="seachno_left"><img src="<?php echo $_smarty_tpl->tpl_vars['style']->value;?>
+/images/seach_no.png" width="144" height="102"></div>
+	<div class="listno-content"> 
+	<h2 color="#00b38a;">您还是少加点条件吧，我都快睡着了</h2><br>
+			<span> 热门关键字：<br>
+              <?php  $_smarty_tpl->tpl_vars['top_key'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['top_key']->_loop = false;
+global $config;eval('$paramer=array("limit"=>"6","recom"=>"1","type"=>"1","item"=>"\'top_key\'","nocache"=>"")
+;');$list=array();
+	
+		if($paramer[recom]){
+			$tuijian = 1;
+		}
+		if($paramer[type]){
+			$type = $paramer[type];
+		}
+		if($paramer[limit]){
+			$limit=$paramer[limit];
+		}else{
+			$limit=20;
+		}
+		include PLUS_PATH."/keyword.cache.php";
+		if($paramer[iswap]){
+			$wap = "/wap";
+		}else{
+			$index =1;
+		}
+		if(is_array($keyword)){
+			if($paramer[iswap]){
+				$i=0;
+				foreach($keyword as $k=>$v){
+					if($tuijian && $v[tuijian]!=1){
+						continue;
+					}
+					if($type && $v[type]!=$type){
+						continue;
+					}
+
+					$i++;
+					if($v[type]=="1"){ 
+						$v[url] = Url("wap",array("c"=>"once","keyword"=>$v['key_name']));
+						$v[type_name]='一句话招聘';
+					}elseif($v['type']=="13"){
+						$v['url'] = Url("wap",array("c"=>"tiny","keyword"=>$v['key_name']));
+						$v['type_name']='微简历';					
+					}elseif($v[type]=="3"){
+						$v[url] = Url("wap",array("c"=>"job","keyword"=>$v['key_name']));
+						$v[type_name]='职位';
+					}elseif($v['type']=="4"){
+						$v['url'] = Url("wap",array("c"=>"company","keyword"=>$v['key_name']));
+						$v['type_name']='公司';
+					}elseif($v['type']=="5"){
+						$v['url'] = Url("wap",array("c"=>"resume","keyword"=>$v['key_name']));
+						$v['type_name']='人才';
+					}
+					$v['key_title']=$v['key_name'];
+					if($v['color']){
+						$v['key_name']="<font color=\"".$v['color']."\">".$v['key_name']."</font>";
+					}
+					$list[] = $v;
+					if($i==$limit){
+						break;
+					}
+				}
+			}else{
+				$i=0;
+				foreach($keyword as $k=>$v){
+					if($tuijian && $v['tuijian']!=1){
+						continue;
+					}
+					if($type && $v['type']!=$type){
+						continue;
+					}
+					$i++;
+					if($v['type']=="1"){
+						$v['url'] = Url("once",array("keyword"=>$v['key_name']));
+						$v['type_name']='一句话招聘';
+					}elseif($v['type']=="13"){
+						$v['url'] = Url("tiny",array("keyword"=>$v['key_name']));
+						$v['type_name']='微简历';	
+					}elseif($v['type']=="3"){
+						$v['url'] = Url("job",array("c"=>"search","keyword"=>$v['key_name']));
+						$v['type_name']='职位';
+					}elseif($v['type']=="4"){
+						$v['url'] = Url("company",array("keyword"=>$v['key_name']));
+						$v['type_name']='公司';
+					}elseif($v['type']=="5"){
+						$v['url'] = Url("resume",array("c"=>"search","keyword"=>$v['key_name']));
+						$v['type_name']='人才';
+					}else if($v['type']=="12"){
+						$v['url'] = Url("ask",array("c"=>"search","keyword"=>$v['key_name']));
+						$v['type_name']='问答';
+					}
+					$v['key_title']=$v['key_name'];
+					if($v['color']){
+						$v['key_name']="<font color=\"".$v['color']."\">".$v['key_name']."</font>";
+					}
+					 
+					$list[] = $v;
+					if($i==$limit){
+						break;
+					}
+				}
+			}
+		}$list = $list; if (!is_array($list) && !is_object($list)) { settype($list, 'array');}
+foreach ($list as $_smarty_tpl->tpl_vars['top_key']->key => $_smarty_tpl->tpl_vars['top_key']->value) {
+$_smarty_tpl->tpl_vars['top_key']->_loop = true;
+?> <a href="<?php echo $_smarty_tpl->tpl_vars['top_key']->value['url'];?>
+"><?php echo $_smarty_tpl->tpl_vars['top_key']->value['key_name'];?>
+</a> <?php } ?> </span> </div>
+          </div>
+          <?php }?> </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!--end--> 
+</div>
+<!--弹出框-->
+<div style="display:none;" id="postpw">
+  <div>
+    <ul class="micro_resume_release_list">
+      <li><span><font color="#FF3300">*</font> 密码：</span>
+        <input id="pw" type='password' class="micro_resume_release_text" style='width:100px'/>
+        <em style="line-height:28px; display:inline-block; margin-left:5px;">请输入添加时的密码。</em> </li>
+      <li><span><font color="#FF3300">*</font> 验证码：</span>
+        <input type="text" id="code" class="micro_resume_release_text micro_resume_release_text2" style='width:100px'/>
+        <a href="javascript:check_codes();"><img id="vcode_imgs" src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+/app/include/authcode.inc.php"></a> 
+        <!--a href="javascript:check_codes();">看不清，换一张</a--> 
+      </li>
+      <li><span>&nbsp; </span>
+        <input type="hidden" id="tid"/>
+        <input type="hidden" id="type"/>
+        <input class="fast_submit" type="button" value="提交" onclick="post_pass();">
+      </li>
+    </ul>
+  </div>
+</div>
+<!--弹出框 end--> 
+<?php echo '<script'; ?>
+ type="text/javascript"> 
+$(document).ready(function(){
+	$(window).scroll(function(){
+		var scroll_Top = $(window).scrollTop();
+		var width=document.body.clientWidth;
+		if(scroll_Top>520){
+			if(window.XMLHttpRequest){
+				var top=0;
+				var right=(width-970)/2+"px";
+			}else{
+				var top=parseInt(scroll_Top)-(520);
+				var right=0;
+			}
+			$(".Fast_left").attr("style","position:fixed;top:"+top+"px;_position:absolute;right:"+right+";");
+		}else{
+			$(".Fast_left").attr("style","");
+		}
+	});
+});
+<?php echo '</script'; ?>
+> 
+<?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplstyle']->value)."/footer.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php }} ?>

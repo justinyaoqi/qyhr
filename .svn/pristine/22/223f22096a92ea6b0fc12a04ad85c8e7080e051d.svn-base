@@ -1,0 +1,4 @@
+<?php 
+$config=array("autodate"=>"20150916","subscribe_time"=>1442374167)
+; 
+?>

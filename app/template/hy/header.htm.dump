@@ -1,0 +1,58 @@
+<!--header-->
+<div class="top">
+  <div class="top_cot">
+    <div class="top_cot_content">
+      <div class="top_left fl">
+        <div class="yun_welcome fl">欢迎来到{yun:}$config.sy_webname{/yun}！</div>
+        <span class="fl"><a href="{yun:}$config.sy_weburl{/yun}/wap" class="wap_icon">手机版</a> | <a href="{yun:}url m=subscribe{/yun}">订阅</a></span> </div>
+      <div class="top_right_re fr">
+        <div class="top_right">
+          <div class="yun_topNav fr"> 
+		  <a class="yun_navMore" href="javascript:;">网站导航</a>
+            <div class="yun_webMoredown" style="display:none">
+              <div class="yun_top_nav_box"> 
+			  {yun:}navmap key=key item=navmap{/yun}
+                <div class="yun_top_nav_h1"><a href="{yun:}$navmap.url{/yun}" {yun:}if $navmap.eject{/yun} target="_blank"{yun:}/if{/yun}>{yun:}$navmap.name{/yun}</a></div>
+                <ul>
+                  {yun:}foreach from=$navmap.list item=maplist{/yun}
+                  <li><a href="{yun:}$maplist.url{/yun}" {yun:}if $maplist.eject{/yun} target="_blank"{yun:}/if{/yun}>{yun:}$maplist.name{/yun}</a></li>
+                  {yun:}/foreach{/yun}
+                </ul>
+                {yun:}/navmap{/yun} </div>
+            </div>
+          </div>
+            {yun:}if $ishtml{/yun}
+            <script language='JavaScript' src='{yun:}url m=ajax c=RedLoginHead{/yun}'></script>
+            {yun:}else{/yun}
+            {yun:}readloginhead{/yun}
+            {yun:}/if{/yun}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header_zt">{yun:}adlist classid=51 limit=5 item=adlist_51{/yun}{yun:}$adlist_51.html{/yun}{yun:}/adlist{/yun}</div>
+<div class="header">
+  <div class="w980">
+    <div class="header_cont">
+      <div class="logo fl"><a href="{yun:}$config.sy_weburl{/yun}"><img src="{yun:}$config.sy_weburl{/yun}/{yun:}$config.sy_logo{/yun}" class="png"></a></div>
+      <nav>
+        <ul class="header_nav">
+          {yun:}nav item=nlist hovclass=header_nav_cur nid=1{/yun}
+          <li class="{yun:}$nlist.navclass{/yun}"><a href="{yun:}$nlist.url{/yun}" {yun:}if $nlist.eject{/yun} target="_blank"{yun:}/if{/yun}>{yun:}$nlist.name{/yun}</a></li>
+          {yun:}/nav{/yun}
+          {yun:}nav item=nalist hovclass=header_fixed_list_cur nid=5{/yun}
+          <li class="{yun:}$nalist.navclass{/yun}"><a href="{yun:}$nalist.url{/yun}">{yun:}$nalist.name{/yun}</a></li>
+          {yun:}/nav{/yun}
+        </ul>
+      </nav>
+
+        
+        
+        
+        
+        
+        
+    </div>
+  </div>
+</div>

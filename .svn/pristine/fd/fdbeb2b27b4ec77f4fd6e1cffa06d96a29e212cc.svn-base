@@ -1,0 +1,12 @@
+<?php 
+defined('IN_TS') or die('Access Denied.');
+include './config.php';
+$arrchatlogin = require('config.php');
+$wxappid=$arrchatlogin['wxappid'];
+$wxappSecret=$arrchatlogin['wxappSecret'];
+ $urle=urlencode("http://www.bibizan.cn/index.php?app=pubs&ac=plugin&plugin=wechatlogin&in=callback");
+ $urls="Location:https://open.weixin.qq.com/connect/qrconnect?appid=".$wxappid."&redirect_uri=".$urle."&response_type=code&scope=snsapi_login&state=STATE#wechat_redirect";
+ //echo urldecode('https://open.weixin.qq.com/connect/qrconnect?appid=wx6d56e4f25ff79b77&redirect_uri=https%3A%2F%2Fbibizan.com%2Findex.php%3Fapp%3Dpubs%26ac%3Dplugin%26plugin%3Dwechatlogin%26in%3Dcallback&response_type=code&scope=snsapi_login&state=STATE#wechat_redirect');
+header($urls);
+
+

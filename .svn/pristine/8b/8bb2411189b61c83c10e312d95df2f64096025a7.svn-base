@@ -1,0 +1,11 @@
+<?php
+defined('IN_TS') or die('Access Denied.');
+return array (
+  300 => 'document.write(\\\'<script src=\\"http://wm.lrswl.com/page/?s=159598\\"></script>\\\');',
+  468 => 'document.write(\\\'<script src=\\"http://wm.lrswl.com/page/?s=159598\\"></script>\\\');',
+  640 => 'document.write(\\\'<script src=\\"http://wm.lrswl.com/page/?s=159598\\"></script>\\\');',
+  960 => '<a href=\\"http://img5.cache.netease.com/photo/0009/2015-03-12/AKG8KU4R0AI20009.jpg\\"><img height=\\"100\\" width=\\"870\\" src=\\"http://img5.cache.netease.com/photo/0009/2015-03-12/AKG8KU4R0AI20009.jpg\\"/></a>',
+  'topic_right_top' => 'document.write(\\\'<script src=\\"http://wm.lrswl.com/page/?s=159598\\"></script>\\\');',
+  'home_left_1' => 'document.write(\\\'<script src=\\"http://wm.lrswl.com/page/?s=159598\\"></script>\\\');',
+  'home_left_2' => 'document.write(\\\'<script src=\\"http://wm.lrswl.com/page/?s=159598\\"></script>\\\');',
+);

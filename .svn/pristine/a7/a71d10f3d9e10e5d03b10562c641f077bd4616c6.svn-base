@@ -1,0 +1,173 @@
+{template header}
+<div style="height:10px;" class="clear">
+    
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 hidden-xs ">
+            <div class="bbox">
+                <div class="catetype" style="background-color: rgba(229, 229, 229, 1);">
+                    <ul>
+                        {loop $arrCatess $key $item}
+                        <li style="height: 90px;padding: 4px;border-bottom: solid 1px silver;overflow: hidden;">
+                            <div style="clear:both; font-size: 16px; ">
+                                <span class="glyphicon glyphicon-search" style="margin-left: 20px;font-size:12px;"></span><span style="margin-left: 10px;"><a style="color:#111" href="{tsUrl('group','allcate',array('cateid'=>$item['cateid']))}">{$item['catename']}</a></span>
+                            </div>
+                            <div style="clear: both;font-size: 14px;padding: 5px 20px;" class="">
+                                <ul style="">
+                                    {loop $item['two'] $tkey $titem}
+                                    <li style="float: left;text-align: center;line-height: 24px;padding: 2px;"><a style="color:#111" title="{$titem['catename']}" href="{tsUrl('group','allcate',array('cateid'=>$item['cateid']))}">{$titem['catename']}</a>
+                                </li>
+                                {/loop}
+                            </ul>
+                        </div>
+                    </li>
+                    {/loop}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="gr">
+            <div class="bbox">
+                <div class="btitle">推荐小组</div>
+                <div class="bc">
+                    {loop $arrRecommendGroup $key $item}
+                    <div class="sub-item" style="padding:10px 0 10px 0;height:100px;">
+                        <div class="pic">
+                            <a href="{tsUrl('group','show',array('id'=>$item[groupid]))}">
+                                <img src="{$item['photo']}" width="40" height="40" alt="{$item['groupname']}" title="{$item['groupname']}" />
+                            </a>
+                        </div>
+                        <div class="info">
+                            <a style="color:#222;" href="{tsUrl('group','show',array('id'=>$item[groupid]))}">{$item['groupname']}</a> ({$item[count_user]})
+                            {$item['groupdesc']}
+                        </div>
+                    </div>
+                    {/loop}
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="bbox">
+                <div class="btitle">热门动态</div>
+                {loop $arrTopic $key $item}
+                <div class="media" style="margin-top: 0;border-bottom:solid 1px silver;padding:10px 0;">
+                    <div class="media-left">
+                        <a href="{tsUrl('user','space',array('id'=>$item[user][userid]))}">
+                            <img class="media-object img-circle" src="{$item[user][face]}" alt="{$item['user']['username']},{$item['user']['about']}" width="40" height="40">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h6 style="padding:0;float:right;"><a href="{tsUrl('group','show',array('id'=>$item['groupid']))}">{$item['group']['groupname']}</a></h6>
+                        <h5 class="media-heading" style="color:#005B97">
+                        <a style="color:#222" href="{tsUrl('group','topic',array('id'=>$item['topicid']))}" target="_blank"><strong>{$item['title']}</strong></a>
+                        <span class="glyphicon glyphicon-eye-open" style="font-size: 12px;margin-left: 10px; color:#159B48"></span><span style="color:#159B48">{$item['count_view']}</span></h5>
+                        <div class="userdesc"><span style=""><a id="def-html-{$item['user']['userid']}{$key}"  data-tooltip="#html-content" style="color:#777;font-size:12px;" href="{tsUrl('group', 'topic', array('id' => $item['topicid']))}">
+                            {$item['user']['username']},{$item['user']['about']}
+                        </a>
+                        <div id = "html-content" class="light" style="display:none;background:white;">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="{tsUrl('user','space',array('id'=>$item[user][userid]))}" rel="face" uid="{$item['user']['userid']}"><img class="
+                                        img-circle" src="{$item[user][face]}" width="32" height="32" alt="{$item['user']['username']}" title="{$item['user']['username']}" />
+                                    </a>
+                                </div>
+                                <div class="media-body" >
+                                    <h5>{$item[user][username]}</h5>
+                                    <h6>{$item[user][about]}</h6>
+                                    <h6>{$item[user][signed]}</h6>
+                                    <p style="font-size:12px;">等{$item[user][count_followed]}人也关注了他</p>
+                                </div>
+                            </div>
+                            <div style="font-size:12px;padding-left:45px;">
+                                <span style="width:100px;marigin-right:20px"> <span class="badge" >{$item[user][count_topic]}</span>帖子</span>&nbsp;&nbsp;&nbsp;<span style="width:100px;"><span class="badge">{$item[user][count_followed]}</span>关注者</span>&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    
+                                    <a class="btn btn-mini" href="javascript:void('0')" onclick="follow('{$item[user]['userid']}','{$_SESSION['token']}');">关注</a>
+                                    
+                                </span>
+                            </div>
+                        </div></span></div>
+                        <p style="line-height: 24px;color:#222;font-size: 13px;padding: 4px">{$item['content']}</p>
+                    </div>
+                    <div style="">
+                        <span style="margin-left:50px;" class="label label-success"><a style="color:#333" href="{tsUrl('group','show',array('id'=>$item['groupid']))}">{$item['group']['groupname']}</a></span>
+                        <span style="float:right;font-size: 12px;color:#666;line-height:12px;"><span style="line-height: 10px;font-size: 12px;" class="glyphicon glyphicon-comment"></span><span>{$item['count_comment']}</span>
+                        <span style="margin-left: 10px;" class="glyphicon glyphicon-heart-empty"></span></span>
+                    </div>
+                </div>
+                <script>
+                $(document).ready( function(){
+                $('#def-html-{$item['user']['userid']}{$key}').darkTooltip({
+                size:'large',
+                opacity:1,
+                gravity:'west',
+                theme:'light'
+                });
+                });</script>
+                {/loop}
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 hidden-xs">
+        <div class="bbox">
+            <div class="btitle">最新创建小组</div>
+            <div class="bc line23">
+                {if $arrNewGroup} {loop $arrNewGroup $key $item}
+                <span class="badge" >{$item[count_user]}</span><span style="width:30px;">&nbsp;&nbsp;</span>
+                <a style="color:#222" href="{tsUrl('group','show',array('id'=>$item[groupid]))}">{$item[groupname]}</a>
+                <br> {/loop} {/if}
+            </div>
+            {if $TS_APP[options][iscreate]==0 || $TS_USER[user][isadmin]==1}
+            <a style="background-color:#159B48" class="btn btn-info btn-block btn-lg" href="{tsUrl('group','create')}">
+                <span class="glyphicon glyphicon-plus-sign"></span> 创建小组</a>
+                <p></p>
+                {/if}
+            </div>
+            <div class="bbox">
+                <div class="btitle">热门帖子</div>
+                <ul class="bc titles">
+                    {loop $arrTopic $key $item}
+                    <li> <span class="badge" >{$item['count_view']}</span><span style="width:30px;">&nbsp;&nbsp;</span>
+                    <strong>
+                    <a style="color:#222;" href="{tsUrl('group','topic',array('id'=>$item['topicid']))}" target="_blank">{$item['title']}</a></strong>
+                    
+                    <p class="titles-b" style="font-size:12px;">
+                        <span class="titles-b-l">来自：<a  title="{$item['group']['groupname']}" target="_blank" href="{tsUrl('group','show',array('id'=>$item['groupid']))}">{$item['group']['groupname']}</a>&nbsp;小组
+                    </span>
+                </p>
+            </li>
+            {/loop}
+        </ul>
+    </div>
+    
+    <!--广告位-->
+    {php doAction('gobad','300')}
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+</div>
+</div>
+</div>
+<div class="container hidden-lg hidden-md">
+<nav class="navbar navbar-default navbar-fixed-bottom ">
+<div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <ul class="nav navbar-nav navbar-left col-xs-5" style="float:left;margin-left:20px;border-right:1px red solid">
+            <li><a href="{tsUrl('group','add',array('id'=>'1'))}"><span class="glyphicon glyphicon-pencil"></span>发表话题</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left col-xs-5" style="float:left;margin-left:20px;">
+            <li><a href="{tsUrl('article','add',array(''=>''))}"><span class="glyphicon glyphicon-pencil"></span>发表文章</a></li>
+        </ul>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    
+    </div><!-- /.container-fluid -->
+</nav>
+</div>
+{template footer}

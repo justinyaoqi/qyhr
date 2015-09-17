@@ -1,0 +1,15 @@
+TIME:2015-02-28 :00:31:46
+SQL:SELECT * FROM ts_area_province  
+ERROR:La table 'zanqy.ts_area_province' n'existe pas
+REQUEST_URI:/documents/index.php/my/setting/ts-city
+--------------------------------------
+TIME:2015-02-28 :00:31:49
+SQL:SELECT * FROM ts_area_province  
+ERROR:La table 'zanqy.ts_area_province' n'existe pas
+REQUEST_URI:/documents/index.php/my/setting/ts-city
+--------------------------------------
+TIME:2015-02-28 :11:26:24
+SQL:SELECT * FROM ts_area_province  
+ERROR:La table 'zanqy.ts_area_province' n'existe pas
+REQUEST_URI:/documents/index.php/my/setting/ts-city
+--------------------------------------

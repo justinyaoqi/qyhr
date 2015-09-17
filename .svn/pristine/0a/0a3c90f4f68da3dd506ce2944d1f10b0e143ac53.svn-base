@@ -1,0 +1,55 @@
+TIME:2015-06-09 :20:38:47
+SQL:DELETE FROM ts_user_scores WHERE ( `userid` = 0)
+ERROR:Table 'zanqy.ts_user_scores' doesn't exist
+REQUEST_URI:/index.php/user/space/www.bibizan.cn
+--------------------------------------
+TIME:2015-06-09 :20:38:47
+SQL:DELETE FROM ts_event WHERE ( `userid` = 0)
+ERROR:Table 'zanqy.ts_event' doesn't exist
+REQUEST_URI:/index.php/user/space/www.bibizan.cn
+--------------------------------------
+TIME:2015-06-09 :20:38:47
+SQL:DELETE FROM ts_event_comment WHERE ( `userid` = 0)
+ERROR:Table 'zanqy.ts_event_comment' doesn't exist
+REQUEST_URI:/index.php/user/space/www.bibizan.cn
+--------------------------------------
+TIME:2015-06-09 :20:38:47
+SQL:DELETE FROM ts_event_users WHERE ( `userid` = 0)
+ERROR:Table 'zanqy.ts_event_users' doesn't exist
+REQUEST_URI:/index.php/user/space/www.bibizan.cn
+--------------------------------------
+TIME:2015-06-09 :20:38:47
+SQL:DELETE FROM ts_ask_comment WHERE ( `userid` = 0)
+ERROR:Table 'zanqy.ts_ask_comment' doesn't exist
+REQUEST_URI:/index.php/user/space/www.bibizan.cn
+--------------------------------------
+TIME:2015-06-09 :20:38:47
+SQL:DELETE FROM ts_ask_comment_add WHERE ( `userid` = 0)
+ERROR:Table 'zanqy.ts_ask_comment_add' doesn't exist
+REQUEST_URI:/index.php/user/space/www.bibizan.cn
+--------------------------------------
+TIME:2015-06-09 :20:38:47
+SQL:DELETE FROM ts_ask_comment_op WHERE ( `userid` = 0)
+ERROR:Table 'zanqy.ts_ask_comment_op' doesn't exist
+REQUEST_URI:/index.php/user/space/www.bibizan.cn
+--------------------------------------
+TIME:2015-06-09 :20:38:47
+SQL:DELETE FROM ts_ask_question_add WHERE ( `userid` = 0)
+ERROR:Table 'zanqy.ts_ask_question_add' doesn't exist
+REQUEST_URI:/index.php/user/space/www.bibizan.cn
+--------------------------------------
+TIME:2015-06-09 :20:38:47
+SQL:DELETE FROM ts_ask_topic WHERE ( `userid` = 0)
+ERROR:Table 'zanqy.ts_ask_topic' doesn't exist
+REQUEST_URI:/index.php/user/space/www.bibizan.cn
+--------------------------------------
+TIME:2015-06-09 :20:38:47
+SQL:DELETE FROM ts_ask_user_cate WHERE ( `userid` = 0)
+ERROR:Table 'zanqy.ts_ask_user_cate' doesn't exist
+REQUEST_URI:/index.php/user/space/www.bibizan.cn
+--------------------------------------
+TIME:2015-06-09 :20:38:47
+SQL:DELETE FROM ts_ask_user_score WHERE ( `userid` = 0)
+ERROR:Table 'zanqy.ts_ask_user_score' doesn't exist
+REQUEST_URI:/index.php/user/space/www.bibizan.cn
+--------------------------------------
